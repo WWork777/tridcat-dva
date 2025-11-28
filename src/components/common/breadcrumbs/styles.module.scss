@@ -1,0 +1,73 @@
+// styles.module.scss
+.breadcrumbs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 16px 0;
+  font-size: 14px;
+  line-height: 1.4;
+
+  .breadcrumbItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .link {
+    color: #0070f3;
+    text-decoration: none;
+    transition: color 1s ease;
+
+    &:hover {
+      color: var(--color-decorate);
+      text-decoration: underline;
+    }
+
+    span {
+      font-size: 20px;
+      font-weight: 400;
+
+      @media (max-width: 768px) {
+        font-size: 18px;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .separator {
+    color: #666;
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .currentPage {
+    color: #333333c5;
+    font-size: 20px;
+    font-weight: 400;
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
+    @media (max-width: 480px) {
+      font-size: 16px;
+    }
+  }
+}
+
+// Адаптивность
+@media (max-width: 768px) {
+  .breadcrumbs {
+    font-size: 10px;
+    gap: 6px;
+    margin-top: 100px;
+
+    .breadcrumbItem {
+      gap: 6px;
+    }
+  }
+}

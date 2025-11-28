@@ -1,0 +1,16 @@
+.specialistsGrid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+// Адаптация для мобильных
+@media (max-width: 768px) {
+  .specialistsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 60px;
+  }
+}

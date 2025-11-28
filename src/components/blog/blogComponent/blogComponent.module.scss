@@ -1,0 +1,95 @@
+
+
+.blogGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.blogCard {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    
+    .cardImage {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.cardImage {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.cardContent {
+  padding: 20px;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.cardCategory {
+  background: var(--color-decorate);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.cardReadTime {
+  color: #666;
+  font-size: 0.875rem;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  color: #333;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+.cardExcerpt {
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.cardDate {
+  color: #999;
+  font-size: 0.875rem;
+}
+
+.readMore {
+  color: var(--color-decorate);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+}

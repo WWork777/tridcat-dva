@@ -1,0 +1,363 @@
+// styles.module.scss
+.hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  margin: 40px 0 80px;
+  padding: 40px 0;
+
+  @media (max-width: 968px) {
+    flex-direction: column;
+    gap: 40px;
+    margin: 20px 0 60px;
+    padding: 20px 0;
+  }
+
+  .heroContent {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 50%;
+    flex: 1;
+
+    .heroImageMobile {
+      display: none;
+
+      @media (max-width: 970px) {
+        display: block;
+
+        width: 50%;
+        flex: 1;
+        position: relative;
+
+        @media (max-width: 968px) {
+          width: 100%;
+        }
+
+        img {
+          width: 100%;
+          height: 400px;
+          object-fit: cover;
+          border-radius: 20px;
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease;
+
+          &:hover {
+            transform: scale(1.02);
+          }
+
+          @media (max-width: 768px) {
+            height: 300px;
+          }
+        }
+
+        // Декоративный элемент
+        &::before {
+          content: "";
+          position: absolute;
+          top: -20px;
+          right: -20px;
+          width: 100px;
+          height: 100px;
+          background: linear-gradient(
+            135deg,
+            var(--color-decorate) 0%,
+            transparent 70%
+          );
+          border-radius: 20px;
+          z-index: -1;
+          opacity: 0.7;
+
+          @media (max-width: 768px) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 968px) {
+      width: 100%;
+      gap: 30px;
+    }
+
+    h1 {
+      font-size: 48px;
+      font-weight: 500;
+      line-height: 1.2;
+      color: var(--color-text-primary);
+      margin: 0;
+      background: linear-gradient(
+        135deg,
+        var(--color-text-primary) 0%,
+        var(--color-decorate) 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+
+      @media (max-width: 768px) {
+        font-size: 36px;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 30px;
+      }
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--color-text-secondary);
+      margin: 0;
+      font-weight: 400;
+
+      @media (max-width: 768px) {
+        font-size: 16px;
+      }
+    }
+
+    .buttons_container {
+      margin-top: 75px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+
+      @media (max-width: 970px) {
+        margin-top: 0;
+      }
+
+      @media (max-width: 480px) {
+        flex-direction: column;
+      }
+
+      .wa_button {
+        background: transparent;
+        color: white;
+        border: none;
+        font-family: inherit;
+        padding: 16px 32px;
+        border-radius: 12px;
+        font-size: 16px;
+        font-weight: 600;
+        border: 1px solid var(--color-decorate);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        img {
+          width: 40px;
+          height: 40px;
+        }
+
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 8px 25px #30549d5e;
+        }
+
+        &:active {
+          transform: translateY(0);
+        }
+      }
+
+      .ctaButton {
+        background: linear-gradient(
+          135deg,
+          var(--color-decorate) 0%,
+          #2a4a8a 100%
+        );
+        color: white;
+        border: none;
+        padding: 16px 32px;
+        border-radius: 12px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(48, 85, 157, 0.3);
+
+        p {
+          color: white;
+          text-align: center;
+        }
+
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 8px 25px rgba(48, 85, 157, 0.4);
+        }
+
+        &:active {
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+
+  .heroImage {
+    width: 50%;
+    flex: 1;
+    position: relative;
+
+    @media (max-width: 970px) {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+
+      @media (max-width: 768px) {
+        height: 300px;
+      }
+    }
+
+    // Декоративный элемент
+    &::before {
+      content: "";
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(
+        135deg,
+        var(--color-decorate) 0%,
+        transparent 70%
+      );
+      border-radius: 20px;
+      z-index: -1;
+      opacity: 0.7;
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+}
+
+.hero {
+  animation: fadeInUp 0.8s ease-out;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Добавьте эти медиа-запросы в существующие стили
+
+@media (max-width: 480px) {
+  .hero {
+    gap: 30px;
+    margin: 15px 0 40px;
+    padding: 15px 0;
+  }
+
+  .heroContent {
+    gap: 25px;
+
+    h1 {
+      font-size: 32px;
+      line-height: 1.3;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .buttons_container {
+      margin-top: 0px;
+      gap: 12px;
+
+      .wa_button,
+      .ctaButton {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 24px;
+        font-size: 15px;
+      }
+    }
+  }
+
+  .heroImage {
+    img {
+      height: 250px;
+      border-radius: 16px;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .heroContent {
+    h1 {
+      font-size: 28px;
+    }
+
+    p {
+      font-size: 15px;
+    }
+
+    .buttons_container {
+      .wa_button,
+      .ctaButton {
+        padding: 12px 20px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .heroImage {
+    img {
+      height: 220px;
+    }
+  }
+}
+
+// Для планшетов в портретной ориентации
+@media (max-width: 768px) and (min-width: 481px) {
+  .hero {
+    gap: 35px;
+    margin: 25px 0 50px;
+    padding: 25px 0;
+  }
+
+  .heroContent {
+    .buttons_container {
+      margin-top: 0px;
+    }
+  }
+}

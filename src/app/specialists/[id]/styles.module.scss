@@ -1,0 +1,676 @@
+.hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+  margin: 40px 0 80px;
+  padding: 40px 0;
+
+  @media (max-width: 968px) {
+    flex-direction: column-reverse;
+    gap: 40px;
+    margin: 20px 0 60px;
+    padding: 20px 0;
+  }
+
+  .heroContent {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 50%;
+    flex: 1;
+
+    @media (max-width: 968px) {
+      width: 100%;
+      gap: 25px;
+    }
+
+    .specialistInfo {
+      h1 {
+        font-size: 48px;
+        font-weight: 500;
+        line-height: 1.2;
+        color: var(--color-text-primary);
+        margin: 0 0 20px 0;
+        background: linear-gradient(
+          135deg,
+          var(--color-text-primary) 0%,
+          var(--color-decorate) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+
+        @media (max-width: 768px) {
+          font-size: 36px;
+        }
+
+        @media (max-width: 480px) {
+          font-size: 30px;
+        }
+      }
+
+      .specialistDescription {
+        font-size: 20px;
+        line-height: 1.6;
+        color: var(--color-decorate);
+        margin: 0 0 25px 0;
+        font-weight: 500;
+
+        @media (max-width: 768px) {
+          font-size: 18px;
+        }
+      }
+
+      .stage {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 25px;
+        padding: 15px 20px;
+        background: rgba(48, 85, 157, 0.05);
+        border-radius: 12px;
+        border-left: 4px solid var(--color-decorate);
+
+        .stageLabel {
+          font-weight: 500;
+          color: var(--color-text-secondary);
+        }
+
+        .stageValue {
+          font-weight: 600;
+          color: var(--color-decorate);
+        }
+      }
+
+      .pageDescription {
+        p {
+          font-size: 18px;
+          line-height: 1.7;
+          color: var(--color-text-secondary);
+          margin: 0;
+
+          @media (max-width: 768px) {
+            font-size: 16px;
+          }
+        }
+      }
+
+      .buttons_container {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: 20px;
+
+        @media (max-width: 480px) {
+          flex-direction: column;
+        }
+
+        .wa_button {
+          background: transparent;
+          color: var(--color-decorate);
+          border: 2px solid var(--color-decorate);
+          font-family: inherit;
+          padding: 16px 32px;
+          border-radius: 12px;
+          font-size: 16px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          text-decoration: none;
+
+          &:hover {
+            background: var(--color-decorate);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px #30549d5e;
+          }
+
+          &:active {
+            transform: translateY(0);
+          }
+        }
+
+        .ctaButton {
+          background: linear-gradient(
+            135deg,
+            var(--color-decorate) 0%,
+            #2a4a8a 100%
+          );
+          color: white;
+          border: none;
+          padding: 16px 32px;
+          border-radius: 12px;
+          font-size: 16px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          box-shadow: 0 4px 15px rgba(48, 85, 157, 0.3);
+          text-decoration: none;
+
+          p {
+            color: white;
+            text-align: center;
+            margin: 0;
+          }
+
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(48, 85, 157, 0.4);
+          }
+
+          &:active {
+            transform: translateY(0);
+          }
+        }
+      }
+    }
+  }
+
+  .heroImage {
+    width: 45%;
+    flex-shrink: 0;
+    position: relative;
+
+    @media (max-width: 968px) {
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+
+      @media (max-width: 768px) {
+        height: 400px;
+      }
+
+      @media (max-width: 480px) {
+        height: 300px;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(
+        135deg,
+        var(--color-decorate) 0%,
+        transparent 70%
+      );
+      border-radius: 20px;
+      z-index: -1;
+      opacity: 0.7;
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+}
+
+// Секция услуг
+.servicesSection {
+  margin: 80px 0;
+  padding: 60px 0;
+  border-radius: 20px;
+
+  @media (max-width: 768px) {
+    margin: 60px 0;
+    padding: 40px 0;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    margin-bottom: 50px;
+
+    @media (max-width: 768px) {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 0 15px;
+    }
+  }
+
+  .serviceCard {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .serviceImage {
+      height: 200px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+    }
+
+    &:hover .serviceImage img {
+      transform: scale(1.05);
+    }
+
+    .serviceInfo {
+      padding: 25px;
+
+      h3 {
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--color-text-primary);
+        margin: 0 0 10px 0;
+        line-height: 1.4;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 1.5;
+        color: var(--color-text-secondary);
+        margin: 0 0 15px 0;
+      }
+
+      .servicePrice {
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--color-decorate);
+      }
+    }
+  }
+}
+
+// Секция контактов
+.contactsSection {
+  margin: 80px 0;
+  padding: 60px 0;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 768px) {
+    margin: 60px 0;
+    padding: 40px 0;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    margin-bottom: 50px;
+
+    @media (max-width: 768px) {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .contactsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      padding: 0 15px;
+    }
+  }
+
+  .contactInfo {
+    h3 {
+      font-size: 24px;
+      font-weight: 500;
+      color: var(--color-text-primary);
+      margin-bottom: 25px;
+
+      @media (max-width: 768px) {
+        font-size: 20px;
+      }
+    }
+
+    .contactItem {
+      margin-bottom: 20px;
+      padding: 15px 0;
+      border-bottom: 1px solid #e2e8f0;
+
+      strong {
+        display: block;
+        font-weight: 600;
+        color: var(--color-text-primary);
+        margin-bottom: 5px;
+      }
+
+      a, span {
+        color: var(--color-text-secondary);
+        text-decoration: none;
+        font-size: 16px;
+
+        &:hover {
+          color: var(--color-decorate);
+        }
+      }
+    }
+  }
+
+  .quickActions {
+    h3 {
+      font-size: 24px;
+      font-weight: 500;
+      color: var(--color-text-primary);
+      margin-bottom: 25px;
+
+      @media (max-width: 768px) {
+        font-size: 20px;
+      }
+    }
+
+    .actionButtons {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      .wa_button, .ctaButton {
+        padding: 18px 30px;
+        border-radius: 12px;
+        font-size: 16px;
+        font-weight: 600;
+        text-align: center;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        display: block;
+      }
+
+      .wa_button {
+        background: transparent;
+        color: var(--color-decorate);
+        border: 2px solid var(--color-decorate);
+
+        &:hover {
+          background: var(--color-decorate);
+          color: white;
+          transform: translateY(-2px);
+        }
+      }
+
+      .ctaButton {
+        background: linear-gradient(135deg, var(--color-decorate) 0%, #2a4a8a 100%);
+        color: white;
+        border: none;
+
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 8px 25px rgba(48, 85, 157, 0.4);
+        }
+      }
+    }
+  }
+}
+
+// Анимации
+.hero {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.servicesSection, .contactsSection {
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero, .servicesSection, .contactsSection {
+    animation: none;
+  }
+}
+
+// Адаптивность для мобильных устройств
+@media (max-width: 480px) {
+  .hero {
+    gap: 30px;
+    margin: 15px 0 40px;
+    padding: 15px 0;
+  }
+
+  .heroContent {
+    .specialistInfo {
+      h1 {
+        font-size: 32px;
+        line-height: 1.3;
+      }
+
+      .specialistDescription {
+        font-size: 18px;
+      }
+
+      .stage {
+        padding: 12px 16px;
+      }
+
+      .buttons_container {
+        .wa_button,
+        .ctaButton {
+          width: 100%;
+          justify-content: center;
+          padding: 14px 24px;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+  .heroImage {
+    img {
+      height: 250px;
+      border-radius: 16px;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .heroContent {
+    .specialistInfo {
+      h1 {
+        font-size: 28px;
+      }
+
+      .buttons_container {
+        .wa_button,
+        .ctaButton {
+          padding: 12px 20px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .heroImage {
+    img {
+      height: 220px;
+    }
+  }
+}
+
+
+
+// Образование и специализации
+.educationSection {
+  margin: 60px 0;
+  padding: 40px 0;
+
+  .educationGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  }
+
+  h2 {
+      font-size: 28px;
+      font-weight: 500;
+      color: var(--color-text-primary);
+      margin-bottom: 25px;
+
+      @media (max-width: 768px) {
+        font-size: 24px;
+      }
+    }
+
+  .educationList {
+    .educationItem {
+      padding: 15px 0;
+      border-bottom: 1px solid #e2e8f0;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      p {
+        margin: 0;
+        line-height: 1.6;
+        color: var(--color-text-secondary);
+      }
+    }
+  }
+
+  .specializationsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    .specializationItem {
+      background: rgba(48, 85, 157, 0.1);
+      padding: 8px 16px;
+      border-radius: 20px;
+      border: 1px solid var(--color-decorate);
+      
+      span {
+        color: var(--color-decorate);
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+// Сертификаты
+.certificatesSection {
+  margin: 60px 0 40px;
+  padding: 40px 0;
+  // background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-radius: 20px;
+
+  h2 {
+      font-size: 28px;
+      font-weight: 500;
+      color: var(--color-text-primary);
+      margin-bottom: 25px;
+
+      @media (max-width: 768px) {
+        font-size: 24px;
+      }
+    }
+}
+
+// Услуги
+.servicesSection {
+  margin: 40px 0 60px;
+  padding: 40px 0;
+
+  h2 {
+    text-align: left;
+      font-size: 28px;
+      font-weight: 500;
+      color: var(--color-text-primary);
+      margin-bottom: 40px;
+
+      @media (max-width: 768px) {
+        font-size: 24px;
+      }
+    }
+}
+
+// Подробное описание
+.detailedDescription {
+  margin: 25px 0;
+
+  p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    margin: 0;
+  }
+}
+
+// Контактные телефоны
+.phoneNumbers {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  a {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--color-decorate);
+    }
+  }
+}

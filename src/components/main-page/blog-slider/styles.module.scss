@@ -1,0 +1,267 @@
+.mySwiper {
+  overflow: visible !important;
+}
+
+.home_team_slider {
+  margin-top: 50px;
+  border-radius: 15px;
+
+  .swiper-wrapper {
+    border-radius: 15px;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 30px;
+    padding: 0 10px;
+  }
+
+  @media (max-width: 480px) {
+    margin-top: 20px;
+    padding: 0 5px;
+  }
+}
+
+.slider_card {
+  background: transparent;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  gap: 16px;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    transform: translateY(-8px);
+
+    .blogImage {
+      transform: scale(1.05);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    span {
+      background: linear-gradient(
+        135deg,
+        var(--color-decorate) 0%,
+        #2a4a8a 100%
+      );
+      transform: translateY(-2px);
+    }
+
+    p {
+      color: var(--color-decorate);
+      transform: translateY(-2px);
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 100%;
+  }
+
+  .blogImage {
+    width: 100%;
+    height: 220px;
+    border-radius: 16px;
+    object-fit: cover;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  span {
+    font-family: var(--font-family-sans);
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--color-container);
+    background: var(--color-decorate);
+    padding: 8px 16px;
+    border-radius: 20px;
+    width: fit-content;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(48, 85, 157, 0.3);
+  }
+
+  p {
+    font-family: var(--font-family-sans);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.4;
+    color: var(--color-text-primary);
+    margin: 0;
+    transition: all 0.3s ease;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex-grow: 1;
+  }
+}
+
+// Настройки Swiper
+.home_team_slider {
+  .swiper-slide {
+    width: 380px !important;
+    height: auto;
+
+    @media (max-width: 1440px) {
+      width: 350px !important;
+    }
+
+    @media (max-width: 1200px) {
+      width: 320px !important;
+    }
+  }
+}
+
+// Мобильная адаптация
+@media (max-width: 1024px) {
+  .slider_card {
+    gap: 14px;
+
+    .blogImage {
+      height: 200px;
+      border-radius: 14px;
+    }
+
+    span {
+      font-size: 13px;
+      padding: 7px 14px;
+    }
+
+    p {
+      font-size: 16px;
+      -webkit-line-clamp: 3;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .slider_card {
+    gap: 12px;
+    border-radius: 16px;
+
+    .blogImage {
+      height: 180px;
+      border-radius: 12px;
+    }
+
+    span {
+      font-size: 12px;
+      padding: 6px 12px;
+      border-radius: 16px;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 1.3;
+      -webkit-line-clamp: 3;
+    }
+  }
+
+  .home_team_slider {
+    .swiper-slide {
+      width: 300px !important;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .slider_card {
+    gap: 10px;
+
+    .blogImage {
+      height: 160px;
+      border-radius: 10px;
+    }
+
+    span {
+      font-size: 11px;
+      padding: 5px 10px;
+      border-radius: 14px;
+    }
+
+    p {
+      font-size: 14px;
+      -webkit-line-clamp: 3;
+    }
+  }
+
+  .home_team_slider {
+    .swiper-slide {
+      width: 280px !important;
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .slider_card {
+    .blogImage {
+      height: 140px;
+    }
+
+    span {
+      font-size: 10px;
+      padding: 4px 8px;
+    }
+
+    p {
+      font-size: 13px;
+      -webkit-line-clamp: 3;
+    }
+  }
+
+  .home_team_slider {
+    .swiper-slide {
+      width: 260px !important;
+    }
+  }
+}
+
+// Анимация появления
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slider_card {
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+
+  &:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  &:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  &:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  &:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+}
+
+// Улучшения для свайпера на мобильных
+@media (max-width: 768px) {
+  .home_team_slider {
+    .swiper-slide {
+      margin-right: 12px !important;
+    }
+
+    .swiper-wrapper {
+      margin-left: -6px;
+      margin-right: -6px;
+    }
+  }
+}
