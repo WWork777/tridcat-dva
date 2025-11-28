@@ -10,10 +10,7 @@ import styles from './certificatesSlider.module.scss';
 
 interface Certificate {
   id: string;
-  title: string;
-  description: string;
   imageUrl: string;
-  year?: string;
 }
 
 interface CertificatesSwiperProps {
@@ -59,19 +56,11 @@ export default function CertificatesSwiper({ certificates }: CertificatesSwiperP
                 <div className={styles.certificateImage}>
                   <img 
                     src={certificate.imageUrl} 
-                    alt={certificate.title}
                     className={styles.certificateImg}
                   />
                 </div>
                 
                 <div className={styles.certificateContent}>
-                  {/* <h4>{certificate.title}</h4>
-                  <p>{certificate.description}</p>
-                  {certificate.year && (
-                    <div className={styles.certificateYear}>
-                      Год получения: {certificate.year}
-                    </div>
-                  )} */}
                   <span className={styles.viewButton}>Посмотреть</span>
                 </div>
               </div>
@@ -86,20 +75,12 @@ export default function CertificatesSwiper({ certificates }: CertificatesSwiperP
           <div className={styles.popupContent} onClick={(e) => e.stopPropagation()}>
             <button className={styles.closeButton} onClick={closePopup}>×</button>
             <div className={styles.popupText}>
-              {/* <h3>{selectedCertificate.title}</h3> */}
               <div className={styles.popupImageContainer}>
                 <img 
                   src={selectedCertificate.imageUrl} 
-                  alt={selectedCertificate.title}
                   className={styles.popupImage}
                 />
               </div>
-              {/* <p>{selectedCertificate.description}</p>
-              {selectedCertificate.year && (
-                <div className={styles.popupYear}>
-                  <strong>Год получения:</strong> {selectedCertificate.year}
-                </div>
-              )} */}
             </div>
           </div>
         </div>

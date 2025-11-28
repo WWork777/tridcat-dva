@@ -126,7 +126,11 @@
 
           &:hover {
             background: var(--color-decorate);
-            color: white;
+            p{
+              transition: all 0.3s ease;
+              color: white !important;
+            }
+            
             transform: translateY(-2px);
             box-shadow: 0 8px 25px #30549d5e;
           }
@@ -183,7 +187,7 @@
 
     img {
       width: 100%;
-      height: 500px;
+      max-height: 600px;
       object-fit: cover;
       border-radius: 20px;
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
@@ -235,6 +239,8 @@
     margin: 60px 0;
     padding: 40px 0;
   }
+
+  
 
   h2 {
     text-align: center;
@@ -551,6 +557,11 @@
   margin: 60px 0;
   padding: 40px 0;
 
+  @media (max-width: 480px) {
+    margin: 15px 0 40px;
+    padding: 15px 0;
+  }
+
   .educationGrid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -560,6 +571,8 @@
       grid-template-columns: 1fr;
       gap: 30px;
     }
+
+    
   }
 
   h2 {
@@ -617,6 +630,11 @@
   // background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
   border-radius: 20px;
 
+  @media (max-width: 480px) {
+    margin: 15px 0 40px;
+    padding: 15px 0;
+  }
+
   h2 {
       font-size: 28px;
       font-weight: 500;
@@ -627,12 +645,19 @@
         font-size: 24px;
       }
     }
+
+    
 }
 
 // Услуги
 .servicesSection {
   margin: 40px 0 60px;
   padding: 40px 0;
+
+  @media (max-width: 480px) {
+    margin: 15px 0 40px;
+    padding: 15px 0;
+  }
 
   h2 {
     text-align: left;
@@ -655,8 +680,36 @@
     font-size: 16px;
     line-height: 1.7;
     color: var(--color-text-secondary);
-    margin: 0;
+    margin: 10px 0 0 0 ;
   }
+
+  ul {
+      margin: 10px 0  0 10px!important;
+      padding-left: 10px;
+      
+      li {
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 0.75rem;
+        font-family: var(--font-family-sans);
+        
+        em {
+          font-style: italic;
+          font-weight: 500;
+          color: var(--color-text-secondary);
+        }
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+        
+        // Декоративный элемент для пунктов списка
+        &::marker {
+          color: #30559d;
+          font-size: 1.2em;
+        }
+      }
+    }
 }
 
 // Контактные телефоны

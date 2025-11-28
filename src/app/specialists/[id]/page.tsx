@@ -4,6 +4,7 @@ import styles from "./styles.module.scss";
 import BreadCrumbs from "@/components/common/breadcrumbs/breadcrumbs";
 import { specialistsData } from "@/data/specialists.data";
 import servicesData from "@/data/services.data";
+import CasesAccordion from "@/components/specialists/cases/cases";
 import CertificatesSwiper from "@/components/specialists/certificatesSlider/certificatesSlider";
 import ServicesAccordion from "@/components/specialists/servicesAccordion/servicesAccordion";
 import Specialists from "@/components/main-page/specialists-slider/specialists-slider";
@@ -39,6 +40,7 @@ export default async function SpecialistPage({
   const hasCertifications = specialist.certifications && specialist.certifications.length > 0;
   const hasSpecializations = specialist.specializations && specialist.specializations.length > 0;
   const hasDetailedDescription = specialist.detailedDescription;
+  const hasCases = specialist.cases && specialist.cases.length > 0;
 
   return (
     <div className="container">
@@ -65,6 +67,33 @@ export default async function SpecialistPage({
               </div>
             )}
 
+            { id === "ivchenko-valerij-nikolaevich" && (
+              <div className={styles.detailedDescription}>
+                <p>Клиника «Тридцать два» это в первую очередь, медицинская организация...и только в третью коммерческая</p>
+                
+                <ul>
+                  <li><em>Мы не даем рекламы, не обучаем врачей навыкам продаж, маркетинг не важное для нас понятие.</em></li>
+                  <li><em>Мы работаем строго по медицинским протоколам, что максимально позволяет избежать осложнений.</em></li>
+                </ul>
+
+                <p>Мы не используем ультрасовременные технологии, которые вышли на рынок «вчера», и не проводим опытов над теми, кто доверил нам свое здоровье, а применяем только проверенные временем технологии с известными отдаленными результатами.</p>
+
+                <p>Для нас очень дорога наша репутация, это самое важное и ценное что есть у нас, и мы ее всячески оберегаем и приумножаем!</p>
+
+                <p>Принципы подбора персонала в «Тридцать два»</p>
+
+                <ul>
+                  <li><em>влюбленность в свою профессию</em></li>
+                  <li><em>порядочность</em></li>
+                  <li><em>стремление к профессиональному росту</em></li>
+                  <li><em>нормальное отношение к деньгам (деньги важное, но не главное)</em></li>
+                </ul>
+
+                <p>Работа в команде, специалистов всех профилей, позволяет нам максимально точно оценить и решить проблему каждого пациента.</p>
+              </div>
+            )
+            }
+            
             {hasDetailedDescription && (
               <div className={styles.detailedDescription}>
                 <p>{specialist.detailedDescription}</p>
@@ -140,6 +169,14 @@ export default async function SpecialistPage({
         </section>
       )}
 
+      {/* Кейсы "до/после" */}
+      {hasCases && (
+        <section className={styles.certificatesSection}>
+          <h2>Работы до/после</h2>
+          <CasesAccordion cases={specialist.cases!} />
+        </section>
+      )}
+
       {/* Сертификаты */}
       {hasCertifications && (
         <section className={styles.certificatesSection}>
@@ -155,7 +192,6 @@ export default async function SpecialistPage({
           <ServicesAccordion services={specialistServices} />
         </section>
       )}
-
 
       {/* Другие специалисты */}
       <Specialists title="Другие специалисты" excludeId={specialist.id}/>

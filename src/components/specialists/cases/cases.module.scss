@@ -1,9 +1,10 @@
+// components/specialists/cases/CasesAccordion.module.scss
 /* breakpoints */
 $bp-sm: 640px;
 $bp-md: 768px;
 $bp-lg: 1024px;
 
-.faqContainer {
+.casesContainer {
   position: relative;
   width: 100%;
   box-sizing: border-box;
@@ -11,17 +12,8 @@ $bp-lg: 1024px;
   color: #111;
 }
 
-.title {
-  position: relative;
-  z-index: 1;
-  margin: 0 0 32px 0;
-  text-align: center;
-  font-family: var(--font-family-sans);
-  font-weight: 600;
-  text-transform: uppercase;
-  color: #000;
-  font-size: clamp(36px, 6.2vw, 72px);
-  line-height: 1.05;
+.casesAccordion {
+  width: 100%;
 }
 
 .lightAccordion {
@@ -32,11 +24,6 @@ $bp-lg: 1024px;
   box-shadow: none !important;
   border: 1px solid #e2e8f0 !important;
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
-
-  &__inner {
-    margin: 20px;
-    padding: 0;
-  }
 
   &:hover {
     transform: translateY(-4px);
@@ -71,7 +58,6 @@ $bp-lg: 1024px;
 
   :global(.MuiAccordionDetails-root) {
     padding: 0 !important;
-    // background: #f8fafc;
     border-radius: 18px !important;
   }
 
@@ -119,7 +105,7 @@ $bp-lg: 1024px;
   flex-shrink: 0;
 }
 
-.servicePrice {
+.caseDuration {
   font-size: 16px;
   font-weight: 600;
   color: var(--color-decorate, #30559d);
@@ -141,80 +127,108 @@ $bp-lg: 1024px;
 }
 
 .accordionContent {
-  font-family: var(--font-family-sans) !important;
+  font-family: var(--font-family-sans);
   font-size: 16px !important;
   line-height: 1.65 !important;
   color: #444 !important;
-  margin: 0 !important;
+  margin: 0 0 20px 0 !important;
 }
 
-.serviceDetails {
-  padding: 0 24px 24px;
+.caseDetails {
+  padding: 24px;
 
   @media (max-width: 768px) {
-    padding: 0 20px 20px;
+    padding: 20px;
   }
 
   @media (max-width: 480px) {
-    padding: 0 16px 16px;
+    padding: 16px;
   }
 }
 
-.serviceMeta {
+.imagesContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.imageWrapper {
+  text-align: center;
+}
+
+.imageLabel {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-family: var(--font-family-sans);
+  background: rgba(48, 85, 157, 0.1);
+  padding: 8px 16px;
+  border-radius: 18px;
+  display: inline-block;
+  border: 1px solid rgba(48, 85, 157, 0.2);
+}
+
+.imageContainer {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  transition: all 0.4s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.caseImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.caseMeta {
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 15px;
-  margin: 20px 0;
+  margin: 20px 0 0 0;
   padding: 20px;
   background: white;
   border-radius: 18px;
   border: 1px solid #e2e8f0;
 
   @media (max-width: 768px) {
-    grid-template-columns: 1fr;
     padding: 15px;
-    margin: 15px 0;
+    margin: 15px 0 0 0;
   }
 }
 
 .metaItem {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 8px;
 
   strong {
     font-weight: 600;
     color: #111;
-    font-size: 14px;
+    font-size: 15px;
     font-family: var(--font-family-sans);
   }
 
   span {
     color: #444;
     font-size: 15px;
+    line-height: 1.5;
     font-family: var(--font-family-sans);
-  }
-}
-
-.detailsLink {
-  display: inline-flex;
-  align-items: center;
-  color: var(--color-decorate, #30559d);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 15px;
-  font-family: var(--font-family-sans);
-  padding: 12px 24px;
-  border: 2px solid var(--color-decorate, #30559d);
-  border-radius: 18px;
-  transition: all 0.4s ease;
-  margin-top: 10px;
-
-  &:hover {
-    background: var(--color-decorate, #30559d);
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(48, 85, 157, 0.3);
   }
 }
 
@@ -257,6 +271,10 @@ $bp-lg: 1024px;
   .accordionControls {
     gap: 15px;
   }
+
+  .imagesContainer {
+    gap: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -273,5 +291,10 @@ $bp-lg: 1024px;
   .accordionControls {
     width: 100%;
     justify-content: space-between;
+  }
+
+  .imageLabel {
+    font-size: 1rem;
+    padding: 6px 12px;
   }
 }
