@@ -47,6 +47,31 @@
   margin-bottom: 20px;
   line-height: 1.2;
   font-weight: 700;
+
+
+  // Планшет (768px - 1024px)
+  @media (max-width: 1024px) {
+    font-size: 2rem !important;
+    margin-bottom: 18px;
+  }
+
+  // Большие мобильные (576px - 767px)
+  @media (max-width: 767px) {
+    font-size: 1.7rem !important;
+    margin-bottom: 16px;
+  }
+
+  // Мобильные (375px - 575px)
+  @media (max-width: 575px) {
+    font-size: 1.5rem !important;
+    margin-bottom: 14px;
+  }
+
+  // Маленькие мобильные (до 374px)
+  @media (max-width: 374px) {
+    font-size: 1.3rem !important;
+    margin-bottom: 12px;
+  }
 }
 
 .excerpt {
@@ -304,10 +329,6 @@
 @media (max-width: 768px) {
   .container {
     padding: 0 15px;
-  }
-  
-  .title {
-    font-size: 2rem;
   }
   
   .excerpt {

@@ -42,9 +42,9 @@ interface Specialists {
 export const specialistsData: Record<string, Specialists> = {
   "marina-sergeevna-ivanova": {
     id: "marina-sergeevna-ivanova",
-    name: "Иванова Мария Сергеевна",
+    name: "Иванова Марина Сергеевна",
     description: "Главный врач, врач-стоматолог терапевт",
-    waLink: "https://wa.me/79029830005?text=Здравствуйте хочу записаться к специалисту Ивановой Марии Сергеевне",
+    waLink: "https://wa.me/79029830005?text=Здравствуйте хочу записаться к специалисту Ивановой Марине Сергеевне",
     stage: "17 лет",
     imageLink: "/specialists/ivanova.jpg",
     
