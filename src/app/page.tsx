@@ -60,8 +60,8 @@ export default function Home() {
         <About />
         <Services />
         <Specialists />
-        <Sales />
-        <BlogSlider />
+        {/* <Sales /> */}
+        {/* <BlogSlider />  */}
         <RewievsSlider />
         <Contacts />
       </section>
