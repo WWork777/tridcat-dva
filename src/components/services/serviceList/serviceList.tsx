@@ -51,56 +51,56 @@ export default function ServiceList() {
       title: "Вектор терапия",
       description:
         "Вектор терапия – это методика, при которой для лечения заболеваний пародонта применяется аппарат лазерной шлифовки «Вектор».",
-      // imageLink: "services/1.png"
+      imageLink: "services/vector.png"
     },
     {
       id: "lechenie-zubov",
       title: "Лечение зубов",
       description:
         "Лечение зубов — процедура, которая на сегодняшний день является менее безболезненной и более простой, чем десятки лет назад.",
-      // imageLink: "services/6.png"
+      imageLink: "services/lechenie.png"
     },
     {
       id: "esteticheskoe-vosstanovlenie-zubov",
       title: "Эстетическое восстановление зубов",
       description:
         "Стоматология «32» оказывает полный спектр услуг по эстетическому восстановлению зубов.",
-      // imageLink: "services/6.png"
+      imageLink: "services/estet.png"
     },
     {
       id: "protezirovanie-zubov",
       title: "Протезирование зубов",
       description:
         "Протезирование зубов – это целый комплекс стоматологических услуг, с помощью которого восстанавливают естественные функции, а также цвет и форму частично разрушенных либо полностью отсутствующих зубов.",
-      // imageLink: "services/6.png"
+      imageLink: "services/protez.png"
     },
     {
       id: "protezirovanie-zubov-na-implantah",
       title: "Протезирование зубов на имплантах",
       description:
         "Имплантация зубов — это методика, позволяющая вживлять в десну искусственные корни в виде имплантов. Далее на них насаживается искусственный зуб, либо же коронка.",
-      // imageLink: "services/6.png"
+      imageLink: "services/imp.png"
     },
     {
       id: "udalenie-zubov",
       title: "Удаление зубов",
       description:
         "Бывают ситуации, когда никакие методы стоматологического лечения не приносят результатов, и единственный выход избавить пациента от проблем – это удалить зуб.",
-      // imageLink: "services/6.png"
+      imageLink: "services/udalenie.png"
     },
     {
       id: "ambulatornye-hirurgicheskie-operacii",
       title: "Амбулаторные хирургические операции",
       description:
         "Стоматология «32» проводит полный перечень амбулаторных хирургических операций. Это операции, которые не требуют госпитализации пациента.",
-      // imageLink: "services/6.png"
+      imageLink: "services/hirurg.png"
     },
     {
       id: "zubnye-ukrasheniya",
       title: "Зубные украшения",
       description:
         "Сейчас украшения (скайсы, твинклзы, стразы) можно установить так, что в будущем их можно поменять или убрать совсем.",
-      // imageLink: "services/6.png"
+      imageLink: "services/ukr.png"
     },
   ];
 

@@ -315,6 +315,8 @@
 
 .service_card:nth-child(6) {
   &:hover .serviceImage {
+    width: 120%;
+    height: 120%;
     transform: translate(22%, 10%) scaleX(-1) scale(1.1);
   }
 
@@ -322,6 +324,122 @@
     width: 100%;
     height: 100%;
     transform: translate(32%, 20%) scaleX(-1);
+  }
+}
+
+.service_card:nth-child(7) {
+  &:hover .serviceImage {
+    width: 120%;
+    height: 120%;
+    transform: translate(22%, 10%) scale(1.05);
+  }
+
+  .serviceImage {
+    position: absolute;
+    top: -100px;
+    width: 100%;
+    height: 100%;
+    transform: translate(32%, 20%);
+  }
+}
+
+.service_card:nth-child(8) {
+  &:hover .serviceImage {
+    width: 120%;
+    height: 120%;
+    transform: translate(30%, 15%) scale(1.03);
+  }
+
+  .serviceImage {
+    position: absolute;
+    top: -100px;
+    width: 100%;
+    height: 100%;
+    transform: translate(32%, 20%);
+  }
+}
+
+.service_card:nth-child(9) {
+  &:hover .serviceImage {
+    width: 120%;
+    height: 120%;
+    transform: translate(20%, -15%) scale(1.03);
+  }
+
+  .serviceImage {
+    width: 100%;
+    height: 100%;
+    transform: translate(32%, 20%);
+  }
+}
+
+.service_card:nth-child(10) {
+  &:hover .serviceImage {
+    width: 120%;
+    height: 120%;
+    transform: translate(30%, -15%) scaleX(-1) scale(1.1) ;
+  }
+
+  .serviceImage {
+    width: 100%;
+    height: 100%;
+    transform: translate(32%, 20%) scaleX(-1);
+  }
+}
+
+.service_card:nth-child(11) {
+  &:hover .serviceImage {
+    width: 120%;
+    height: 120%;
+    transform: translate(30%, -15%)  scale(1.1) ;
+  }
+
+  .serviceImage {
+    width: 100%;
+    height: 100%;
+    transform: translate(32%, 20%);
+  }
+}
+
+.service_card:nth-child(12) {
+  &:hover .serviceImage {
+    width: 120%;
+    height: 120%;
+    transform: translate(30%, -30%) rotate(30deg) scale(1.1) ;
+  }
+
+  .serviceImage {
+    width: 100%;
+    height: 100%;
+    transform: translate(32%, -40%) rotate(30deg);;
+  }
+}
+
+.service_card:nth-child(13) {
+  &:hover .serviceImage {
+    width: 120%;
+    height: 120%;
+    transform: translate(30%, -20%) scale(1.1) ;
+  }
+
+  .serviceImage {
+    width: 100%;
+    height: 100%;
+    transform: translate(32%, -10%) ;;
+  }
+}
+
+.service_card:nth-child(14) {
+  &:hover .serviceImage {
+    width: 120%;
+    height: 120%;
+    transform: translate(23%, 20%) scale(1.1) ;
+  }
+
+  .serviceImage {
+    width: 100%;
+    height: 100%;
+    transform: translate(32%, 50%) ;;
   }
 }
 

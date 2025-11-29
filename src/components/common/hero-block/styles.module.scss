@@ -215,7 +215,8 @@
 }
 
 .hero_left__bottom__left {
-  width: 45%;
+  // width: 45%; при наличии второго блока
+  width: 100%;
   height: 100%;
   border-radius: 25px;
   overflow: hidden;

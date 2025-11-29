@@ -26,7 +26,7 @@ export default function HeroBlock() {
               alt="Современное стоматологическое оборудование"
             />
           </div>
-          <div
+          {/* <div
             className={`${styles.hero_left__bottom__rigth} ${styles.container}`}
           >
             <p>
@@ -41,7 +41,7 @@ export default function HeroBlock() {
                 <span>Акция</span>
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className={styles.hero_right}>

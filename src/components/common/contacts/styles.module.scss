@@ -78,8 +78,9 @@
   background-color: var(--color-container);
   padding: 40px;
   display: flex;
-  flex-direction: column;
-  width: 50%;
+  flex-direction: row;
+  width: 100%;
+  gap: 5%;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -100,6 +101,10 @@
     transition: left 0.5s ease;
   }
 
+  .halfContacts{
+      min-width: 47.5%;
+    }
+
   &:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -107,11 +112,18 @@
     &::before {
       left: 100%;
     }
+
+    
   }
 
   @media (max-width: 1024px) {
     height: auto;
     width: 100%;
+    flex-direction: column;
+
+    .halfContacts{
+      min-width: 100%;
+    }
   }
 
   @media (max-width: 768px) {
@@ -308,7 +320,7 @@
 }
 
 .map {
-  width: 50% !important;
+  width: 100% !important;
   border-radius: 30px;
   transition: all 0.3s ease;
   position: relative;
@@ -337,7 +349,7 @@
 
   @media (max-width: 1024px) {
     width: 100% !important;
-    min-height: 350px;
+    // min-height: 350px;
 
     iframe {
       min-height: 350px;
