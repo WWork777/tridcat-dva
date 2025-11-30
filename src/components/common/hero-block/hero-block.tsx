@@ -55,7 +55,7 @@ export default function HeroBlock() {
           />
           <div className={styles.hero_buttons__right}>
             <button>
-              <span>Проффесионализм</span>
+              <span>Професcионализм</span>
             </button>
             <button>
               <span>Качество</span>
