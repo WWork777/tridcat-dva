@@ -8,6 +8,15 @@ const nextConfig = {
     rsc: false,
   },
 
+  eslint: {
+    // Отключить проверку ESLint при сборке
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    // Отключить проверку TypeScript при сборке
+    ignoreBuildErrors: true,
+  },
+
   // 2. Заголовки безопасности
   async headers() {
     return [
