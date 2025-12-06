@@ -2,8 +2,8 @@ import HeroBlock from "@/components/common/hero-block/hero-block";
 import About from "@/components/main-page/about/about";
 import Specialists from "@/components/main-page/specialists-slider/specialists-slider";
 import Services from "@/components/main-page/services/services";
-import Sales from "@/components/main-page/sales/sales-slider";
-import BlogSlider from "@/components/main-page/blog-slider/blog-slider";
+// import Sales from "@/components/main-page/sales/sales-slider";
+// import BlogSlider from "@/components/main-page/blog-slider/blog-slider";
 import RewievsSlider from "@/components/main-page/rewievs-slider/rewievs-slider";
 import Contacts from "@/components/common/contacts/contacts";
 

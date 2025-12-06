@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+// import type { Metadata } from "next";
 import { Wix_Madefor_Display } from "next/font/google";
 import "./globals.scss";
 import Header from "@/components/layout/header/Header";
