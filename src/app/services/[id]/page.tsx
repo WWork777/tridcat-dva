@@ -1,17 +1,17 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import styles from "./styles.module.scss";
+import styles from "styles.module.scss";
 import BreadCrumbs from "@/components/common/breadcrumbs/breadcrumbs";
 import servicesData from "@/data/services.data";
 import SpecialistsService from "@/components/specialists/specialistsSlider/specialists-slider";
 import PricingAccordion from "@/components/services/pricing-accordion/PricingAccordion";
 import { specialistsData } from "@/data/specialists.data";
 
-interface ServicePageProps {
-  params: {
-    id: string;
-  };
-}
+// interface ServicePageProps {
+//   params: {
+//     id: string;
+//   };
+// }
 
 // Исправляем компонент - params должен быть Promise
 export default async function ServicePage({
@@ -80,10 +80,14 @@ export default async function ServicePage({
         )}
       </section>
 
-      {hasFeatures && <PricingAccordion service={{
-        ...service,
-        features: service.features || [] // Добавить fallback
-      }} />}
+      {hasFeatures && (
+        <PricingAccordion
+          service={{
+            ...service,
+            features: service.features || [], // Добавить fallback
+          }}
+        />
+      )}
       <SpecialistsService specialists={serviceSpecialists} />
     </div>
   );
