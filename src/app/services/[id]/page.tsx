@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import styles from "styles.module.scss";
+import styles from "./styles.module.scss";
 import BreadCrumbs from "@/components/common/breadcrumbs/breadcrumbs";
 import servicesData from "@/data/services.data";
 import SpecialistsService from "@/components/specialists/specialistsSlider/specialists-slider";
