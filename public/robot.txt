@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://stomatologiya42.ru/sitemap.xml
+Sitemap: https://тридцать-два.рф/sitemap.xml
