@@ -48,7 +48,7 @@ export default function ArticleComponent({ slug }: ArticleComponentProps) {
         </header>
 
         {/* Изображение статьи */}
-        <div className={styles.imageWrapper}>
+        {/* <div className={styles.imageWrapper}>
           <Image
             src={article.img}
             alt={article.title}
@@ -57,7 +57,7 @@ export default function ArticleComponent({ slug }: ArticleComponentProps) {
             className={styles.image}
             priority
           />
-        </div>
+        </div> */}
 
         {/* Основной контент */}
         <div className={styles.content}>

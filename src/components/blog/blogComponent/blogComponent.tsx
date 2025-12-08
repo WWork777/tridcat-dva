@@ -19,13 +19,13 @@ export default function BlogComponent() {
             href={`/blog/${article.slug}`}
             className={styles.blogCard}
           >
-            <Image 
+            {/* <Image 
               src={article.img} 
               alt={article.title}
               width={400}
               height={220}
               className={styles.cardImage}
-            />
+            /> */}
             <div className={styles.cardContent}>
               <div className={styles.cardHeader}>
                 {article.category && (

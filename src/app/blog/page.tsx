@@ -13,14 +13,14 @@ export async function generateMetadata() {
       description: `Современная стоматология в Кемерово: лечение, имплантация, протезирование, отбеливание и детская стоматология. Без боли, по доступным ценам, с гарантией.`,
       url: "https://тридцать-два.рф/blog",
       siteName: "Стоматология Кемерово",
-      images: [
-        {
-          url: `/about/about.jpg`,
-          width: 1200,
-          height: 630,
-          alt: `Стоматология в Кемерово`,
-        },
-      ],
+      // images: [
+      //   {
+      //     url: `/about/about.jpg`,
+      //     width: 1200,
+      //     height: 630,
+      //     alt: `Стоматология в Кемерово`,
+      //   },
+      // ],
       locale: "ru_RU",
       type: "website",
     },
@@ -29,7 +29,7 @@ export async function generateMetadata() {
       title: "Стоматология в Кемерово | Тридцать Два",
       description:
         "Современная стоматология в Кемерово: лечение, имплантация, протезирование, отбеливание и детская стоматология. Без боли, по доступным ценам, с гарантией.",
-      images: [`/about/about.jpg`],
+      // images: [`/about/about.jpg`],
     },
     robots: {
       index: true,

@@ -41,14 +41,14 @@ export async function generateMetadata({
     openGraph: {
       title: article.title,
       description: article.excerpt,
-      images: [
-        {
-          url: article.img,
-          width: 800,
-          height: 400,
-          alt: article.title,
-        },
-      ],
+      // images: [
+      //   {
+      //     url: article.img,
+      //     width: 800,
+      //     height: 400,
+      //     alt: article.title,
+      //   },
+      // ],
       type: "article",
       publishedTime: article.date,
       authors: [article.author.name],
