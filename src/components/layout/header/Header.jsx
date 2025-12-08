@@ -11,14 +11,11 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Фон появляется когда страница прокручена больше чем на 50px
       const scrollTop = window.scrollY;
       setIsScrolled(scrollTop > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    // Очистка при размонтировании
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -34,13 +31,22 @@ export default function Header() {
     };
   }, [menuOpen]);
 
+  // Функция для закрытия меню
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
+  // Функция для переключения меню
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <header
       className={`${styles.header} ${
         isScrolled && !menuOpen ? styles.scrolled : ""
-      }`}
+      } ${menuOpen ? styles.menuOpen : ""}`} // Добавили класс при открытом меню
     >
-      {/* Остальной код без изменений */}
       <div>
         <div className={styles.inner}>
           <Link href="/" className={styles.logo}>
@@ -58,7 +64,6 @@ export default function Header() {
             <Link href="/#about">О клинике</Link>
             <Link href="/services">Услуги</Link>
             <Link href="/specialists">Специалисты</Link>
-            {/* <a href="#sales">Акции</a> */}
             <Link href="/#reviews">Отзывы</Link>
             <Link href="/blog">Блог</Link>
             <Link href="/#contacts">Контакты</Link>
@@ -101,9 +106,12 @@ export default function Header() {
             </div>
           </div>
 
+          {/* БУРГЕР - УВЕЛИЧИМ Z-INDEX И ДОБАВИМ КЛАСС ПРИ ОТКРЫТОМ МЕНЮ */}
           <button
-            className={styles.burger}
-            onClick={() => setMenuOpen(!menuOpen)}
+            className={`${styles.burger} ${menuOpen ? styles.burgerOpen : ""}`}
+            onClick={toggleMenu}
+            aria-label={menuOpen ? "Закрыть меню" : "Открыть меню"}
+            aria-expanded={menuOpen}
           >
             <span />
             <span />
@@ -111,12 +119,13 @@ export default function Header() {
           </button>
         </div>
       </div>
+      
       {/* Мобильное меню */}
       <div
         className={`${styles.mobileMenuOverlay} ${
           menuOpen ? styles.mobileMenuOverlayActive : ""
         }`}
-        onClick={() => setMenuOpen(false)}
+        onClick={closeMenu}
       >
         <div
           className={`${styles.mobileMenu} ${
@@ -126,31 +135,28 @@ export default function Header() {
         >
           <Link
             href="/"
-            onClick={() => setMenuOpen(false)}
+            onClick={closeMenu}
             className={styles.mobile_logo_container}
           >
             <img src="/logo/logo.svg" alt="" className={styles.mobile_logo} />
           </Link>
           <nav>
-            <Link href="/#about" onClick={() => setMenuOpen(false)}>
+            <Link href="/#about" onClick={closeMenu}>
               О клинике
             </Link>
-            <Link href="/services" onClick={() => setMenuOpen(false)}>
+            <Link href="/services" onClick={closeMenu}>
               Услуги
             </Link>
-            <Link href="/specialists" onClick={() => setMenuOpen(false)}>
+            <Link href="/specialists" onClick={closeMenu}>
               Специалисты
             </Link>
-            {/* <Link href="#sales" onClick={() => setMenuOpen(false)}>
-              Акции
-            </Link> */}
-            <Link href="/blog" onClick={() => setMenuOpen(false)}>
+            <Link href="/blog" onClick={closeMenu}>
               Блог
             </Link>
-            <Link href="/#reviews" onClick={() => setMenuOpen(false)}>
+            <Link href="/#reviews" onClick={closeMenu}>
               Отзывы
             </Link>
-            <Link href="/#contacts" onClick={() => setMenuOpen(false)}>
+            <Link href="/#contacts" onClick={closeMenu}>
               Контакты
             </Link>
           </nav>
@@ -165,7 +171,7 @@ export default function Header() {
               <Link href="https://m.vk.com/tridsat_dva" target="_blank">
                 <Image
                   src="/footer/vk.svg"
-                  alt="whatsapp"
+                  alt="vkontakte"
                   width={24}
                   height={24}
                 />
@@ -173,7 +179,7 @@ export default function Header() {
               <Link href="https://wa.me/79029830005" target="_blank">
                 <Image
                   src="/footer/wa.svg"
-                  alt="telegram"
+                  alt="whatsapp"
                   width={24}
                   height={24}
                 />

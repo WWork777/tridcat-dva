@@ -6,12 +6,12 @@ export async function generateMetadata() {
     description:
       "Современная стоматология в Кемерово: лечение, имплантация, протезирование, отбеливание и детская стоматология. Без боли, по доступным ценам, с гарантией.",
     alternates: {
-      canonical: "https://тридцать-два.рф",
+      canonical: "https://тридцать-два.рф/blog",
     },
     openGraph: {
       title: `Стоматология в Кемерово | Тридцать Два`,
       description: `Современная стоматология в Кемерово: лечение, имплантация, протезирование, отбеливание и детская стоматология. Без боли, по доступным ценам, с гарантией.`,
-      url: "https://тридцать-два.рф",
+      url: "https://тридцать-два.рф/blog",
       siteName: "Стоматология Кемерово",
       images: [
         {
@@ -48,7 +48,7 @@ export async function generateMetadata() {
 export default function Blog() {
   return (
     <>
-    <BlogComponent/>
+      <BlogComponent />
     </>
   );
 }

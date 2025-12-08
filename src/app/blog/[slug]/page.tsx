@@ -6,20 +6,20 @@ import ArticleComponent from "@/components/blog/article/article";
 //   };
 // }
 
-export default async function BlogPage({ 
-  params 
-}: { 
-  params: Promise<{ slug: string }> 
+export default async function BlogPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
   return <ArticleComponent slug={slug} />;
 }
 
 // Метаданные для SEO
-export async function generateMetadata({ 
-  params 
-}: { 
-  params: Promise<{ slug: string }> 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
   const { blogData } = await import("@/data/blog.data");
@@ -35,6 +35,9 @@ export async function generateMetadata({
     title: `${article.title} | Стоматология «Тридцать два»`,
     description: article.excerpt,
     keywords: article.tags.join(", "),
+    alternates: {
+      canonical: `https://тридцать-два.рф/services/${article.slug}`,
+    },
     openGraph: {
       title: article.title,
       description: article.excerpt,
