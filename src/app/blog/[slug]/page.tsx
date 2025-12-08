@@ -1,4 +1,4 @@
-import ArticleComponent from "@/components/blog/article/article";
+import ArticleComponent from '@/components/blog/article/article';
 
 // interface BlogPageProps {
 //   params: {
@@ -22,21 +22,21 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const { blogData } = await import("@/data/blog.data");
+  const { blogData } = await import('@/data/blog.data');
   const article = blogData.find((item) => item.slug === slug);
 
   if (!article) {
     return {
-      title: "Статья не найдена",
+      title: 'Статья не найдена',
     };
   }
 
   return {
     title: `${article.title} | Стоматология «Тридцать два»`,
     description: article.excerpt,
-    keywords: article.tags.join(", "),
+    keywords: article.tags.join(', '),
     alternates: {
-      canonical: `https://тридцать-два.рф/services/${article.slug}`,
+      canonical: `https://тридцать-два.рф/blog/${article.slug}`,
     },
     openGraph: {
       title: article.title,
@@ -49,7 +49,7 @@ export async function generateMetadata({
       //     alt: article.title,
       //   },
       // ],
-      type: "article",
+      type: 'article',
       publishedTime: article.date,
       authors: [article.author.name],
     },
