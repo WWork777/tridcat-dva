@@ -111,7 +111,7 @@
   }
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 0;
     right: 0;
@@ -238,7 +238,7 @@
   }
 
   &:hover img {
-    transform: scale(1.02);
+    transform: translateX(-10%) scale(1.02);
   }
 
   img {
@@ -247,6 +247,7 @@
     object-fit: cover;
     object-position: center;
     transition: all 0.3s ease;
+    transform: translateX(-10%);
   }
 }
 

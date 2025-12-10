@@ -1,5 +1,5 @@
-import Link from "next/link";
-import styles from "./styles.module.scss";
+import Link from 'next/link';
+import styles from './styles.module.scss';
 
 export default function HeroBlock() {
   return (
@@ -13,7 +13,7 @@ export default function HeroBlock() {
             Клиника влюбленных в свое дело <br /> Профилактика и лечение зубов
           </p>
           <Link
-            href="https://wa.me/79029830005?text=Здравствуйте хочу записаться на прием"
+            href='https://wa.me/79029830005?text=Здравствуйте хочу записаться на прием'
             className={styles.corner_button}
           >
             <span>Записаться онлайн</span>
@@ -22,8 +22,8 @@ export default function HeroBlock() {
         <div className={`${styles.hero_left__bottom}`}>
           <div className={`${styles.hero_left__bottom__left}`}>
             <img
-              src="/hero/hero-first.png"
-              alt="Современное стоматологическое оборудование"
+              src='/hero/hero-first.png'
+              alt='Современное стоматологическое оборудование'
             />
           </div>
           {/* <div
@@ -50,8 +50,8 @@ export default function HeroBlock() {
             Стоматологи, которым вы<br></br> можете доверять
           </p>
           <img
-            src="/hero/hero-second.png"
-            alt="Квалифицированные стоматологи клиники"
+            src='/hero/hero-second.png'
+            alt='Квалифицированные стоматологи клиники'
           />
           <div className={styles.hero_buttons__right}>
             <button>
