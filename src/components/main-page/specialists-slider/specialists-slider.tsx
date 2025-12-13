@@ -46,7 +46,7 @@ export const SliderCard = ({
               // Проверяем ширину экрана
               const isNotMobile = typeof window !== 'undefined' && window.innerWidth >= 1200;
               
-              if (1) {
+              if (isNotMobile) {
                 const words = name.split(' ');
                 if (words.length >= 3) {
                   const firstLine = words.slice(0, 2).join(' ');
