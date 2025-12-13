@@ -72,6 +72,9 @@ export default function Footer() {
           <Link href="https://m.vk.com/tridsat_dva" className={styles.footer_socials_link}>
             <img src="/footer/vk.svg" alt="" />
           </Link>
+          <Link href="https://t.me/+79029830005" className={styles.footer_socials_link}>
+            <img src="/footer/telegram.svg" alt="" />
+          </Link>
         </div>
       </div>
     </section>

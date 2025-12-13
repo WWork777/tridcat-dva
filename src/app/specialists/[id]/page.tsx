@@ -108,16 +108,16 @@ export default async function SpecialistPage({
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <p>Написать в WhatsApp</p>
+                  <p>Написать в Telegram</p>
                 </Link>
               ) : (
                 <Link
-                  href={`https://wa.me/79029830005?text=${encodedMessage}`}
+                  href={`https://t.me/+79029830005?text=${encodedMessage}`}
                   className={styles.wa_button}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <p>Написать в WhatsApp</p>
+                  <p>Написать в Telegram</p>
                 </Link>
               )}
               

@@ -63,10 +63,10 @@ export default async function ServicePage({
           <p className={styles.heroDescription}>{service.fullDescription}</p>
           <div className={styles.buttons_container}>
             <Link
-              href={`https://wa.me/79029830005?text=${encodedMessage}`}
+              href={`https://t.me/+79029830005?text=${encodedMessage}`}
               className={styles.wa_button}
             >
-              <p>WhatsApp</p>
+              <p>Telegram</p>
             </Link>
             <Link href="tel:+7 902 983 0005" className={styles.ctaButton}>
               <p>Записаться на прием</p>

@@ -127,7 +127,7 @@ export default function ReviewsSlider() {
     {
       id: "2gis",
       name: "2GIS",
-      rating: 4.3,
+      rating: 4.8,
       reviewsCount: 45,
       ratingsCount: 55,
       icon: "/rewievs/2gis-icon.svg",

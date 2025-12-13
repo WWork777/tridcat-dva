@@ -37,6 +37,9 @@ export default function Contacts() {
                   <Link href="https://m.vk.com/tridsat_dva" className={styles.social_link}>
                     <img src="/socials/vk.svg" alt="" />
                   </Link>
+                  <Link href="https://t.me/+79029830005" className={styles.social_link}>
+                    <img src="/socials/telegram.svg" alt="" />
+                  </Link>
                 </div>
               </div>
           </div>

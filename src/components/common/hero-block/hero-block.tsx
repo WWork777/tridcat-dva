@@ -13,7 +13,7 @@ export default function HeroBlock() {
             Клиника влюбленных в свое дело <br /> Профилактика и лечение зубов
           </p>
           <Link
-            href='https://wa.me/79029830005?text=Здравствуйте хочу записаться на прием'
+            href='https://t.me/+79029830005?text=Здравствуйте хочу записаться на прием'
             className={styles.corner_button}
           >
             <span>Записаться онлайн</span>
