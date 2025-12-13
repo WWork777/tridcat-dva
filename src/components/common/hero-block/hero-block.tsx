@@ -50,7 +50,7 @@ export default function HeroBlock() {
             Стоматологи, которым вы<br></br> можете доверять
           </p>
           <img
-            src='/hero/hero-second.png'
+            src='/hero/women.png'
             alt='Квалифицированные стоматологи клиники'
           />
           <div className={styles.hero_buttons__right}>

@@ -400,7 +400,7 @@
   img {
     position: absolute;
     top: 65%;
-    left: 36%;
+    left: 50%;
     transform: translate(-50%, -50%);
     height: 80%;
     object-fit: cover;
@@ -441,15 +441,19 @@
       background-color: rgba(255, 255, 255, 0.103);
       backdrop-filter: blur(5px);
       padding: 12px 24px;
-      border: 1px solid var(--color-decorate);
+      border: 1px solid white;
       color: white;
       font-size: 18px;
       font-weight: 600;
       transition: background-color 0.3s ease;
 
       @media (max-width: 1500px) {
+        
         padding: 10px 20px;
         font-size: 16px;
+      }
+      @media (max-width: 992px) {
+        border: 1px solid var(--color-decorate);
       }
 
       @media (max-width: 480px) {
@@ -458,15 +462,16 @@
       }
 
       &:hover {
-        border: 1px solid var(--color-decorate);
+        border: 1px solid white;
         background-color: rgba(255, 255, 255, 0.205);
         span {
-          color: var(--color-decorate);
+          color: white;
         }
       }
 
       span {
         font-weight: 500;
+        color: white;
       }
     }
   }

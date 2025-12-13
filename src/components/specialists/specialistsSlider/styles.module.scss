@@ -193,14 +193,15 @@
     justify-content: center;
     width: 44px;
     height: 44px;
-    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    /* Градиент Telegram (сине-голубой) */
+    background: linear-gradient(135deg, #2AABEE 0%, #229ED9 100%);
     border-radius: 50%;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+    box-shadow: 0 4px 12px rgba(42, 171, 238, 0.3);
 
     &:hover {
       transform: scale(1.1) rotate(5deg);
-      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+      box-shadow: 0 6px 20px rgba(42, 171, 238, 0.4);
     }
 
     img {

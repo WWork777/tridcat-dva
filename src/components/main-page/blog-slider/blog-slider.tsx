@@ -12,12 +12,13 @@ interface SliderCard {
   img: string;
   date: string;
   title: string;
+  link?:string;
 }
 
-const SliderCard = ({ img, date, title }: SliderCard) => {
+const SliderCard = ({ img, date, title, link }: SliderCard) => {
   return (
     <div className={styles.slider_card}>
-      <Link href="#">
+      <Link href={link}>
         <img src={img} alt="" className={styles.blogImage} />
         <span>{date}</span>
         <p>{title}</p>
@@ -88,6 +89,7 @@ export default function BlogSlider() {
                 img="/blog/blog1.jpg"
                 date="12.09.2025"
                 title="Лечение кариеса в стоматологии «Тридцать два»: забота о ваших зубах без боли"
+                link="/blog/lechenie-kariesa"
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -95,6 +97,7 @@ export default function BlogSlider() {
                 img="/blog/blog2.jpg"
                 date="12.09.2025"
                 title="Современные методы эстетического восстановления зубов в стоматологии «Тридцать два»"
+                link="/blog/esteticheskoe-vosstanovlenie"
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -102,6 +105,7 @@ export default function BlogSlider() {
                 img="/blog/blog3.jpg"
                 date="12.09.2025"
                 title="Удаление зуба — страшно или нет? Как подготовиться к приёму"
+                link="/blog/udalenie-zuba"
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -109,6 +113,7 @@ export default function BlogSlider() {
                 img="/blog/blog4.jpg"
                 date="12.09.2025"
                 title="Когда идти к детскому стоматологу в Кемерово: первые симптомы больных зубов"
+                link="/blog/detskiy-stomatolog"
               />
             </SwiperSlide>
           </Swiper>

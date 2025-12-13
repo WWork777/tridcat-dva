@@ -102,7 +102,13 @@
   }
 
   .halfContacts{
-      min-width: 47.5%;
+      &:nth-child(1){
+        min-width: 42.5% !important;
+      }
+
+      &:nth-child(2){
+        min-width: 52.5% !important;
+      }
     }
 
   &:hover {

@@ -1,4 +1,6 @@
 .footer {
+  overflow: hidden;
+  position: relative;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
@@ -76,6 +78,7 @@
 }
 
 .footer_left_item {
+  z-index: 1;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -129,23 +132,40 @@
   }
 }
 
+// старый лого 
+// .logo {
+//   width: 60%;
+//   transition: all 0.4s ease;
+
+//   &:hover {
+//     transform: scale(1.05);
+//     filter: brightness(1.1);
+//   }
+
+//   @media (max-width: 768px) {
+//     width: 200px;
+//     max-width: 80%;
+//   }
+
+//   @media (max-width: 480px) {
+//     width: 180px;
+//   }
+// }
+
 .logo {
-  width: 60%;
-  transition: all 0.4s ease;
-
-  &:hover {
-    transform: scale(1.05);
-    filter: brightness(1.1);
-  }
-
-  @media (max-width: 768px) {
-    width: 200px;
-    max-width: 80%;
-  }
-
-  @media (max-width: 480px) {
-    width: 180px;
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto; /* Авто-отступы центрируют */
+  width: 70%; /* Размер относительно родителя */
+  height: auto;
+  // max-height: 60%;
+  object-fit: contain; /* Сохраняет пропорции */
+  opacity: 0.2;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .footer_center {

@@ -41,7 +41,26 @@ export const SliderCard = ({
       <a href={link} >
           <div className={styles.card_link}>
           <img src={img} alt={name} className={styles.specialistImage} />
-          <h3>{name}</h3>
+          <h3>
+            {(() => {
+              // Проверяем ширину экрана
+              const isNotMobile = typeof window !== 'undefined' && window.innerWidth >= 1200;
+              
+              if (1) {
+                const words = name.split(' ');
+                if (words.length >= 3) {
+                  const firstLine = words.slice(0, 2).join(' ');
+                  const secondLine = words.slice(2).join(' ');
+                  return (
+                    <>
+                      {firstLine}<br/>{secondLine}
+                    </>
+                  );
+                }
+              }
+              return name;
+            })()}
+          </h3>
           <p>{description}</p>
         </div>
       </a>
@@ -52,7 +71,7 @@ export const SliderCard = ({
         {showWhatsApp &&
           waLink && ( // Показываем WhatsApp только если есть ссылка
             <Link href={waLink} target="_blank" rel="noopener noreferrer">
-              <img src="/socials/waSecond.svg" alt="WhatsApp" />
+              <img src="/socials/telegram.svg" alt="WhatsApp" />
             </Link>
           )}
       </div>
@@ -82,13 +101,22 @@ export default function Specialists( {title, excludeId}: SpecialistsProps ) {
     <>
       <section id="specialists" className="component">
         <div className={styles.head}>
-          <h2 className={`${title ? styles.anotherSpec : null}`}>{title ? title : "Специалисты"}</h2>
+          <div className={styles.leftSide}>
+            <h2 className={`${title ? styles.anotherSpec : null}`}>{title ? title : "Специалисты"}</h2>
+            <div className={`${styles.custom_navigation}`}>
+              <div className={`${styles.custom_prev}`}></div>
+              <div className={`${styles.custom_next}`}></div>
+            </div>
+          </div>
+          
           <Link href="/specialists" className={styles.all_button}>
             <span>Все специалисты</span>
           </Link>
         </div>
 
         <div className={styles.home_team_slider}>
+          
+          
           <Swiper
             modules={[Navigation, Pagination]}
             className={styles.mySwiper}
@@ -141,6 +169,7 @@ export default function Specialists( {title, excludeId}: SpecialistsProps ) {
               </SwiperSlide>
             ))}
           </Swiper>
+          
         </div>
       </section>
     </>

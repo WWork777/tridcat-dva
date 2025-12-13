@@ -3,6 +3,80 @@
   overflow: visible !important;
 }
 
+.leftSide {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+}
+
+.custom_navigation {
+  display: flex;
+  gap: 15px;
+}
+
+.custom_prev,
+.custom_next {
+  position: static !important;
+  width: 50px !important;
+  height: 50px !important;
+  background: var(--color-decorate);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+
+  @media (max-width: 600px) {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  &::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+  }
+
+  // Hover эффект для кнопок навигации
+  &:hover {
+    background: var(--color-decorate);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.custom_prev::after,
+.custom_next::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.custom_next::after {
+  background: url("/rewievs/arrowrigth.svg") no-repeat center;
+}
+
+.custom_prev::after {
+  background: url("/rewievs/arrowleft.svg") no-repeat center;
+}
+
+// Hover эффект для стрелок
+.custom_next:hover::after {
+  transform: translateX(2px);
+}
+
+.custom_prev:hover::after {
+  transform: translateX(-2px);
+}
+
 .head {
   display: flex;
   flex-direction: row;
@@ -193,14 +267,15 @@
     justify-content: center;
     width: 44px;
     height: 44px;
-    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    /* Градиент Telegram (сине-голубой) */
+    background: linear-gradient(135deg, #2AABEE 0%, #229ED9 100%);
     border-radius: 50%;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+    box-shadow: 0 4px 12px rgba(42, 171, 238, 0.3);
 
     &:hover {
       transform: scale(1.1) rotate(5deg);
-      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+      box-shadow: 0 6px 20px rgba(42, 171, 238, 0.4);
     }
 
     img {
@@ -250,6 +325,7 @@
     gap: 20px;
     text-align: center;
     margin-bottom: 30px;
+    align-items: start;
 
     .all_button {
       align-self: center;

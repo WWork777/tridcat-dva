@@ -102,6 +102,14 @@ export default function Header() {
                     height={24}
                   />
                 </Link>
+                <Link href="https://t.me/+79029830005" target="_blank">
+                  <Image
+                    src="/socials/telegram.svg"
+                    alt="tg"
+                    width={24}
+                    height={24}
+                  />
+                </Link>
               </div>
             </div>
           </div>
@@ -184,6 +192,14 @@ export default function Header() {
                   height={24}
                 />
               </Link>
+              <Link href="https://t.me/+79029830005" target="_blank">
+                  <Image
+                    src="/footer/telegram.svg"
+                    alt="tg"
+                    width={24}
+                    height={24}
+                  />
+                </Link>
             </div>
           </div>
         </div>
