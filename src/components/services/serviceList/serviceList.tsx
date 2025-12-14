@@ -23,21 +23,21 @@ export default function ServiceList() {
       title: "Исправление прикуса",
       description:
         "Наша стоматология оказывает полный спектр услуг, направленный на исправление прикуса зубов.",
-      imageLink: "services/3.png",
+      imageLink: "services/prikus.png",
     },
     {
       id: "otbelivanie-zubov",
       title: "Отбеливание зубов",
       description:
         "Белоснежные зубы – это неотъемлемый атрибут шикарной здоровой «голливудской» улыбки.",
-      imageLink: "services/5.png",
+      imageLink: "services/otbel.png",
     },
     {
       id: "professionalnaya-gigiena",
       title: "Профессиональная гигиена",
       description:
         "это комплекс процедур, направленных на удаление с зубов самого разного рода отложений.",
-      imageLink: "services/4.png",
+      imageLink: "services/gigiena.png",
     },
     {
       id: "rentgenodiagnostika",
@@ -65,21 +65,21 @@ export default function ServiceList() {
       title: "Эстетическое восстановление зубов",
       description:
         "Стоматология «32» оказывает полный спектр услуг по эстетическому восстановлению зубов.",
-      imageLink: "services/estet.png"
+      imageLink: "services/restv.png"
     },
     {
       id: "protezirovanie-zubov",
       title: "Протезирование зубов",
       description:
-        "Протезирование зубов – это целый комплекс стоматологических услуг, с помощью которого восстанавливают естественные функции, а также цвет и форму частично разрушенных либо полностью отсутствующих зубов.",
-      imageLink: "services/protez.png"
+        "Протезирование зубов – это целый комплекс стоматологических услуг, с помощью которого восстанавливают функции, цвет и форму частично разрушенных или полностью отсутствующих зубов.",
+      imageLink: "services/3.png"
     },
     {
       id: "protezirovanie-zubov-na-implantah",
       title: "Протезирование зубов на имплантах",
       description:
-        "Имплантация зубов — это методика, позволяющая вживлять в десну искусственные корни в виде имплантов. Далее на них насаживается искусственный зуб, либо же коронка.",
-      imageLink: "services/imp.png"
+        "Имплантация зубов — это методика, позволяющая вживлять в десну искусственные корни в виде имплантов.",
+      imageLink: "services/impNaZub.png"
     },
     {
       id: "udalenie-zubov",
@@ -92,7 +92,7 @@ export default function ServiceList() {
       id: "ambulatornye-hirurgicheskie-operacii",
       title: "Амбулаторные хирургические операции",
       description:
-        "Стоматология «32» проводит полный перечень амбулаторных хирургических операций. Это операции, которые не требуют госпитализации пациента.",
+        "Стоматология «32» проводит полный перечень амбулаторных хирургических операций. Это операции, не требующие госпитализации пациента.",
       imageLink: "services/hirurg.png"
     },
     {
@@ -100,7 +100,7 @@ export default function ServiceList() {
       title: "Зубные украшения",
       description:
         "Сейчас украшения (скайсы, твинклзы, стразы) можно установить так, что в будущем их можно поменять или убрать совсем.",
-      imageLink: "services/ukr.png"
+      imageLink: "services/ukrash.png"
     },
   ];
 
