@@ -32,7 +32,7 @@ export default function HeroBlock() {
               alt='Современное стоматологическое оборудование'
             /> */}
             <MediaPlayer
-              src={"/hero/video.mp4"}
+              src="/hero/video.mp4"
               viewType="video"
               streamType="on-demand"
               logLevel="warn"
