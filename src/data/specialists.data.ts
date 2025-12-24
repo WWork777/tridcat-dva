@@ -1493,7 +1493,7 @@ export const specialistsData: Record<string, Specialists> = {
       },
       {
         id: "Case-3",
-        title: "Кейс 3",
+        title: "Установка коронки из диоксида циркония на дентальный имплантат Straumann",
         beforeImage: {
           src: "/cases/anastasiya-aleksandrovna/before3.webp",
           alt: "Прямые до реставрации зуба 4.6"
