@@ -2,8 +2,8 @@ import Link from 'next/link';
 import styles from './styles.module.scss';
 
 
-import { MediaPlayer, MediaProvider } from '@vidstack/react';
-import { defaultLayoutIcons, DefaultVideoLayout } from '@vidstack/react/player/layouts/default';
+// import { MediaPlayer, MediaProvider } from '@vidstack/react';
+// import { defaultLayoutIcons, DefaultVideoLayout } from '@vidstack/react/player/layouts/default';
 import '@vidstack/react/player/styles/default/theme.css';
 import '@vidstack/react/player/styles/default/layouts/video.css';
 
@@ -31,7 +31,7 @@ export default function HeroBlock() {
               src='/hero/hero-first.png'
               alt='Современное стоматологическое оборудование'
             /> */}
-            <MediaPlayer
+            {/* <MediaPlayer
               src="/hero/video.mp4"
               viewType="video"
               streamType="on-demand"
@@ -45,24 +45,19 @@ export default function HeroBlock() {
               className={styles.videoBackground}
             >
               <MediaProvider />
-          </MediaPlayer>
+          </MediaPlayer> */}
+
+          <video
+            src="/hero/video.mp4"
+            className={styles.videoBackground}
+            loop
+            muted
+            playsInline
+            controlsList='nodownload'
+            preload='metadata'
+            autoPlay
+          />
           </div>
-          {/* <div
-            className={`${styles.hero_left__bottom__rigth} ${styles.container}`}
-          >
-            <p>
-              При установке имплантов Straumann <br></br> или Alpha-Bio вы
-              получаете скидку 8000 <br></br> на каждый имплант!
-            </p>
-            <div className={styles.hero_buttons}>
-              <button>
-                <span>Импланты</span>
-              </button>
-              <button>
-                <span>Акция</span>
-              </button>
-            </div>
-          </div> */}
         </div>
       </div>
       <div className={styles.hero_right}>
