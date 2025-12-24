@@ -1490,6 +1490,18 @@ export const specialistsData: Record<string, Specialists> = {
           src: "/cases/anastasiya-aleksandrovna/after2.jpg",
           alt: "Состояние зубов 2.1 и 2.2 после реставрации"
         },
+      },
+      {
+        id: "Case-3",
+        title: "Кейс 3",
+        beforeImage: {
+          src: "/cases/anastasiya-aleksandrovna/before3.webp",
+          alt: "Прямые до реставрации зуба 4.6"
+        },
+        afterImage: {
+          src: "/cases/anastasiya-aleksandrovna/after3.webp",
+          alt: "Состояние зубов 2.1 и 2.2 после реставрации"
+        },
       }
     ],
 
