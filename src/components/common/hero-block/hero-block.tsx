@@ -1,13 +1,19 @@
 import Link from 'next/link';
 import styles from './styles.module.scss';
 
+
+import { MediaPlayer, MediaProvider } from '@vidstack/react';
+import { defaultLayoutIcons, DefaultVideoLayout } from '@vidstack/react/player/layouts/default';
+import '@vidstack/react/player/styles/default/theme.css';
+import '@vidstack/react/player/styles/default/layouts/video.css';
+
 export default function HeroBlock() {
   return (
     <section className={`${styles.hero__section}`}>
       <div className={styles.hero_left}>
         <div className={styles.hero_left__top}>
           <h1>
-            Стоматология <br /> для всей семьи
+            Стоматология для всей семьи
           </h1>
           <p>
             Клиника влюбленных в свое дело <br /> Профилактика и лечение зубов
@@ -21,10 +27,25 @@ export default function HeroBlock() {
         </div>
         <div className={`${styles.hero_left__bottom}`}>
           <div className={`${styles.hero_left__bottom__left}`}>
-            <img
+            {/* <img
               src='/hero/hero-first.png'
               alt='Современное стоматологическое оборудование'
-            />
+            /> */}
+            <MediaPlayer
+              src={"/video.mp4"}
+              viewType="video"
+              streamType="on-demand"
+              logLevel="warn"
+              crossOrigin
+              playsInline={true}  // Явно указываем
+              autoplay={true}     // Явно указываем
+              muted={true}        // Явно указываем
+              loop
+              controls={false} // Отключает все элементы управления
+              className={styles.videoBackground}
+            >
+              <MediaProvider />
+          </MediaPlayer>
           </div>
           {/* <div
             className={`${styles.hero_left__bottom__rigth} ${styles.container}`}

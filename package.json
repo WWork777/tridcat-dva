@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.14.1",
     "@mui/icons-material": "^7.3.5",
     "@mui/material": "^7.3.5",
+    "@vidstack/react": "^1.12.13",
     "@vitejs/plugin-rsc": "^0.5.5",
     "next": "^16.0.7",
     "react": "^19.2.1",
