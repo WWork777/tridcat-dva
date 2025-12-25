@@ -36,16 +36,17 @@ const BlockModal = ({ allowClose = false }) => {
             &times;
           </button>
         )}
-
-          <div className='leftHalf'>
-            <h2>Обновленный график работы клиники</h2>
-            <p>26.12 время работы 9.00 - 14.00 <br /> 27.12 время работы 14.00 - 20.00</p>
-            <p>Поздравляем всех с наступающим новым годом!</p>
+          <div className='Cardbody'>
+            <div className='leftHalf'>
+              <h2>Обновленный график работы клиники</h2>
+              <p>26.12 время работы 9.00 - 14.00 <br /> 27.12 время работы 14.00 - 20.00</p>
+              <p>Поздравляем всех с наступающим новым годом!</p>
+            </div>
+            <div className='rightHalf'>
+              <img src="/favicon/favicon.svg" alt="" />
+            </div>
           </div>
-          <div className='rightHalf'>
-            <img src="/favicon/favicon.svg" alt="" />
-          </div>
-
+          
       </div>
     </div>
   );
