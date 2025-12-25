@@ -7,6 +7,8 @@ import Services from "@/components/main-page/services/services";
 import RewievsSlider from "@/components/main-page/rewievs-slider/rewievs-slider";
 import Contacts from "@/components/common/contacts/contacts";
 
+import BlockModal from "@/components/common/BlockModal/BlockModal"
+
 export async function generateMetadata() {
   return {
     title: "Стоматология Кемерово - Тридцать Два",
@@ -65,6 +67,7 @@ export default function Home() {
         <RewievsSlider />
         <Contacts />
       </section>
+      <BlockModal allowClose={true}/>
     </>
   );
 }
