@@ -9,7 +9,7 @@ const BlockModal = ({ allowClose = false }) => {
     // Устанавливаем таймер на 3 секунды
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 3000);
+    }, 1000);
     
     // Очищаем таймер при размонтировании компонента
     return () => clearTimeout(timer);
