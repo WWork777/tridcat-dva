@@ -68,21 +68,21 @@ export default function Services() {
       title: "Исправление прикуса",
       description:
         "Наша стоматология оказывает полный спектр услуг, направленный на исправление прикуса зубов.",
-      imageLink: "services/3.png",
+      imageLink: "services/prikus.png",
     },
     {
       id: "otbelivanie-zubov",
       title: "Отбеливание зубов",
       description:
         "Белоснежные зубы – это неотъемлемый атрибут шикарной здоровой «голливудской» улыбки.",
-      imageLink: "services/5.png",
+      imageLink: "services/otbel.png",
     },
     {
       id: "professionalnaya-gigiena",
       title: "Профессиональная гигиена",
       description:
         "это комплекс процедур, направленных на удаление с зубов самого разного рода отложений.",
-      imageLink: "services/4.png",
+      imageLink: "services/gigiena.png",
     },
     {
       id: "rentgenodiagnostika",
