@@ -13,7 +13,7 @@ export default function HeroBlock() {
       <div className={styles.hero_left}>
         <div className={styles.hero_left__top}>
           <h1>
-            Стоматология для всей семьи
+            Стоматология <br/>для всей семьи
           </h1>
           <p>
             Клиника влюбленных в свое дело <br /> Профилактика и лечение зубов
@@ -27,27 +27,12 @@ export default function HeroBlock() {
         </div>
         <div className={`${styles.hero_left__bottom}`}>
           <div className={`${styles.hero_left__bottom__left}`}>
-            {/* <img
+            <img
               src='/hero/hero-first.png'
               alt='Современное стоматологическое оборудование'
-            /> */}
-            {/* <MediaPlayer
-              src="/hero/video.mp4"
-              viewType="video"
-              streamType="on-demand"
-              logLevel="warn"
-              crossOrigin
-              playsInline={true}  // Явно указываем
-              autoplay={true}     // Явно указываем
-              muted={true}        // Явно указываем
-              loop
-              controls={false} // Отключает все элементы управления
-              className={styles.videoBackground}
-            >
-              <MediaProvider />
-          </MediaPlayer> */}
+            />
 
-          <video
+          {/* <video
             src="/hero/video.mp4"
             className={styles.videoBackground}
             loop
@@ -56,7 +41,7 @@ export default function HeroBlock() {
             controlsList='nodownload'
             preload='metadata'
             autoPlay
-          />
+          /> */}
           </div>
         </div>
       </div>
