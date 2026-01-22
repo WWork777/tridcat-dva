@@ -72,8 +72,8 @@ export default function Header() {
           {/* Контакты и кнопка */}
           <div className={styles.actions}>
             <div className={styles.contacts}>
-              <a href="tel:+7 902 983 0005" className={styles.phone}>
-                +7 902 983 0005
+              <a href="tel:+7(3842) 33 00 05" className={styles.phone}>
+                +7(3842) 33 00 05
               </a>
               <div
                 style={{
@@ -85,6 +85,7 @@ export default function Header() {
               <a href="tel:+7(3842) 58 30 26" className={styles.phone}>
                 +7(3842) 58 30 26
               </a>
+
               <div className={styles.socials}>
                 <Link href="https://m.vk.com/tridsat_dva" target="_blank">
                   <Image
@@ -127,7 +128,7 @@ export default function Header() {
           </button>
         </div>
       </div>
-      
+
       {/* Мобильное меню */}
       <div
         className={`${styles.mobileMenuOverlay} ${
@@ -169,11 +170,14 @@ export default function Header() {
             </Link>
           </nav>
           <div className={styles.mobileContacts}>
-            <Link href="tel:+7 902 983 0005">
-              <span>+7 902 983 0005</span>
+            <Link href="tel:+7(3842) 33 00 05">
+              <span>+7(3842) 33 00 05</span>
             </Link>
             <Link href="tel:+7(3842) 58 30 26">
               <span>+7(3842) 58 30 26</span>
+            </Link>
+            <Link href="tel:+7(3842) 45-75-95">
+              <span>+7(3842) 45-75-95</span>
             </Link>
             <div className={styles.socials}>
               <Link href="https://m.vk.com/tridsat_dva" target="_blank">
@@ -193,13 +197,13 @@ export default function Header() {
                 />
               </Link>
               <Link href="https://t.me/+79029830005" target="_blank">
-                  <Image
-                    src="/footer/telegram.svg"
-                    alt="tg"
-                    width={24}
-                    height={24}
-                  />
-                </Link>
+                <Image
+                  src="/footer/telegram.svg"
+                  alt="tg"
+                  width={24}
+                  height={24}
+                />
+              </Link>
             </div>
           </div>
         </div>

@@ -29,7 +29,9 @@ export default async function SpecialistPage({
 
   // Получаем услуги специалиста
   const specialistServices = specialist.services
-    ? specialist.services.map(serviceId => servicesData[serviceId]).filter(Boolean)
+    ? specialist.services
+        .map((serviceId) => servicesData[serviceId])
+        .filter(Boolean)
     : [];
 
   const whatsappMessage = `Здравствуйте, хочу записаться к специалисту ${specialist.name}`;
@@ -37,8 +39,10 @@ export default async function SpecialistPage({
 
   const hasServices = specialistServices.length > 0;
   const hasEducation = specialist.education && specialist.education.length > 0;
-  const hasCertifications = specialist.certifications && specialist.certifications.length > 0;
-  const hasSpecializations = specialist.specializations && specialist.specializations.length > 0;
+  const hasCertifications =
+    specialist.certifications && specialist.certifications.length > 0;
+  const hasSpecializations =
+    specialist.specializations && specialist.specializations.length > 0;
   const hasDetailedDescription = specialist.detailedDescription;
   const hasCases = specialist.cases && specialist.cases.length > 0;
 
@@ -49,7 +53,10 @@ export default async function SpecialistPage({
         items={[
           { label: "Главная", href: "/" },
           { label: "Специалисты", href: "/specialists" },
-          { label: `${specialist.name}`, href: `/specialists/${specialist.id}` },
+          {
+            label: `${specialist.name}`,
+            href: `/specialists/${specialist.id}`,
+          },
         ]}
       />
 
@@ -58,8 +65,10 @@ export default async function SpecialistPage({
         <div className={styles.heroContent}>
           <div className={styles.specialistInfo}>
             <h1>{specialist.name}</h1>
-            <p className={styles.specialistDescription}>{specialist.description}</p>
-            
+            <p className={styles.specialistDescription}>
+              {specialist.description}
+            </p>
+
             {specialist.stage && (
               <div className={styles.stage}>
                 <span className={styles.stageLabel}>Стаж работы:</span>
@@ -67,33 +76,67 @@ export default async function SpecialistPage({
               </div>
             )}
 
-            { id === "ivchenko-valerij-nikolaevich" && (
+            {id === "ivchenko-valerij-nikolaevich" && (
               <div className={styles.detailedDescription}>
-                <p>Клиника «Тридцать два» это в первую очередь, медицинская организация...и только в третью коммерческая</p>
-                
+                <p>
+                  Клиника «Тридцать два» это в первую очередь, медицинская
+                  организация...и только в третью коммерческая
+                </p>
+
                 <ul>
-                  <li><em>Мы не даем рекламы, не обучаем врачей навыкам продаж, маркетинг не важное для нас понятие.</em></li>
-                  <li><em>Мы работаем строго по медицинским протоколам, что максимально позволяет избежать осложнений.</em></li>
+                  <li>
+                    <em>
+                      Мы не даем рекламы, не обучаем врачей навыкам продаж,
+                      маркетинг не важное для нас понятие.
+                    </em>
+                  </li>
+                  <li>
+                    <em>
+                      Мы работаем строго по медицинским протоколам, что
+                      максимально позволяет избежать осложнений.
+                    </em>
+                  </li>
                 </ul>
 
-                <p>Мы не используем ультрасовременные технологии, которые вышли на рынок «вчера», и не проводим опытов над теми, кто доверил нам свое здоровье, а применяем только проверенные временем технологии с известными отдаленными результатами.</p>
+                <p>
+                  Мы не используем ультрасовременные технологии, которые вышли
+                  на рынок «вчера», и не проводим опытов над теми, кто доверил
+                  нам свое здоровье, а применяем только проверенные временем
+                  технологии с известными отдаленными результатами.
+                </p>
 
-                <p>Для нас очень дорога наша репутация, это самое важное и ценное что есть у нас, и мы ее всячески оберегаем и приумножаем!</p>
+                <p>
+                  Для нас очень дорога наша репутация, это самое важное и ценное
+                  что есть у нас, и мы ее всячески оберегаем и приумножаем!
+                </p>
 
                 <p>Принципы подбора персонала в «Тридцать два»</p>
 
                 <ul>
-                  <li><em>влюбленность в свою профессию</em></li>
-                  <li><em>порядочность</em></li>
-                  <li><em>стремление к профессиональному росту</em></li>
-                  <li><em>нормальное отношение к деньгам (деньги важное, но не главное)</em></li>
+                  <li>
+                    <em>влюбленность в свою профессию</em>
+                  </li>
+                  <li>
+                    <em>порядочность</em>
+                  </li>
+                  <li>
+                    <em>стремление к профессиональному росту</em>
+                  </li>
+                  <li>
+                    <em>
+                      нормальное отношение к деньгам (деньги важное, но не
+                      главное)
+                    </em>
+                  </li>
                 </ul>
 
-                <p>Работа в команде, специалистов всех профилей, позволяет нам максимально точно оценить и решить проблему каждого пациента.</p>
+                <p>
+                  Работа в команде, специалистов всех профилей, позволяет нам
+                  максимально точно оценить и решить проблему каждого пациента.
+                </p>
               </div>
-            )
-            }
-            
+            )}
+
             {hasDetailedDescription && (
               <div className={styles.detailedDescription}>
                 <p>{specialist.detailedDescription}</p>
@@ -120,8 +163,8 @@ export default async function SpecialistPage({
                   <p>Написать в Telegram</p>
                 </Link>
               )}
-              
-              <Link href="tel:+7 902 983 0005" className={styles.ctaButton}>
+
+              <Link href="tel:+7(3842) 33 00 05" className={styles.ctaButton}>
                 <p>Записаться на прием</p>
               </Link>
             </div>
@@ -129,10 +172,7 @@ export default async function SpecialistPage({
         </div>
 
         <div className={styles.heroImage}>
-          <img 
-            src={specialist.imageLink} 
-            alt={specialist.name}
-          />
+          <img src={specialist.imageLink} alt={specialist.name} />
         </div>
       </section>
 
@@ -194,7 +234,7 @@ export default async function SpecialistPage({
       )}
 
       {/* Другие специалисты */}
-      <Specialists title="Другие специалисты" excludeId={specialist.id}/>
+      <Specialists title="Другие специалисты" excludeId={specialist.id} />
     </div>
   );
 }
@@ -221,13 +261,13 @@ export async function generateMetadata({
 
   return {
     title: `${specialist.name} - ${specialist.description} в Кемерово`,
-    description: `Записаться на прием к ${specialist.name} - ${specialist.description}. Стаж работы ${specialist.stage || 'более 5 лет'}. Современные методы лечения.`,
+    description: `Записаться на прием к ${specialist.name} - ${specialist.description}. Стаж работы ${specialist.stage || "более 5 лет"}. Современные методы лечения.`,
     alternates: {
       canonical: `https://тридцать-два.рф/specialists/${specialist.id}`,
     },
     openGraph: {
       title: `${specialist.name} - ${specialist.description}`,
-      description: `Профессиональный стоматолог в Кемерово. Стаж работы ${specialist.stage || 'более 5 лет'}.`,
+      description: `Профессиональный стоматолог в Кемерово. Стаж работы ${specialist.stage || "более 5 лет"}.`,
       url: `https://тридцать-два.рф/specialists/${specialist.id}`,
       siteName: "Стоматология Кемерово",
       images: [
@@ -244,7 +284,7 @@ export async function generateMetadata({
     twitter: {
       card: "summary_large_image",
       title: `${specialist.name} - Стоматология в Кемерово`,
-      description: `${specialist.description}. Стаж работы ${specialist.stage || 'более 5 лет'}.`,
+      description: `${specialist.description}. Стаж работы ${specialist.stage || "более 5 лет"}.`,
       images: [specialist.imageLink || `/specialists/default.jpg`],
     },
     robots: {

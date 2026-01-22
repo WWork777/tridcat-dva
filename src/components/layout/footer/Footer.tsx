@@ -55,8 +55,12 @@ export default function Footer() {
             <p>+7(3842) 58 30 26</p>
           </Link>
           <div className={styles.footer_line}>|</div>
-          <Link href="tel:+7 902 983 0005">
-            <p>+7 902 983 0005</p>
+          <Link href="tel:+7(3842) 33 00 05">
+            <p>+7(3842) 33 00 05</p>
+          </Link>
+          <div className={styles.footer_line}>|</div>
+          <Link href="tel:+7(3842) 45-75-95">
+            <p>+7(3842) 45-75-95</p>
           </Link>
         </div>
         <div className={styles.footer_rigth__item}>
@@ -66,13 +70,22 @@ export default function Footer() {
           </Link>
         </div>
         <div className={styles.footer_socials}>
-          <Link href="https://wa.me/79029830005" className={styles.footer_socials_link}>
+          <Link
+            href="https://wa.me/79029830005"
+            className={styles.footer_socials_link}
+          >
             <img src="/footer/wa.svg" alt="" />
           </Link>
-          <Link href="https://m.vk.com/tridsat_dva" className={styles.footer_socials_link}>
+          <Link
+            href="https://m.vk.com/tridsat_dva"
+            className={styles.footer_socials_link}
+          >
             <img src="/footer/vk.svg" alt="" />
           </Link>
-          <Link href="https://t.me/+79029830005" className={styles.footer_socials_link}>
+          <Link
+            href="https://t.me/+79029830005"
+            className={styles.footer_socials_link}
+          >
             <img src="/footer/telegram.svg" alt="" />
           </Link>
         </div>

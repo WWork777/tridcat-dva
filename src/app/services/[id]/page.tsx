@@ -32,7 +32,7 @@ export default async function ServicePage({
     (specialist) =>
       specialist.services &&
       Array.isArray(specialist.services) &&
-      specialist.services.includes(id)
+      specialist.services.includes(id),
   );
 
   const whatsappMessage = `Здравствуйте, хочу записаться на ${service.title}`;
@@ -68,7 +68,7 @@ export default async function ServicePage({
             >
               <p>Telegram</p>
             </Link>
-            <Link href="tel:+7 902 983 0005" className={styles.ctaButton}>
+            <Link href="tel:+7(3842) 33 00 05" className={styles.ctaButton}>
               <p>Записаться на прием</p>
             </Link>
           </div>
