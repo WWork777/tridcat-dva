@@ -233,7 +233,26 @@ export const specialistsData: Record<string, Specialists> = {
       {
         id: "cert-34",
         imageUrl: "/certificates/marina-sergeevna/cert-34.webp",
-        
+      },
+      {
+        id: "cert-35",
+        imageUrl: "/certificates/marina-sergeevna/cert-35.webp",
+      },
+      {
+        id: "cert-36",
+        imageUrl: "/certificates/marina-sergeevna/cert-36.webp",
+      },
+      {
+        id: "cert-37",
+        imageUrl: "/certificates/marina-sergeevna/cert-37.webp",
+      },
+      {
+        id: "cert-38",
+        imageUrl: "/certificates/marina-sergeevna/cert-38.webp",
+      },
+      {
+        id: "cert-39",
+        imageUrl: "/certificates/marina-sergeevna/cert-39.webp",
       }
     ],
     
@@ -1324,7 +1343,7 @@ export const specialistsData: Record<string, Specialists> = {
   },
   "elena-gennadevna-lobanova": {
     id: "elena-gennadevna-lobanova",
-    name: "Лобанова Елена Генадьевна",
+    name: "Лобанова Елена Геннадьевна",
     description: "Врач стоматолог-терапевт",
     waLink:
       "https://t.me/+79029830005?text=Здравствуйте хочу записаться к специалисту Лобановой Елене Генадьевне",
