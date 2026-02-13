@@ -4,6 +4,7 @@ import "./globals.scss";
 import Header from "@/components/layout/header/Header";
 import Footer from "@/components/layout/footer/Footer";
 import YandexMetrika from "@/components/common/YandexMetrika/YandexMEtrika";
+import FloatingButton from "@/components/FloatingContacts/FloatingContacts";
 
 const geistSans = Wix_Madefor_Display({
   variable: "--font-geist-sans",
@@ -36,8 +37,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <body className={`${geistSans.variable}`}>
-        
         <Header />
+        <FloatingButton />
         {children}
         <YandexMetrika />
         <Footer />

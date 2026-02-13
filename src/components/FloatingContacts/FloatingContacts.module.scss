@@ -1,0 +1,118 @@
+.root {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 999;
+  font-family: inherit;
+}
+
+.fab {
+  height: 56px;
+  padding: 0 18px;
+
+  border-radius: 18px;
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #2f5597;
+  color: #fff;
+
+  font-size: 16px;
+  font-weight: 400;
+  white-space: nowrap;
+  font-family: "Wix Madefor Display", sans-serif;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    background-color: #f1f4fa;
+    border: 1px solid #2f5597;
+    color: #2f5597;
+  }
+}
+
+.menu {
+  position: absolute;
+  right: 0;
+  bottom: 72px;
+
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 10px;
+
+  min-width: 180px;
+
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px) scale(0.98);
+  transition: 0.18s ease;
+}
+
+.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px 12px;
+  border-radius: 12px;
+
+  text-decoration: none;
+  color: #1f2a44;
+  font-size: 14px;
+  font-weight: 500;
+
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    color: #2f5597;
+    flex-shrink: 0;
+  }
+
+  &:hover {
+    background: #f1f4fa;
+    color: #2f5597;
+  }
+}
+
+/* мобильная адаптация */
+@media (max-width: 480px) {
+  .root {
+    right: 16px;
+    bottom: 16px;
+  }
+
+  .menu {
+    bottom: 64px;
+    min-width: 100px;
+  }
+
+  .fab {
+    height: 48px;
+    padding: 0 14px;
+    border-radius: 14px;
+    font-size: 13px;
+  }
+}
