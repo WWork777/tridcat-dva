@@ -253,6 +253,106 @@ export const specialistsData: Record<string, Specialists> = {
       {
         id: "cert-39",
         imageUrl: "/certificates/marina-sergeevna/cert-39.webp",
+      },
+      {
+        id: "cert-40",
+        imageUrl: "/certificates/marina-sergeevna/cert-40.webp",
+      },
+      {
+        id: "cert-41",
+        imageUrl: "/certificates/marina-sergeevna/cert-41.webp",
+      },
+      {
+        id: "cert-42",
+        imageUrl: "/certificates/marina-sergeevna/cert-42.webp",
+      },
+      {
+        id: "cert-43",
+        imageUrl: "/certificates/marina-sergeevna/cert-43.webp",
+      },
+      {
+        id: "cert-44",
+        imageUrl: "/certificates/marina-sergeevna/cert-44.webp",
+      },
+      {
+        id: "cert-45",
+        imageUrl: "/certificates/marina-sergeevna/cert-45.webp",
+      },
+      {
+        id: "cert-46",
+        imageUrl: "/certificates/marina-sergeevna/cert-46.webp",
+      },
+      {
+        id: "cert-47",
+        imageUrl: "/certificates/marina-sergeevna/cert-47.webp",
+      },
+      {
+        id: "cert-48",
+        imageUrl: "/certificates/marina-sergeevna/cert-48.webp",
+      },
+      {
+        id: "cert-49",
+        imageUrl: "/certificates/marina-sergeevna/cert-49.webp",
+      },
+      {
+        id: "cert-50",
+        imageUrl: "/certificates/marina-sergeevna/cert-50.webp",
+      },
+      {
+        id: "cert-51",
+        imageUrl: "/certificates/marina-sergeevna/cert-51.webp",
+      },
+      {
+        id: "cert-52",
+        imageUrl: "/certificates/marina-sergeevna/cert-52.webp",
+      },
+      {
+        id: "cert-53",
+        imageUrl: "/certificates/marina-sergeevna/cert-53.webp",
+      },
+      {
+        id: "cert-54",
+        imageUrl: "/certificates/marina-sergeevna/cert-54.webp",
+      },
+      {
+        id: "cert-55",
+        imageUrl: "/certificates/marina-sergeevna/cert-55.webp",
+      },
+      {
+        id: "cert-56",
+        imageUrl: "/certificates/marina-sergeevna/cert-56.webp",
+      },
+      {
+        id: "cert-57",
+        imageUrl: "/certificates/marina-sergeevna/cert-57.webp",
+      },
+      {
+        id: "cert-58",
+        imageUrl: "/certificates/marina-sergeevna/cert-58.webp",
+      },
+      {
+        id: "cert-59",
+        imageUrl: "/certificates/marina-sergeevna/cert-59.webp",
+      },
+      {
+        id: "cert-60",
+        imageUrl: "/certificates/marina-sergeevna/cert-60.webp",
+      },
+      {
+        id: "cert-61",
+        imageUrl: "/certificates/marina-sergeevna/cert-61.webp",
+      },
+      {
+        id: "cert-62",
+        imageUrl: "/certificates/marina-sergeevna/cert-62.webp",
+      },
+      {
+        id: "cert-63",
+        imageUrl: "/certificates/marina-sergeevna/cert-63.webp",
+      },
+      {
+        id: "cert-64",
+        imageUrl: "/certificates/marina-sergeevna/cert-64.webp",
       }
     ],
     
@@ -567,6 +667,53 @@ export const specialistsData: Record<string, Specialists> = {
     
     ],
 
+    certifications: [
+      {
+        id: "cert-1",
+        imageUrl: "/certificates/yuliya-sergeevna/cert-1.webp",
+      },
+      {
+        id: "cert-2",
+        imageUrl: "/certificates/yuliya-sergeevna/cert-2.webp",
+      },
+      {
+        id: "cert-3",
+        imageUrl: "/certificates/yuliya-sergeevna/cert-3.webp",
+      },
+      {
+        id: "cert-4",
+        imageUrl: "/certificates/yuliya-sergeevna/cert-4.webp",
+      },
+      {
+        id: "cert-5",
+        imageUrl: "/certificates/yuliya-sergeevna/cert-5.webp",
+      },
+      {
+        id: "cert-6",
+        imageUrl: "/certificates/yuliya-sergeevna/cert-6.webp",
+      },
+      {
+        id: "cert-7",
+        imageUrl: "/certificates/yuliya-sergeevna/cert-7.webp",
+      },
+      {
+        id: "cert-8",
+        imageUrl: "/certificates/yuliya-sergeevna/cert-8.webp",
+      },
+      {
+        id: "cert-9",
+        imageUrl: "/certificates/yuliya-sergeevna/cert-9.webp",
+      },
+      {
+        id: "cert-10",
+        imageUrl: "/certificates/yuliya-sergeevna/cert-10.webp",
+      },
+      {
+        id: "cert-11",
+        imageUrl: "/certificates/yuliya-sergeevna/cert-11.webp",
+      },
+    ],
+
     cases:[
       {
         id: "Case-1",
@@ -860,6 +1007,17 @@ export const specialistsData: Record<string, Specialists> = {
       "2011 г. — «Кемеровский государственный медицинский университет», стоматология терапевтическая (повышение квалификации)",
       "2020 г. — «Кемеровский государственный медицинский университет», стоматология терапевтическая (повышение квалификации)",
       "2020 г. — «Кемеровский государственный медицинский университет», стоматология детская (повышение квалификации)",
+    ],
+
+    certifications: [
+      {
+        id: "cert-1",
+        imageUrl: "/certificates/tamara-sergeevna/cert-1.webp",
+      },
+      {
+        id: "cert-2",
+        imageUrl: "/certificates/tamara-sergeevna/cert-2.webp",
+      },
     ],
 
     specializations: [
@@ -1459,6 +1617,38 @@ export const specialistsData: Record<string, Specialists> = {
     "gigiena-anesteziya-sochetannaya",
     "gigiena-povyazka"
     ],
+
+    certifications: [
+      {
+        id: "cert-1",
+        imageUrl: "/certificates/elena-gennadevna/cert-1.webp",
+      },
+      {
+        id: "cert-2",
+        imageUrl: "/certificates/elena-gennadevna/cert-2.webp",
+      },
+      {
+        id: "cert-3",
+        imageUrl: "/certificates/elena-gennadevna/cert-3.webp",
+      },
+      {
+        id: "cert-4",
+        imageUrl: "/certificates/elena-gennadevna/cert-4.webp",
+      },
+      {
+        id: "cert-5",
+        imageUrl: "/certificates/elena-gennadevna/cert-5.webp",
+      },
+      {
+        id: "cert-6",
+        imageUrl: "/certificates/elena-gennadevna/cert-6.webp",
+      },
+      {
+        id: "cert-7",
+        imageUrl: "/certificates/elena-gennadevna/cert-7.webp",
+      },
+    ],
+
     imageLink: "/specialists/lobanova-1.jpg",
   },
   "anastasiya-aleksandrovna-terskih": {
