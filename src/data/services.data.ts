@@ -287,6 +287,7 @@ const servicesData: Record<string, Service> = {
     features: [
       "Одонтопародонтограмма, компьютерная диагностика «Florida Probe» - 2 000 ₽",
       "Ортопантомография (ОПТГ) - 850 ₽",
+      "Телерентгенография (ТРГ) - 800 ₽",
       "Радиовизиография (прицельный снимок) - 550 ₽",
       "Компьютерная томография (КТ) 16*18 - 2 200 ₽",
       "Компьютерная томография (КТ) 13*10 - 2 000 ₽",
@@ -1162,7 +1163,7 @@ const servicesData: Record<string, Service> = {
     ownPage: false,
     title: "Комплексная гигиена (молочный прикус)",
     description: "Комплексная профессиональная гигиена полости рта (ультразвук, Air Flow, полировка пастой) в молочном прикусе",
-    price: "3600 ₽",
+    price: "3630 ₽",
     duration: "45-60 минут"
   },
   "kompleksnaya-gigiena-smennyy": {
@@ -1170,7 +1171,7 @@ const servicesData: Record<string, Service> = {
     ownPage: false,
     title: "Комплексная гигиена (сменный прикус)",
     description: "Комплексная профессиональная гигиена полости рта (ультразвук, Air Flow, полировка пастой) в сменном прикусе",
-    price: "4150 ₽",
+    price: "4180 ₽",
     duration: "50-70 минут"
   },
   "kompleksnaya-gigiena-ortodont": {
@@ -1266,7 +1267,7 @@ const servicesData: Record<string, Service> = {
     ownPage: false,
     title: "Ультразвуковое удаление отложений (молочный прикус)",
     description: "Ультразвуковое удаление наддесневых и поддесневых зубных отложений (в молочном прикусе) один зуб",
-    price: "160 ₽",
+    price: "165 ₽",
     duration: "5-10 минут"
   },
   "ultrazvukovoe-udalenie-smennyy": {
@@ -3289,7 +3290,103 @@ const servicesData: Record<string, Service> = {
     description: "Полирование ортодонтической конструкции (одна челюсть)",
     price: "900 ₽",
     duration: "15-25 минут"
-  }
+  },
+  "implantatsiya-mini-vint-bolshoy": {
+    id: "implantatsiya-mini-vint-bolshoy",
+    ownPage: false,
+    title: "Имплантация (мини-винт большой)",
+    description: "Внутрикостная дентальная имплантация (мини-винт большой)",
+    price: "16000 ₽",
+    duration: "30-60 минут"
+  },
+  "implantatsiya-mini-vint-malyy": {
+    id: "implantatsiya-mini-vint-malyy",
+    ownPage: false,
+    title: "Имплантация (мини-винт малый)",
+    description: "Внутрикостная дентальная имплантация (мини-винт малый)",
+    price: "12000 ₽",
+    duration: "30-60 минут"
+  },
+  "gingivoplastika-implant-nasha": {
+    id: "gingivoplastika-implant-nasha",
+    ownPage: false,
+    title: "Пластика десны в области импланта (наша клиника)",
+    description: "Пластика десны в области импланта (после установки в нашей клинике)",
+    price: "7200 ₽",
+    duration: "40-60 минут"
+  },
+  "gingivoplastika-implant-storonnaya": {
+    id: "gingivoplastika-implant-storonnaya",
+    ownPage: false,
+    title: "Пластика десны в области импланта (сторонняя клиника)",
+    description: "Пластика десны в области импланта (после установки в сторонней клинике)",
+    price: "15000 ₽",
+    duration: "40-60 минут"
+  },
+  "gingivoplastika-udlinenie-koronki": {
+    id: "gingivoplastika-udlinenie-koronki",
+    ownPage: false,
+    title: "Хирургическое удлинение коронки зуба",
+    description: "Гингивопластика (хирургическое удлинение клинической высоты коронки зуба)",
+    price: "5200 ₽",
+    duration: "40-60 минут"
+  },
+  "provizornaya-koronka-vremennaya": {
+    id: "provizornaya-koronka-vremennaya",
+    ownPage: false,
+    title: "Провизорная коронка (временная)",
+    description: "Провизорная коронка (временная)",
+    price: "2500 ₽",
+    duration: "40-60 минут"
+  },
+  "protez-4-implanta-balka-multiunit-zircon": {
+    id: "protez-4-implanta-balka-multiunit-zircon",
+    ownPage: false,
+    title: "Протез на 4 имплантатах (циркон)",
+    description: "Протез на 4 имплантатах (балка, мультиюниты-циркон)",
+    price: "310000 ₽",
+    duration: "120-180 минут"
+  },
+  "protez-4-implanta-balka-multiunit-pmma": {
+    id: "protez-4-implanta-balka-multiunit-pmma",
+    ownPage: false,
+    title: "Протез на 4 имплантатах (РММА)",
+    description: "Протез на 4 имплантатах с мультиюнитами (балка, РММА)",
+    price: "178500 ₽",
+    duration: "120-180 минут"
+  },
+  "protez-6-implanta-balka-multiunit-pmma": {
+    id: "protez-6-implanta-balka-multiunit-pmma",
+    ownPage: false,
+    title: "Протез на 6 имплантатах (РММА)",
+    description: "Протез на 6 имплантатах с мультиюнитами (балка, РММА)",
+    price: "239500 ₽",
+    duration: "150-210 минут"
+  },
+  "lechenie-pod-mikroskopom-1chas": {
+    id: "lechenie-pod-mikroskopom-1chas",
+    ownPage: false,
+    title: "Лечение под микроскопом (1 час)",
+    description: "Лечение под микроскопом (1 час)",
+    price: "2000 ₽",
+    duration: "60 минут"
+  },
+  "lechenie-pod-mikroskopom-30min": {
+    id: "lechenie-pod-mikroskopom-30min",
+    ownPage: false,
+    title: "Лечение под микроскопом (30 минут)",
+    description: "Лечение под микроскопом (30 минут)",
+    price: "1000 ₽",
+    duration: "30 минут"
+  },
+  "plombirovanie-kanala-vertikalnaya-kondensatsiya": {
+    id: "plombirovanie-kanala-vertikalnaya-kondensatsiya",
+    ownPage: false,
+    title: "Пломбирование канала (вертикальная конденсация)",
+    description: "Пломбирование канала методом вертикальной конденсации",
+    price: "2300 ₽",
+    duration: "30-45 минут"
+  },
 
 
 

@@ -83,7 +83,10 @@ const categorizeServices = (services: Service[]) => {
     "anesteziya-applikatsionnaya",
     "anesteziya-infiltratsionnaya",
     "anesteziya-sochetannaya",
-    "povyazka"
+    "povyazka",
+    "lechenie-pod-mikroskopom-1chas",
+    "lechenie-pod-mikroskopom-30min",
+    "plombirovanie-kanala-vertikalnaya-kondensatsiya"
   ];
 
   const hygieneIds = [
@@ -249,7 +252,10 @@ const categorizeServices = (services: Service[]) => {
     "ostanovka-krovotecheniya-alvozhel",
     "ostanovka-krovotecheniya-tamponada",
     "ostanovka-krovotecheniya-gemostatic",
-    "snyatie-shvov"
+    "snyatie-shvov",
+    "gingivoplastika-implant-nasha",
+    "gingivoplastika-implant-storonnaya",
+    "gingivoplastika-udlinenie-koronki"
   ];
 
   const KidsIds = [
@@ -325,7 +331,9 @@ const categorizeServices = (services: Service[]) => {
     "implantatsiya-anesteziya-applikatsionnaya",
     "implantatsiya-anesteziya-infiltratsionnaya",
     "implantatsiya-anesteziya-sochetannaya",
-    "implantatsiya-povyazka"
+    "implantatsiya-povyazka",
+    "implantatsiya-mini-vint-bolshoy",
+    "implantatsiya-mini-vint-malyy"
   ]
 
   const OrtodontIds = [
@@ -380,7 +388,11 @@ const categorizeServices = (services: Service[]) => {
     "ortodontiya-povtornaya-fiksatsiya-breketa",
     "ortodontiya-fiksatsiya-nakusochnogo-breketa",
     "ortodontiya-ustanovka-shchechnoy-trubki",
-    "ortodontiya-polirovanie-konstruktsii"
+    "ortodontiya-polirovanie-konstruktsii",
+    "provizornaya-koronka-vremennaya",
+    "protez-4-implanta-balka-multiunit-zircon",
+    "protez-4-implanta-balka-multiunit-pmma",
+    "protez-6-implanta-balka-multiunit-pmma"
   ]
 
   services.forEach(service => {
