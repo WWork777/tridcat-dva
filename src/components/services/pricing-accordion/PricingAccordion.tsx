@@ -87,7 +87,7 @@ export default function PricingAccordion({ service }: PricingAccordionProps) {
         })}
       </div>
 
-      {service.features.length > 8 && (
+      {service.features.length > 3 && (
         <button className={styles.toggleButton} onClick={handleToggle}>
           <span>{isExpanded ? "Свернуть" : `Показать еще`}</span>
         </button>
