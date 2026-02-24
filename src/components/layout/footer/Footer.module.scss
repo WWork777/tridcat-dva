@@ -286,6 +286,8 @@
   transition: all 0.3s ease;
   padding: 8px 16px;
   border-radius: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
 
   p {
     font-size: 18px;

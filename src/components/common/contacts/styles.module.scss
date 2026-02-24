@@ -250,7 +250,14 @@
     }
   }
 
+  @media (max-width: 1900px) {
+    gap: 12px;
+    flex-direction: column;
+    justify-content: start;
+  }
+
   @media (max-width: 1200px) {
+    justify-content: flex-start;
     gap: 20px;
   }
 
@@ -276,6 +283,10 @@
     &:hover {
       transform: translateY(-2px);
     }
+  }
+
+  @media (max-width: 1900px) {
+    justify-content: start;
   }
 
   @media (max-width: 768px) {
