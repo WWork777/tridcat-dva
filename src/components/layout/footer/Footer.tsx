@@ -19,6 +19,14 @@ export default function Footer() {
               Пн-Сб 9:00-20:00 <br></br> Вс 10:00-18:00
             </p>
           </div>
+          <div className={styles.footer_left_item}>
+            <p>
+              Разработка сайта:{" "}
+              <Link href={"https://virlab42.ru"} target="_blanc">
+                Вирлаб
+              </Link>
+            </p>
+          </div>
         </div>
       </div>
       <div className={styles.footer_center}>
