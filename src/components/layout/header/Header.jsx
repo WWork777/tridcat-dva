@@ -64,7 +64,8 @@ export default function Header() {
             <Link href="/#about">О клинике</Link>
             <Link href="/services">Услуги</Link>
             <Link href="/specialists">Специалисты</Link>
-            <Link href="/#reviews">Отзывы</Link>
+            {/* <Link href="/#reviews">Отзывы</Link> */}
+            <Link href="/prices">Цены</Link>
             <Link href="/blog">Блог</Link>
             <Link href="/#contacts">Контакты</Link>
           </nav>
@@ -162,8 +163,11 @@ export default function Header() {
             <Link href="/blog" onClick={closeMenu}>
               Блог
             </Link>
-            <Link href="/#reviews" onClick={closeMenu}>
+            {/* <Link href="/#reviews" onClick={closeMenu}>
               Отзывы
+            </Link> */}
+            <Link href="/prices" onClick={closeMenu}>
+              <p>Цены</p>
             </Link>
             <Link href="/#contacts" onClick={closeMenu}>
               Контакты

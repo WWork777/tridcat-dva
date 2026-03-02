@@ -48,9 +48,13 @@ export default function Footer() {
           <Link href="/#sales" className={styles.footer_center_link}>
             <p>Акции</p>
           </Link>
-          <Link href="/#reviews" className={styles.footer_center_link}>
+          {/* <Link href="/#reviews" className={styles.footer_center_link}>
             <p>Отзывы</p>
+          </Link> */}
+          <Link href="/prices" className={styles.footer_center_link}>
+            <p>Цены</p>
           </Link>
+          
           <Link href="/#contacts" className={styles.footer_center_link}>
             <p>Контакты</p>
           </Link>
