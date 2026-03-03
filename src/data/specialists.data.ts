@@ -1711,6 +1711,18 @@ export const specialistsData: Record<string, Specialists> = {
           src: "/cases/anastasiya-aleksandrovna/after3.webp",
           alt: "Состояние зубов 2.1 и 2.2 после реставрации"
         },
+      },
+      {
+        id: "Case-4",
+        title: "Изготовление коронки из диоксида циркония в полную анатомию на депульпированный зуб (зуб с пломбированными корневыми каналами)",
+        beforeImage: {
+          src: "/cases/anastasiya-aleksandrovna/before4.webp",
+          alt: ""
+        },
+        afterImage: {
+          src: "/cases/anastasiya-aleksandrovna/after4.webp",
+          alt: ""
+        },
       }
     ],
 
