@@ -18,7 +18,7 @@ export const ServiceCard = ({
   const handleAppointment = () => {
     const whatsappMessage = `Здравствуйте, хочу записаться на ${title}`;
     const encodedMessage = encodeURIComponent(whatsappMessage);
-    const phoneNumber = "+79029830005";
+    const phoneNumber = "stomatologiya_32";
     const whatsappUrl = `https://t.me/${phoneNumber}?text=${encodedMessage}`;
 
     window.open(whatsappUrl, "_blank", "noopener,noreferrer");
