@@ -9,7 +9,7 @@ export default function FloatingContacts() {
 
   const links = {
     vk: "https://m.vk.com/tridsat_dva",
-    tg: "https://t.me/+79029830005",
+    tg: "https://t.me/stomatologiya_32",
     wa: "https://api.whatsapp.com/send/?phone=79029830005&text&type=phone_number&app_absent=0",
     tel: "tel:+7(3842) 33 00 05",
   };

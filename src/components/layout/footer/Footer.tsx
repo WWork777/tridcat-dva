@@ -95,7 +95,7 @@ export default function Footer() {
             <img src="/footer/vk.svg" alt="" />
           </Link>
           <Link
-            href="https://t.me/+79029830005"
+            href="https://t.me/stomatologiya_32"
             className={styles.footer_socials_link}
           >
             <img src="/footer/telegram.svg" alt="" />

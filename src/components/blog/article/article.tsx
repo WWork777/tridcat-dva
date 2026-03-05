@@ -111,7 +111,7 @@ export default function ArticleComponent({ slug }: ArticleComponentProps) {
           <div className={styles.cta}>
             <h3>Записаться на консультацию</h3>
             <p>Не откладывайте здоровье своих зубов на потом! Наши специалисты готовы помочь вам уже сегодня.</p>
-            <button className={styles.ctaButton} ><a href={`https://t.me/+79029830005?text=${encodedMessage}`}>Записаться онлайн</a></button>
+            <button className={styles.ctaButton} ><a href={`https://t.me/stomatologiya_32?text=${encodedMessage}`}>Записаться онлайн</a></button>
           </div>
         </div>
 

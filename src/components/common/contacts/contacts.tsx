@@ -76,7 +76,7 @@ export default function Contacts() {
                       <img src="/socials/vk.svg" alt="ВКонтакте" />
                     </Link>
                     <Link
-                      href="https://t.me/+79029830005"
+                      href="https://t.me/stomatologiya_32"
                       className={styles.social_link}
                       aria-label="Telegram"
                     >

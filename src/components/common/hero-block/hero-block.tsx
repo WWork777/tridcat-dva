@@ -19,7 +19,7 @@ export default function HeroBlock() {
             Клиника влюбленных в свое дело <br /> Профилактика и лечение зубов
           </p>
           <Link
-            href='https://t.me/+79029830005?text=Здравствуйте хочу записаться на прием'
+            href='https://t.me/stomatologiya_32?text=Здравствуйте хочу записаться на прием'
             className={styles.corner_button}
           >
             <span>Записаться онлайн</span>
@@ -27,10 +27,10 @@ export default function HeroBlock() {
         </div>
         <div className={`${styles.hero_left__bottom}`}>
           <div className={`${styles.hero_left__bottom__left}`}>
-            <img
+            {/* <img
               src='/hero/hero-first.png'
               alt='Современное стоматологическое оборудование'
-            />
+            /> */}
 
           {/* <video
             src="/hero/video.mp4"
@@ -42,6 +42,13 @@ export default function HeroBlock() {
             preload='metadata'
             autoPlay
           /> */}
+          <p>Скидка <span>10%</span> для женщин, <span>впервые</span> посетивших нашу стоматологическую клинику c 6.03 до 1.04</p>
+          <Link
+            href='https://t.me/stomatologiya_32?text=Здравствуйте, хочу узнать по поводу акции скидка 10% 6.03-1.04'
+            className={styles.corner_button}
+          >
+            Узнать подробности
+          </Link>
           </div>
         </div>
       </div>

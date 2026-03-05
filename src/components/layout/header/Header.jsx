@@ -104,7 +104,7 @@ export default function Header() {
                     height={24}
                   />
                 </Link>
-                <Link href="https://t.me/+79029830005" target="_blank">
+                <Link href="https://t.me/stomatologiya_32" target="_blank">
                   <Image
                     src="/socials/telegram.svg"
                     alt="tg"
@@ -200,7 +200,7 @@ export default function Header() {
                   height={24}
                 />
               </Link>
-              <Link href="https://t.me/+79029830005" target="_blank">
+              <Link href="https://t.me/stomatologiya_32" target="_blank">
                 <Image
                   src="/footer/telegram.svg"
                   alt="tg"

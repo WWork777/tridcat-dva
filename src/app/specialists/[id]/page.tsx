@@ -155,7 +155,7 @@ export default async function SpecialistPage({
                 </Link>
               ) : (
                 <Link
-                  href={`https://t.me/+79029830005?text=${encodedMessage}`}
+                  href={`https://t.me/stomatologiya_32?text=${encodedMessage}`}
                   className={styles.wa_button}
                   target="_blank"
                   rel="noopener noreferrer"
