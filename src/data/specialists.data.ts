@@ -841,7 +841,7 @@ export const specialistsData: Record<string, Specialists> = {
   },
   "ekaterina-dmitrievna-markelova": {
     id: "ekaterina-dmitrievna-markelova",
-    name: "Маркелова Екатерина Дмитриева",
+    name: "Маркелова Екатерина Дмитриевна",
     description: "Врач-стоматолог хирург имплантолог, врач-стоматолог ортопед, врач-стоматолог терапевт",
     waLink:
       "https://t.me/stomatologiya_32?text=Здравствуйте хочу записаться к специалисту Маркеловой Екатерине Дмитриевне",
