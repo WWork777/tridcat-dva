@@ -1669,6 +1669,18 @@ export const specialistsData: Record<string, Specialists> = {
           src: "/cases/anastasiya-aleksandrovna/after4.webp",
           alt: ""
         },
+      },
+      {
+        id: "Case-5",
+        title: "Установка коронки на имплант Straumann",
+        beforeImage: {
+          src: "/cases/anastasiya-aleksandrovna/before5.webp",
+          alt: ""
+        },
+        afterImage: {
+          src: "/cases/anastasiya-aleksandrovna/after5.webp",
+          alt: ""
+        },
       }
     ],
 
