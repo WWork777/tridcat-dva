@@ -1681,6 +1681,7 @@ export const specialistsData: Record<string, Specialists> = {
           src: "/cases/anastasiya-aleksandrovna/after5.webp",
           alt: ""
         },
+        details: "2 посещения по 1,5 часа"
       }
     ],
 
