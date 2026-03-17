@@ -712,6 +712,10 @@ export const specialistsData: Record<string, Specialists> = {
         id: "cert-11",
         imageUrl: "/certificates/yuliya-sergeevna/cert-11.webp",
       },
+      {
+        id: "cert-12",
+        imageUrl: "/certificates/yuliya-sergeevna/cert-12.webp",
+      },
     ],
 
     cases:[
