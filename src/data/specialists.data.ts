@@ -411,7 +411,7 @@ export const specialistsData: Record<string, Specialists> = {
       "anesteziya-sochetannaya",
       "povyazka",
       
-      "lechenie-zubov",
+      // "lechenie-zubov",
     "esteticheskoe-vosstanovlenie-zubov",
     "professionalnaya-gigiena",
       "otbelivanie-zubov",
@@ -801,7 +801,7 @@ export const specialistsData: Record<string, Specialists> = {
       "anesteziya-sochetannaya",
       "povyazka",
         
-      "lechenie-zubov",
+      // "lechenie-zubov",
     "esteticheskoe-vosstanovlenie-zubov",
     "professionalnaya-gigiena",
       "otbelivanie-zubov",
@@ -1035,7 +1035,7 @@ export const specialistsData: Record<string, Specialists> = {
       "anesteziya-sochetannaya",
       "povyazka",
         
-      "lechenie-zubov",
+      // "lechenie-zubov",
     "esteticheskoe-vosstanovlenie-zubov",
     "professionalnaya-gigiena",
       "otbelivanie-zubov",
@@ -1073,7 +1073,7 @@ export const specialistsData: Record<string, Specialists> = {
       "gigiena-anesteziya-sochetannaya",
       "gigiena-povyazka",
 
-      "detskaya-stomatologiya",
+      // "detskaya-stomatologiya",,
       "detskaya-pervichnyy-kpl",
       "detskaya-pervichnyy-osmotr",
       "detskaya-dispansernyy-priem",
@@ -1194,7 +1194,7 @@ export const specialistsData: Record<string, Specialists> = {
       "anesteziya-sochetannaya",
       "povyazka",
         
-      "lechenie-zubov",
+      // "lechenie-zubov",
     "esteticheskoe-vosstanovlenie-zubov",
     "professionalnaya-gigiena",
       "otbelivanie-zubov",
@@ -1297,12 +1297,13 @@ export const specialistsData: Record<string, Specialists> = {
   ],
 
     specializations: [
-      "Терапевтическая стоматология",
-      "Профессиональная гигиена полости рта", 
-      "Отбеливание зубов",
-      "Эстетическая реставрация зубов",
-      "Лечение заболеваний пародонта",
-      "Диагностика стоматологических заболеваний"
+      "Ортодонтическое лечение",
+      "Исправление прикуса у взрослых и детей",
+      "Лечение на брекет-системах Damon",
+      "Лечение зубочелюстных аномалий",
+      "Функциональная окклюзия",
+      "Миофункциональная терапия",
+      "Междисциплинарный подход в ортодонтии"
     ],
 
     services: [
@@ -1529,7 +1530,7 @@ export const specialistsData: Record<string, Specialists> = {
     "anesteziya-sochetannaya",
     "povyazka",
 
-    "lechenie-zubov",
+    // "lechenie-zubov",
     "esteticheskoe-vosstanovlenie-zubov",
     "professionalnaya-gigiena",
     "otbelivanie-zubov",
@@ -1744,7 +1745,7 @@ export const specialistsData: Record<string, Specialists> = {
     "anesteziya-sochetannaya",
     "povyazka",
 
-    "lechenie-zubov",
+    // "lechenie-zubov",
     "esteticheskoe-vosstanovlenie-zubov",
     "professionalnaya-gigiena",
     "otbelivanie-zubov",
@@ -1947,7 +1948,7 @@ export const specialistsData: Record<string, Specialists> = {
     "anesteziya-sochetannaya",
     "povyazka",
 
-    "lechenie-zubov",
+    // "lechenie-zubov",
     "esteticheskoe-vosstanovlenie-zubov",
     "professionalnaya-gigiena",
     "otbelivanie-zubov",
@@ -2066,7 +2067,7 @@ export const specialistsData: Record<string, Specialists> = {
     "anesteziya-sochetannaya",
     "povyazka",
 
-    "lechenie-zubov",
+    // "lechenie-zubov",
     "esteticheskoe-vosstanovlenie-zubov",
     "professionalnaya-gigiena",
     "otbelivanie-zubov",
@@ -2325,7 +2326,7 @@ export const specialistsData: Record<string, Specialists> = {
     "anesteziya-sochetannaya",
     "povyazka",
 
-    "lechenie-zubov",
+    // "lechenie-zubov",
     "esteticheskoe-vosstanovlenie-zubov",
     "professionalnaya-gigiena",
     "otbelivanie-zubov",
@@ -2363,7 +2364,7 @@ export const specialistsData: Record<string, Specialists> = {
     "gigiena-anesteziya-sochetannaya",
     "gigiena-povyazka",
 
-    "detskaya-stomatologiya",
+    // "detskaya-stomatologiya",,
       "detskaya-pervichnyy-kpl",
     "detskaya-pervichnyy-osmotr",
     "detskaya-dispansernyy-priem",
@@ -2487,7 +2488,7 @@ export const specialistsData: Record<string, Specialists> = {
     "anesteziya-sochetannaya",
     "povyazka",
 
-    "lechenie-zubov",
+    // "lechenie-zubov",
     "esteticheskoe-vosstanovlenie-zubov",
     "professionalnaya-gigiena",
     "otbelivanie-zubov", 
@@ -2536,13 +2537,13 @@ export const specialistsData: Record<string, Specialists> = {
 //       "https://t.me/stomatologiya_32?text=Здравствуйте хочу записаться к специалисту Евсеенко Яне Игоревне",
 //     stage: "4 лет",
 //     services: [
-//       "lechenie-zubov",
+//       // "lechenie-zubov",
 //     "esteticheskoe-vosstanovlenie-zubov",
 //     "professionalnaya-gigiena",
 // "otbelivanie-zubov",
     
-//       "lechenie-zubov",
-//       "detskaya-stomatologiya",
+//       // "lechenie-zubov",
+//       // "detskaya-stomatologiya",,
 //       "esteticheskoe-vosstanovlenie-zubov",
 //       "ambulatornye-hirurgicheskie-operacii",
 //     ],

@@ -215,6 +215,20 @@
   }
 }
 
+.hero_slider {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+
+  :global(.swiper-pagination-bullet) {
+    background-color: rgba(255, 255, 255, 0.7);
+    opacity: 1;
+  }
+  :global(.swiper-pagination-bullet-active) {
+    background-color: var(--color-decorate);
+  }
+}
+
 .hero_left__bottom__left {
   // width: 45%; при наличии второго блока
   display: flex;
@@ -248,6 +262,8 @@
     // opacity: 0.45;
     z-index: 1; /* Чтобы фон ушел на задний план */
   }
+
+  
   *{
     z-index: 2;
   }
@@ -342,6 +358,16 @@
     object-position: center;
     transition: all 0.3s ease;
     transform: translateX(-10%);
+  }
+}
+
+.second_slide {
+  &::before {
+    background: url("/hero/promo2v2.webp");
+    background-position: top;
+    opacity: 0.45;
+    background-size: cover; /* Для фона лучше использовать background-size вместо object-fit */
+    
   }
 }
 

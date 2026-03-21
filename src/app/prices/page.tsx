@@ -3,6 +3,7 @@ import Prices from "@/components/prices/Prices";
 import Contacts from "@/components/common/contacts/contacts";
 import StructuredData from '@/components/seo/StructuredData';
 import servicesData from '@/data/services.data';
+import Promos from "@/components/main-page/promos/promos";
 
 export async function generateMetadata() {
   return {
@@ -59,7 +60,9 @@ export default function Blog() {
         <BreadCrumbs
             items={[{ label: "Главная", href: "/" }, { label: "Цены" }]}
         />
+        <Promos pricesPage={true}/>
         <h1>Цены на услуги</h1>
+        
         <Prices/>
         <Contacts/>
     </section>

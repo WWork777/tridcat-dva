@@ -5,6 +5,7 @@ import ServiceList from "@/components/services/serviceList/serviceList";
 import BlogSlider from "@/components/main-page/blog-slider/blog-slider";
 import Sales from "@/components/main-page/sales/sales-slider";
 import Contacts from "@/components/common/contacts/contacts";
+import Promos from "@/components/main-page/promos/promos";
 
 export async function generateMetadata() {
   return {
@@ -60,6 +61,7 @@ export default function Services() {
       />
       <h1>Наши услуги</h1>
       <ServiceList />
+      <Promos />
       <BlogSlider />
       <Contacts />
     </section>

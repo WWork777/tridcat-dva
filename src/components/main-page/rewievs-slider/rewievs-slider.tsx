@@ -35,7 +35,7 @@ const SliderCard = ({ name, date, stars, text }: SliderCard) => {
         ))}
       </div>
       <p>{text}</p>
-      <b>Читать полностью</b>
+      {/* <b>Читать полностью</b> */}
     </div>
   );
 };

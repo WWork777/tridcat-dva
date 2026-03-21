@@ -6,6 +6,7 @@ import Services from "@/components/main-page/services/services";
 // import BlogSlider from "@/components/main-page/blog-slider/blog-slider";
 import RewievsSlider from "@/components/main-page/rewievs-slider/rewievs-slider";
 import Contacts from "@/components/common/contacts/contacts";
+import Promos from "@/components/main-page/promos/promos";
 
 // import BlockModal from "@/components/common/BlockModal/BlockModal"
 
@@ -61,9 +62,11 @@ export default function Home() {
       <section className="container">
         <About />
         <Services />
+        
         <Specialists />
         {/* <Sales /> */}
         {/* <BlogSlider />  */}
+        <Promos />
         <RewievsSlider />
         <Contacts />
       </section>

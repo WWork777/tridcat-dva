@@ -1,6 +1,11 @@
+"use client";
 import Link from 'next/link';
 import styles from './styles.module.scss';
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 // import { MediaPlayer, MediaProvider } from '@vidstack/react';
 // import { defaultLayoutIcons, DefaultVideoLayout } from '@vidstack/react/player/layouts/default';
@@ -26,30 +31,40 @@ export default function HeroBlock() {
           </Link>
         </div>
         <div className={`${styles.hero_left__bottom}`}>
-          <div className={`${styles.hero_left__bottom__left}`}>
-            {/* <img
-              src='/hero/hero-first.png'
-              alt='Современное стоматологическое оборудование'
-            /> */}
-
-          {/* <video
-            src="/hero/video.mp4"
-            className={styles.videoBackground}
-            loop
-            muted
-            playsInline
-            controlsList='nodownload'
-            preload='metadata'
-            autoPlay
-          /> */}
-          <p>Скидка <span>10%</span> для женщин, <span>впервые</span> посетивших нашу стоматологическую клинику c 6.03 до 1.04</p>
-          <Link
-            href='https://t.me/stomatologiya_32?text=Здравствуйте, хочу узнать по поводу акции скидка 10% 6.03-1.04'
-            className={styles.corner_button}
+          <Swiper
+            modules={[Autoplay, Pagination]}
+            spaceBetween={20}
+            slidesPerView={1}
+            loop={true}
+            autoplay={{ delay: 5000, disableOnInteraction: true }}
+            speed={1500}
+            // allowTouchMove={false}
+            pagination={{ clickable: true }}
+            className={styles.hero_slider}
           >
-            Узнать подробности
-          </Link>
-          </div>
+            <SwiperSlide>
+              <div className={`${styles.hero_left__bottom__left}`}>
+                <p>Скидка <span>10%</span> для женщин, <span>впервые</span> посетивших нашу стоматологическую клинику c 6.03 до 1.04</p>
+                <Link
+                  href='https://t.me/stomatologiya_32?text=Здравствуйте, хочу узнать по поводу акции скидка 10% 6.03-1.04'
+                  className={styles.corner_button}
+                >
+                  Узнать подробности
+                </Link>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={`${styles.hero_left__bottom__left} ${styles.second_slide}`}>
+                <p>Отбеливание <span>Amazing White</span> с использованием лампы <span>Zoom4</span> <br /><span>15.000 </span>рублей вместо 22.000 рублей до конца весны</p>
+                <Link
+                  href='https://t.me/stomatologiya_32?text=Здравствуйте, хочу узнать по поводу отбеливании Amazing White'
+                  className={styles.corner_button}
+                >
+                  Узнать подробности
+                </Link>
+              </div>
+          </SwiperSlide>
+          </Swiper>
         </div>
       </div>
       <div className={styles.hero_right}>
