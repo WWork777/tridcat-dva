@@ -102,6 +102,27 @@ export default function Footer() {
           </Link>
         </div>
       </div>
+      <div className={styles.footer_warning}>
+        <p className={styles.footer_warning__info}>
+          ООО <span>|</span> «ТРИДЦАТЬ ДВА» <br/> 
+          ИНН <span>|</span>4207048278 <br/>
+          КПП <span>|</span>420501001 <br/>
+          ОГРН <span>|</span>1024200702965 <br/>
+          Юр. адрес <span>|</span> 650000, Кемеровская область, г Кемерово, Советский пр-кт, зд. 32, помещ. 18<br/>
+          Директор - Ивченко Валерий Николаевич<br/>
+          
+        </p>
+        <p className={styles.footer_warning__info}>
+          Лицензия на осуществление медицинской деятельности: <a href="/docs/Л041-01161-42_00573884.pdf" target="_blanc">Л041-01161-42/00573884 от 12.12.2017</a> <br />
+          <a href="/docs/ПППСУ.pdf" target="_blanc" >Правила предоставления услуг</a> <br /> 
+          <a href="/docs/ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ.pdf" target="_blanc" >Пользовательское соглашение</a> <br /> 
+          <a href="/docs/ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ.pdf" target="_blanc" >Политика конфиденциальности</a> <br /> 
+          <a href="/docs/ПОЛИТИКА ОБРАБОТКИ ПД.pdf" target="_blanc" >Политика обработки персональных данных</a> <br /> 
+          <a href="/yur-info" target="_blanc">Юридическая информация</a>
+        </p>
+        Имеются противопоказания, необходима консультация специалиста <br />
+        
+      </div>
     </section>
   );
 }

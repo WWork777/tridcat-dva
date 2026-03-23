@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /yur-info
 
 Sitemap: https://тридцать-два.рф/sitemap.xml
