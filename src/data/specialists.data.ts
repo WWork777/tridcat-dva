@@ -1626,6 +1626,13 @@ export const specialistsData: Record<string, Specialists> = {
       "Отбеливание зубов"
     ],
 
+    certifications: [
+      {
+        id: "cert-1",
+        imageUrl: "/certificates/anastasiya-aleksandrovna/cert-1.webp",
+      }
+    ],
+
     cases:[
       {
         id: "Case-1",
