@@ -222,9 +222,11 @@ export default function ReviewsSlider() {
                 </div>
               </div>
               <div className={styles.rewievs_button}>
-                <button>
-                  <p>Оставить отзыв</p>
-                </button>
+                <a href="https://yandex.ru/maps/org/tridtsat_dva/103320707341/?indoorLevel=1&ll=86.076707%2C55.357939&z=16.54" target="_blank" rel="noopener noreferrer">
+                  <button>
+                    <p>Оставить отзыв</p>
+                  </button>
+                </a>
               </div>
             </div>
           </div>
