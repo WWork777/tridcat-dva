@@ -177,9 +177,13 @@
   }
 
   .heroImage {
-    width: 45%;
+    width: 35%;
     flex-shrink: 0;
     position: relative;
+
+    @media (max-width: 1500px) {
+      width: 45%;
+    }
 
     @media (max-width: 968px) {
       width: 100%;
@@ -199,11 +203,11 @@
       }
 
       @media (max-width: 768px) {
-        height: 400px;
+        height: 550px;
       }
 
       @media (max-width: 480px) {
-        height: 370px;
+        height: 480px;
       }
     }
 
