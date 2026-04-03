@@ -4,7 +4,7 @@ import servicesData from '@/data/services.data';
 
 // Массивы ID категорий
 const therapyIds = [
-  "pervichnyy-priem", "dispansernyy-priem", "povtornyy-priem", "optragate", "kofferdam",
+  "pervichnyy-priem", "optragate", "kofferdam",
   "vremennaya-plomba", "vremennaya-plomba-sits", "vremennaya-plomba-devit", "plomba-1-5-6",
   "plomba-2-3", "plomba-4", "polirovka-garantiya", "pulpotomiya", "ekstirpatsiya-pulpy",
   "vosstanovlenie-stenki", "snyatie-plomby", "lechebnaya-prokladka", "plomba-sits",
@@ -12,7 +12,7 @@ const therapyIds = [
   "plombirovanie-kanala", "plombirovanie-lateral", "zakrytie-perforatsii", "diagnosticheskoe-preparirovanie",
   "obrabotka-kanala", "obrabotka-horoshiy", "obrabotka-plohoy", "vremennoe-plombirovanie",
   "medikamentoznaya-obrabotka", "udalenie-shtifta", "rasplombirovka-pasta", "rasplombirovka-fosfat",
-  "rasplombirovka-rezorsin", "rasplombirovka-termafil", "rasplombirovka-guttapercha", "soshlifovyvanie",
+  "rasplombirovka-rezorsin", "rasplombirovka-termafil", "rasplombirovka-guttapercha",
   "ultrazvukovoe-rasshirenie", "izbiratelnoe-polirovanie", "esteticheskaya-restavratsiya",
   "bokovoy-shtift-menshe", "peredniy-shtift-menshe", "peredniy-shtift-bolshe", "bokovoy-shtift-bolshe",
   "dopolnitelnyy-shtift", "shtiftovyy-zub", "anesteziya-provodnikovaya", "anesteziya-applikatsionnaya",
@@ -21,22 +21,16 @@ const therapyIds = [
 ];
 
 const hygieneIds = [
-  "lechenie-zubov", "professionalnaya-gigiena", "otbelivanie-zubov", "gigiena-optragate",
+  "gigiena-optragate",
   "gigiena-kofferdam", "kompleksnaya-gigiena", "kompleksnaya-gigiena-molochnyy",
   "kompleksnaya-gigiena-smennyy", "kompleksnaya-gigiena-ortodont", "kompleksnaya-gigiena-ortodont-deti",
-  "udalenie-myagkogo-naleta-zub", "udalenie-myagkogo-naleta-chelyust", "udalenie-myagkogo-naleta-polost",
-  "razmyagchenie-tverdyh-otlozheniy", "udalenie-pigmentirovannogo-naleta", "profilakticheskaya-chistka-molochnyy",
-  "profilakticheskaya-chistka-smennyy", "profilakticheskaya-chistka-zub", "ultrazvukovoe-udalenie-zub",
-  "ultrazvukovoe-udalenie-molochnyy", "ultrazvukovoe-udalenie-smennyy", "ultrazvukovoe-udalenie-polost",
-  "glubokoe-ftorirovanie", "glubokoe-ftorirovanie-molochnyy", "ftorirovanie-apf", "ustranenie-giperchuvstvitelnosti",
-  "remineraliziruyushchiy-gel", "otbelivanie-amazing-white", "otbelivanie-philips-zoom", "individualnaya-kapa",
-  "obuchenie-gigiene", "gigiena-anesteziya-provodnikovaya", "gigiena-anesteziya-applikatsionnaya",
-  "gigiena-anesteziya-infiltratsionnaya", "gigiena-anesteziya-sochetannaya", "gigiena-povyazka"
+  "ftorirovanie-apf", "otbelivanie-amazing-white", "otbelivanie-philips-zoom", "individualnaya-kapa",
+  "obuchenie-gigiene"
 ];
 
 const ortopediaIDS = [
-  "protezirovanie-zubov-na-implantah", "protezirovanie-zubov", "ortopediya-pervichnyy-osmotr",
-  "ortopediya-pervichnyy-kpl", "ortopediya-povtornyy-primerka", "ortopediya-povtornyy-sdacha",
+  "protezirovanie-zubov",
+  "ortopediya-pervichnyy-kpl",
   "ottisk-alginat", "ottisk-c-silikon", "ottisk-a-silikon", "ottisk-diagnosticheskie",
   "issledovanie-modeley", "intraoralnoe-skanirovanie", "diagnosticheskoe-modelirovanie",
   "analiz-okklyuzii", "licevaya-duga", "hirurgicheskiy-shablon", "vinir-keramicheskiy",
@@ -61,8 +55,8 @@ const ortopediaIDS = [
 ];
 
 const SurgeryIds = [
-  "ambulatornye-hirurgicheskie-operacii", "udalenie-zubov", "hirurgiya-pervichnyy-osmotr",
-  "hirurgiya-pervichnyy-kpl", "hirurgiya-povtornyy-priem", "hirurgiya-optragate", "udalenie-molochnogo-zuba",
+  "ambulatornye-hirurgicheskie-operacii",
+  "hirurgiya-pervichnyy-kpl", "hirurgiya-optragate", "udalenie-molochnogo-zuba",
   "udalenie-odnokornevogo", "udalenie-mnogokornevogo", "udalenie-atravmaticheskoe", "udalenie-slozhnoe",
   "udalenie-stenki-zuba", "udalenie-ekzostoza", "udalenie-retinirovannogo", "cistektomiya",
   "rezektsiya-verhushki", "gimisektsiya", "lechenie-perikoronita", "vskrytie-odontogennogo-abscessa",
@@ -75,15 +69,14 @@ const SurgeryIds = [
 ];
 
 const KidsIds = [
-  "detskaya-stomatologiya", "detskaya-pervichnyy-kpl", "detskaya-pervichnyy-osmotr",
-  "detskaya-dispansernyy-priem", "detskaya-povtornyy-priem", "detskaya-adaptatsionnyy-priem",
+  "detskaya-pervichnyy-kpl", "detskaya-adaptatsionnyy-priem",
   "detskaya-optragate", "detskaya-kofferdam", "detskaya-tsvetnaya-plomba", "detskaya-plomba",
   "detskaya-plomba-posle-endodontii", "detskaya-lechebnaya-prokladka", "detskaya-vremennaya-plomba-devit",
   "detskaya-snyatie-plomby", "detskaya-lechenie-pulpita-pulpotek", "detskaya-vremennaya-plomba",
   "detskaya-polirovka-plomby", "detskaya-vremennoe-plombirovanie-kalasept", "detskaya-plombirovanie-kanala",
   "detskaya-plombirovanie-forfenan-pasta", "detskaya-plombirovanie-forfenan-zhidkost", "detskaya-pulpotomiya",
   "detskaya-ekstirpatsiya-pulpy", "detskaya-obrabotka-kanala", "detskaya-vremennoe-plombirovanie",
-  "detskaya-remineraliziruyushchiy-gel", "detskaya-glubokoe-ftorirovanie", "detskaya-gigiena-molochnyy",
+  "detskaya-gigiena-molochnyy",
   "detskaya-gigiena-smennyy", "detskaya-ultrazvuk-molochnyy", "detskaya-ultrazvuk-smennyy",
   "detskaya-polirovka-garantiya", "detskaya-germetizatsiya-molochnyy", "detskaya-germetizatsiya-postoyannyy",
   "detskaya-germetizatsiya-invazivnaya", "detskaya-applikatsiya-lekarstva", "detskaya-lechebnaya-povyazka",

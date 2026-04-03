@@ -40,14 +40,14 @@ export const ServiceCard = ({
 
 export default function Promos({ pricesPage }: { pricesPage?: boolean }) {
   const servicesData = [
-    {
-      id: 1,
-      title: "Скидка 10% к 8 марта",
-      description:
-        "Скидка 10% для женщин, впервые посетивших нашу стоматологическую клинику c 6.03 до 1.04",
-      imageLink: "/hero/promo8march.webp",
-      url: "https://t.me/stomatologiya_32?text=Здравствуйте, хочу узнать по поводу акции скидка 10% 6.03-1.04",
-    },
+    // {
+    //   id: 1,
+    //   title: "Скидка 10% к 8 марта",
+    //   description:
+    //     "Скидка 10% для женщин, впервые посетивших нашу стоматологическую клинику c 6.03 до 1.04",
+    //   imageLink: "/hero/promo8march.webp",
+    //   url: "https://t.me/stomatologiya_32?text=Здравствуйте, хочу узнать по поводу акции скидка 10% 6.03-1.04",
+    // },
     {
       id: 2,
       title: "Скидки на отбеливание",
@@ -56,11 +56,19 @@ export default function Promos({ pricesPage }: { pricesPage?: boolean }) {
       imageLink: "/hero/promo2v2.webp",
       url: "https://t.me/stomatologiya_32?text=Здравствуйте, хочу узнать по поводу отбеливания Amazing White",
     },
+    {
+      id: 3,
+      title: "Скидка для новый клиентов",
+      description:
+        "Скидка 10% на все услуги для тех, кто впервые посетит нашу клинику",
+      imageLink: "/promos/promo3.webp",
+      url: "https://t.me/stomatologiya_32?text=Здравствуйте, хочу узнать по поводу скидки для новых клиентов",
+    },
   ];
 
   return (
     <section
-      id="services"
+      id="promos"
       className={`component ${pricesPage ? styles.pricesPage : ""}`}
     >
       <div>

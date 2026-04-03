@@ -371,6 +371,16 @@
   }
 }
 
+.third_slide{
+  &::before {
+    background: url("/promos/promo3.webp");
+    background-position: center;
+    opacity: 0.45;
+    background-size: cover; /* Для фона лучше использовать background-size вместо object-fit */
+    
+  }
+}
+
 .hero_left__bottom__rigth {
   width: 55%;
   display: flex;

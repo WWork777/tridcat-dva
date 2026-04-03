@@ -1345,7 +1345,7 @@ const servicesData: Record<string, Service> = {
     ownPage: false,
     title: "Изготовление индивидуальной капы",
     description: "Изготовление индивидуальной капы на обе челюсти для домашнего отбеливания",
-    price: "5500 ₽",
+    price: "7500 ₽",
     duration: "30-45 минут"
   },
   "obuchenie-gigiene": {

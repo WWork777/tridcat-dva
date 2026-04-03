@@ -42,7 +42,7 @@ export default function HeroBlock() {
             pagination={{ clickable: true }}
             className={styles.hero_slider}
           >
-            <SwiperSlide>
+            {/* <SwiperSlide>
               <div className={`${styles.hero_left__bottom__left}`}>
                 <p>Скидка <span>10%</span> для женщин, <span>впервые</span> посетивших нашу стоматологическую клинику c 6.03 до 1.04</p>
                 <Link
@@ -52,7 +52,7 @@ export default function HeroBlock() {
                   Узнать подробности
                 </Link>
               </div>
-            </SwiperSlide>
+            </SwiperSlide> */}
             <SwiperSlide>
               <div className={`${styles.hero_left__bottom__left} ${styles.second_slide}`}>
                 <p>Отбеливание <span>Amazing White</span> с использованием лампы <span>Zoom4</span> <br /><span>15.000 </span>рублей вместо 22.000 рублей до конца весны</p>
@@ -64,6 +64,17 @@ export default function HeroBlock() {
                 </Link>
               </div>
           </SwiperSlide>
+          <SwiperSlide>
+              <div className={`${styles.hero_left__bottom__left} ${styles.third_slide}`}>
+                <p>Скидка <span>10%</span> на все услуги для тех, кто<span>впервые</span> посетит нашу клинику с 1.04 по 1.05</p>
+                <Link
+                  href='https://t.me/stomatologiya_32?text=Здравствуйте, хочу узнать по поводу скидки для новых клиентов'
+                  className={styles.corner_button}
+                >
+                  Узнать подробности
+                </Link>
+              </div>
+            </SwiperSlide>
           </Swiper>
         </div>
       </div>

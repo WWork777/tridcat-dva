@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { useState, useRef } from "react";
+import type { Swiper as SwiperType } from "swiper";
 
 interface SliderCard {
   name: string;
@@ -42,7 +43,7 @@ const SliderCard = ({ name, date, stars, text }: SliderCard) => {
 
 export default function ReviewsSlider() {
   const [activeAggregator, setActiveAggregator] = useState<string>("all");
-  const swiperRef = useRef<any>(null);
+  const swiperRef = useRef<SwiperType | null>(null);
 
   // Моковые данные для разных агрегаторов
   const aggregatorsData: ReviewAggregator[] = [
@@ -100,6 +101,12 @@ export default function ReviewsSlider() {
           text: "Очень грамотный подход к лечению, спасибо врачам за внимательность.",
           stars: "5",
         },
+        {
+          name: "Михаил С.",
+          date: "20.08.2025",
+          text: "Лучшая стоматология в городе. Современное оборудование и очень вежливые администраторы.",
+          stars: "5",
+        },
       ],
     },
     {
@@ -122,6 +129,12 @@ export default function ReviewsSlider() {
           text: "Хорошая клиника, но есть небольшие замечания по организации записи.",
           stars: "4",
         },
+        {
+          name: "Евгений Воронов",
+          date: "18.08.2025",
+          text: "Лечил здесь зубы по рекомендации друзей. Все прошло безболезненно и быстро.",
+          stars: "5",
+        },
       ],
     },
     {
@@ -142,6 +155,12 @@ export default function ReviewsSlider() {
           name: "Наталья Орлова",
           date: "19.08.2025",
           text: "Цены доступные, качество услуг на уровне. Рекомендую.",
+          stars: "5",
+        },
+        {
+          name: "Екатерина М.",
+          date: "17.08.2025",
+          text: "Чистота в кабинетах идеальная. Врач подробно объяснил план лечения и стоимость.",
           stars: "5",
         },
       ],
