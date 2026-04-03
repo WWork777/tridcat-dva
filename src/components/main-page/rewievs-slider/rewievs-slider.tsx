@@ -23,6 +23,7 @@ interface ReviewAggregator {
   ratingsCount: number;
   reviews: SliderCard[];
   icon: string;
+  link: string;
 }
 
 const SliderCard = ({ name, date, stars, text }: SliderCard) => {
@@ -54,6 +55,7 @@ export default function ReviewsSlider() {
       reviewsCount: 209,
       ratingsCount: 456,
       icon: "",
+      link: "https://yandex.ru/maps/org/tridtsat_dva/103320707341/",
       reviews: [
         {
           name: "Ирина Константиновна",
@@ -88,6 +90,7 @@ export default function ReviewsSlider() {
       reviewsCount: 156,
       ratingsCount: 156,
       icon: "/rewievs/prodoktorov-icon.svg",
+      link: "https://prodoctorov.ru/kemerovo/lpu/27140-tridcat-dva/",
       reviews: [
         {
           name: "Сергей Иванов",
@@ -116,6 +119,7 @@ export default function ReviewsSlider() {
       reviewsCount: 89,
       ratingsCount: 245,
       icon: "/rewievs/yandex-icon.svg",
+      link: "https://yandex.ru/maps/org/tridtsat_dva/103320707341/",
       reviews: [
         {
           name: "Дмитрий Козлов",
@@ -144,6 +148,7 @@ export default function ReviewsSlider() {
       reviewsCount: 45,
       ratingsCount: 55,
       icon: "/rewievs/2gis-icon.svg",
+      link: "https://2gis.ru/kemerovo/firm/704215723090545",
       reviews: [
         {
           name: "Виктор Павлов",
@@ -241,7 +246,7 @@ export default function ReviewsSlider() {
                 </div>
               </div>
               <div className={styles.rewievs_button}>
-                <a href="https://yandex.ru/maps/org/tridtsat_dva/103320707341/?indoorLevel=1&ll=86.076707%2C55.357939&z=16.54" target="_blank" rel="noopener noreferrer">
+                <a href={currentAggregator.link} target="_blank" rel="noopener noreferrer">
                   <button>
                     <p>Оставить отзыв</p>
                   </button>
