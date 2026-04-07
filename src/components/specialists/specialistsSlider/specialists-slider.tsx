@@ -40,7 +40,7 @@ const SliderCard = ({ specialist }: { specialist: Specialist }) => {
       <div className={styles.card_footer}>
         <span>Стаж: {specialist.stage}</span>
         <Link href={specialist.waLink || "#"}>
-          <img src="/socials/telegram.svg" alt="WhatsApp" />
+          <img src="/socials/max.svg" alt="WhatsApp" />
         </Link>
       </div>
     </div>
