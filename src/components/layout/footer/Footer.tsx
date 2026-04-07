@@ -95,11 +95,17 @@ export default function Footer() {
             <img src="/footer/vk.svg" alt="" />
           </Link>
           <Link
+            href="https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM"
+            className={styles.footer_socials_link}
+          >
+            <img src="/footer/max.svg" alt="" />
+          </Link>
+          {/* <Link
             href="https://t.me/stomatologiya_32"
             className={styles.footer_socials_link}
           >
             <img src="/footer/telegram.svg" alt="" />
-          </Link>
+          </Link> */}
         </div>
       </div>
       <div className={styles.footer_warning}>

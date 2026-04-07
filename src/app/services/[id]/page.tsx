@@ -63,10 +63,11 @@ export default async function ServicePage({
           <p className={styles.heroDescription}>{service.fullDescription}</p>
           <div className={styles.buttons_container}>
             <Link
-              href={`https://t.me/stomatologiya_32?text=${encodedMessage}`}
+              // href={`https://t.me/stomatologiya_32?text=${encodedMessage}`}
+              href={'https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM'}
               className={styles.wa_button}
             >
-              <p>Telegram</p>
+              <p>Max</p>
             </Link>
             <Link href="tel:+7(3842) 33 00 05" className={styles.ctaButton}>
               <p>Записаться на прием</p>

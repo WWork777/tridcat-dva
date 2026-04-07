@@ -76,12 +76,19 @@ export default function Contacts() {
                       <img src="/socials/vk.svg" alt="ВКонтакте" />
                     </Link>
                     <Link
+                      href="https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM"
+                      className={styles.social_link}
+                      aria-label="Max"
+                    >
+                      <img src="/socials/max.svg" alt="Max" />
+                    </Link>
+                    {/* <Link
                       href="https://t.me/stomatologiya_32"
                       className={styles.social_link}
                       aria-label="Telegram"
-                    >
+                    > 
                       <img src="/socials/telegram.svg" alt="Telegram" />
-                    </Link>
+                    </Link>*/}
                   </div>
                 </div>
               </div>

@@ -54,7 +54,8 @@ export default function Promos({ pricesPage }: { pricesPage?: boolean }) {
       description:
         "Отбеливание Amazing White с использованием лампы Zoom4 15.000 рублей вместо 22.000 рублей до конца весны",
       imageLink: "/hero/promo2v2.webp",
-      url: "https://t.me/stomatologiya_32?text=Здравствуйте, хочу узнать по поводу отбеливания Amazing White",
+      // url: "https://t.me/stomatologiya_32?text=Здравствуйте, хочу узнать по поводу отбеливания Amazing White",
+      url: 'https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM'
     },
     {
       id: 3,
@@ -62,7 +63,8 @@ export default function Promos({ pricesPage }: { pricesPage?: boolean }) {
       description:
         "Скидка 10% на все услуги для тех, кто впервые посетит нашу клинику",
       imageLink: "/promos/promo3.webp",
-      url: "https://t.me/stomatologiya_32?text=Здравствуйте, хочу узнать по поводу скидки для новых клиентов",
+      // url: "https://t.me/stomatologiya_32?text=Здравствуйте, хочу узнать по поводу скидки для новых клиентов",
+      url: 'https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM'
     },
   ];
 

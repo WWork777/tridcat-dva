@@ -19,7 +19,8 @@ export const ServiceCard = ({
     const whatsappMessage = `Здравствуйте, хочу записаться на ${title}`;
     const encodedMessage = encodeURIComponent(whatsappMessage);
     const phoneNumber = "stomatologiya_32";
-    const whatsappUrl = `https://t.me/${phoneNumber}?text=${encodedMessage}`;
+    // const whatsappUrl = `https://t.me/${phoneNumber}?text=${encodedMessage}`;
+    const whatsappUrl = `https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM`;
 
     window.open(whatsappUrl, "_blank", "noopener,noreferrer");
   };

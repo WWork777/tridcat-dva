@@ -24,7 +24,8 @@ export default function HeroBlock() {
             Клиника влюбленных в свое дело <br /> Профилактика и лечение зубов
           </p>
           <Link
-            href='https://t.me/stomatologiya_32?text=Здравствуйте хочу записаться на прием'
+            // href='https://t.me/stomatologiya_32?text=Здравствуйте хочу записаться на прием'
+            href={'https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM'}
             className={styles.corner_button}
           >
             <span>Записаться онлайн</span>
@@ -57,7 +58,8 @@ export default function HeroBlock() {
               <div className={`${styles.hero_left__bottom__left} ${styles.second_slide}`}>
                 <p>Отбеливание <span>Amazing White</span> с использованием лампы <span>Zoom4</span> <br /><span>15.000 </span>рублей вместо 22.000 рублей до конца весны</p>
                 <Link
-                  href='https://t.me/stomatologiya_32?text=Здравствуйте, хочу узнать по поводу отбеливании Amazing White'
+                  // href='https://t.me/stomatologiya_32?text=Здравствуйте, хочу узнать по поводу отбеливании Amazing White'
+                  href={'https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM'}
                   className={styles.corner_button}
                 >
                   Узнать подробности
@@ -68,7 +70,8 @@ export default function HeroBlock() {
               <div className={`${styles.hero_left__bottom__left} ${styles.third_slide}`}>
                 <p>Скидка <span>10%</span> на все услуги для тех, кто<span>впервые</span> посетит нашу клинику с 1.04 по 1.05</p>
                 <Link
-                  href='https://t.me/stomatologiya_32?text=Здравствуйте, хочу узнать по поводу скидки для новых клиентов'
+                  // href='https://t.me/stomatologiya_32?text=Здравствуйте, хочу узнать по поводу скидки для новых клиентов'
+                  href={'https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM'}
                   className={styles.corner_button}
                 >
                   Узнать подробности

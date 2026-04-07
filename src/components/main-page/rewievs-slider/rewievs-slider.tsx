@@ -115,7 +115,7 @@ export default function ReviewsSlider() {
     {
       id: "yandex",
       name: "Яндекс",
-      rating: 4.5,
+      rating: 4.7,
       reviewsCount: 89,
       ratingsCount: 245,
       icon: "/rewievs/yandex-icon.svg",

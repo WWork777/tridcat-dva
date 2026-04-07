@@ -151,16 +151,17 @@ export default async function SpecialistPage({
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <p>Написать в Telegram</p>
+                  <p>Написать в Max</p>
                 </Link>
               ) : (
                 <Link
-                  href={`https://t.me/stomatologiya_32?text=${encodedMessage}`}
+                  // href={`https://t.me/stomatologiya_32?text=${encodedMessage}`}
+                  href={'https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM'}
                   className={styles.wa_button}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <p>Написать в Telegram</p>
+                  <p>Написать в Max</p>
                 </Link>
               )}
 

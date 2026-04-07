@@ -71,7 +71,7 @@ export const SliderCard = ({
         {showWhatsApp &&
           waLink && ( // Показываем WhatsApp только если есть ссылка
             <Link href={waLink} target="_blank" rel="noopener noreferrer">
-              <img src="/socials/telegram.svg" alt="WhatsApp" />
+              <img src="/socials/max.svg" alt="WhatsApp" />
             </Link>
           )}
       </div>

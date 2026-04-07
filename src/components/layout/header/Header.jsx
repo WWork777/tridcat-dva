@@ -105,14 +105,22 @@ export default function Header() {
                     height={24}
                   />
                 </Link>
-                <Link href="https://t.me/stomatologiya_32" target="_blank">
+                <Link href="https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM" target="_blank">
+                  <Image
+                    src="/socials/max.svg"
+                    alt="tg"
+                    width={24}
+                    height={24}
+                  />
+                </Link>
+                {/* <Link href="https://t.me/stomatologiya_32" target="_blank">
                   <Image
                     src="/socials/telegram.svg"
                     alt="tg"
                     width={24}
                     height={24}
                   />
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
@@ -207,14 +215,22 @@ export default function Header() {
                   height={24}
                 />
               </Link>
-              <Link href="https://t.me/stomatologiya_32" target="_blank">
+              <Link href="https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM" target="_blank">
+                <Image
+                  src="/footer/max.svg"
+                  alt="tg"
+                  width={24}
+                  height={24}
+                />
+              </Link>
+              {/* <Link href="https://t.me/stomatologiya_32" target="_blank">
                 <Image
                   src="/footer/telegram.svg"
                   alt="tg"
                   width={24}
                   height={24}
                 />
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
