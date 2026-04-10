@@ -37,8 +37,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
-      <StructuredData type="Dentist" />
+      
       <body className={`${geistSans.variable}`}>
+        <StructuredData type="Dentist" />
         <Header />
         <FloatingButton />
         {children}

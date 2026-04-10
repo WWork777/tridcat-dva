@@ -6,7 +6,7 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { specialistsData } from "@/data/specialists.data";
 
@@ -34,46 +34,56 @@ export const SliderCard = ({
   showStage = true,
   link,
   showWhatsApp = true,
-  waLink = "", // Добавляем waLink
+  waLink = "",
 }: SliderCardProps) => {
+  // Добавляем состояние для проверки, произошел ли монтаж на клиенте
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  const renderName = () => {
+    // На сервере и при первом рендере на клиенте всегда возвращаем чистый name
+    if (!isMounted) return name;
+
+    const isNotMobile = typeof window !== 'undefined' && window.innerWidth >= 1200;
+
+    if (isNotMobile) {
+      const words = name.split(" ");
+      if (words.length >= 3) {
+        const firstLine = words.slice(0, 2).join(" ");
+        const secondLine = words.slice(2).join(" ");
+        return (
+          <>
+            {firstLine}
+            <br />
+            {secondLine}
+          </>
+        );
+      }
+    }
+    return name;
+  };
+
   return (
     <div className={styles.slider_card}>
-      <a href={link} >
-          <div className={styles.card_link}>
+      <Link href={link || "#"}>
+        <div className={styles.card_link}>
           <img src={img} alt={name} className={styles.specialistImage} />
-          <h3>
-            {(() => {
-              // Проверяем ширину экрана
-              const isNotMobile = typeof window !== 'undefined' && window.innerWidth >= 1200;
-              
-              if (isNotMobile) {
-                const words = name.split(' ');
-                if (words.length >= 3) {
-                  const firstLine = words.slice(0, 2).join(' ');
-                  const secondLine = words.slice(2).join(' ');
-                  return (
-                    <>
-                      {firstLine}<br/>{secondLine}
-                    </>
-                  );
-                }
-              }
-              return name;
-            })()}
-          </h3>
+          <h3>{renderName()}</h3>
           <p>{description}</p>
         </div>
-      </a>
-      
+      </Link>
+
       <div className={styles.card_footer}>
         {showStage && stage && <span>Стаж: {stage}</span>}
 
-        {showWhatsApp &&
-          waLink && ( // Показываем WhatsApp только если есть ссылка
-            <Link href={waLink} target="_blank" rel="noopener noreferrer">
-              <img src="/socials/max.svg" alt="WhatsApp" />
-            </Link>
-          )}
+        {showWhatsApp && waLink && (
+          <Link href={waLink} target="_blank" rel="noopener noreferrer">
+            <img src="/socials/max.svg" alt="WhatsApp" />
+          </Link>
+        )}
       </div>
     </div>
   );

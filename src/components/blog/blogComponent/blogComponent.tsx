@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import styles from "./blogComponent.module.scss";
 import BreadCrumbs from "@/components/common/breadcrumbs/breadcrumbs";
 import Image from "next/image";
@@ -5,6 +6,26 @@ import { blogData, Article } from "@/data/blog.data";
 import Link from "next/link";
 
 export default function BlogComponent() {
+  // Сортировка статей согласно ТЗ: сначала Имплантация, затем Протезирование, остальные по дате
+  const sortedArticles = useMemo(() => {
+    const categoryPriority: Record<string, number> = {
+      "Имплантация": 1,
+      "Протезирование": 2,
+      "Ортопедия": 2, // На случай, если в будущем встретится такое название
+    };
+
+    return [...blogData].sort((a, b) => {
+      const pA = categoryPriority[a.category || ""] ?? 3;
+      const pB = categoryPriority[b.category || ""] ?? 3;
+
+      // 1. Сортируем по приоритету категории
+      if (pA !== pB) return pA - pB;
+
+      // 2. Если приоритет одинаковый, сортируем по дате (сначала новые)
+      return new Date(b.date).getTime() - new Date(a.date).getTime();
+    });
+  }, []);
+
   return (
     <section className="container">
       <BreadCrumbs
@@ -13,7 +34,7 @@ export default function BlogComponent() {
       <h1>Блог</h1>
       
       <div className={styles.blogGrid}>
-        {blogData.map((article: Article) => (
+        {sortedArticles.map((article: Article) => (
           <Link 
             key={article.id} 
             href={`/blog/${article.slug}`}

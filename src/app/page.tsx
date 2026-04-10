@@ -7,6 +7,7 @@ import Services from "@/components/main-page/services/services";
 import RewievsSlider from "@/components/main-page/rewievs-slider/rewievs-slider";
 import Contacts from "@/components/common/contacts/contacts";
 import Promos from "@/components/main-page/promos/promos";
+import Vacancies from "@/components/main-page/Vacancies/Vacancies";
 
 // import BlockModal from "@/components/common/BlockModal/BlockModal"
 
@@ -68,6 +69,7 @@ export default function Home() {
         {/* <BlogSlider />  */}
         <Promos />
         <RewievsSlider />
+        <Vacancies/>
         <Contacts />
       </section>
       {/* <BlockModal allowClose={true}/> */}
