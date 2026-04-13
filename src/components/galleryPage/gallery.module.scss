@@ -1,0 +1,118 @@
+.title {
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: stretch; 
+}
+
+.Images {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  
+  .smallImageWrapper {
+    aspect-ratio: 3 / 4;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #eee;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+                box-shadow 0.4s ease, 
+                opacity 0.3s ease;
+    // Аппаратное ускорение
+    transform: translateZ(0);
+
+    &.active {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      z-index: 2;
+    }
+
+    &:hover:not(.active) {
+      opacity: 0.8;
+    }
+
+    .thumb {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+}
+
+.BigImage {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  align-self: start;
+  
+
+  .stickyContainer {
+    position: sticky !important;
+    top: 120px;
+    height: 700px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 40px;
+    background: #f5f5f5;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+    
+    // Контейнер для абсолютных фото внутри
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .mainPhoto {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      // Принудительно выносим на GPU слой, чтобы не лагало
+      will-change: opacity, transform;
+      backface-visibility: hidden;
+      transform: translateZ(0);
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .Images {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .galleryGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .BigImage {
+    order: -1;
+    margin-bottom: 20px;
+    
+    .stickyContainer {
+      position: relative;
+      top: 0;
+      height: 500px; // На мобилках поменьше
+      border-radius: 25px;
+    }
+  }
+  
+  .Images {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

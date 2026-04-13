@@ -62,6 +62,7 @@ export default function Header() {
           {/* Навигация desktop */}
           <nav className={styles.nav}>
             <Link href="/#about">О клинике</Link>
+            <Link href="/gallery">Галерея</Link>
             <Link href="/services">Услуги</Link>
             <Link href="/specialists">Специалисты</Link>
             <Link href="/#reviews">Отзывы</Link>
@@ -162,6 +163,9 @@ export default function Header() {
           <nav>
             <Link href="/#about" onClick={closeMenu}>
               О клинике
+            </Link>
+            <Link href="/gallery" onClick={closeMenu}>
+              Галерея
             </Link>
             <Link href="/services" onClick={closeMenu}>
               Услуги
