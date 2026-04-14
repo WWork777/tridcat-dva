@@ -34,6 +34,9 @@ export default function Footer() {
           <Link href="/#about" className={styles.footer_center_link}>
             <p>О клинике</p>
           </Link>
+          <Link href="/gallery" className={styles.footer_center_link}>
+            <p>Галерея</p>
+          </Link>
           <Link href="/services" className={styles.footer_center_link}>
             <p>Услуги</p>
           </Link>
