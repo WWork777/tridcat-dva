@@ -1,7 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 import styles from './gallery.module.scss';
 import BreadCrumbs from "@/components/common/breadcrumbs/breadcrumbs";
 
@@ -26,31 +28,45 @@ const staffPhotos = [
 
 export default function Gallery() {
   const [activeId, setActiveId] = useState(staffPhotos[0].id);
+  const [isOpen, setIsOpen] = useState(false);
+  const [photoIndex, setPhotoIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Оптимизированный обработчик наведения
+  // Проверка ширины экрана для отключения анимаций
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 500);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   const handleMouseEnter = (id: number) => {
+    if (isMobile) return; // Игнорируем на мобилках
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
     timeoutRef.current = setTimeout(() => {
       setActiveId(id);
-    }, 50); // Небольшой дебаунс убирает рывки при быстром пролете мыши
+    }, 50);
+  };
+
+  const handlePhotoClick = (index: number) => {
+    setPhotoIndex(index);
+    setIsOpen(true);
   };
 
   return (
     <section className="container" style={{ overflowX: 'unset' }}>
-    <BreadCrumbs
-                items={[{ label: "Главная", href: "/" }, { label: "Галлерея" }]}
-            />
+      <BreadCrumbs items={[{ label: "Главная", href: "/" }, { label: "Галерея" }]} />
       <h1 className={styles.title}>Галерея нашей клиники</h1>
       
       <div className={styles.galleryGrid}>
-        {/* Левая сетка превью */}
         <div className={styles.Images}>
-          {staffPhotos.map((photo) => (
+          {staffPhotos.map((photo, index) => (
             <div 
               key={photo.id} 
-              className={`${styles.smallImageWrapper} ${activeId === photo.id ? styles.active : ''}`}
+              className={`${styles.smallImageWrapper} ${!isMobile && activeId === photo.id ? styles.active : ''}`}
               onMouseEnter={() => handleMouseEnter(photo.id)}
+              onClick={() => handlePhotoClick(index)}
             >
               <img 
                 src={photo.src} 
@@ -62,33 +78,39 @@ export default function Gallery() {
           ))}
         </div>
 
-        {/* Правое большое фото */}
-        <div className={styles.BigImage}>
-          <div className={styles.stickyContainer}>
-            {staffPhotos.map((photo) => (
-              <motion.img
-                key={photo.id}
-                src={photo.src}
-                initial={false}
-                animate={{ 
-                  opacity: activeId === photo.id ? 1 : 0,
-                  scale: activeId === photo.id ? 1 : 1.05,
-                }}
-                transition={{ 
-                  duration: 0.5, 
-                  ease: [0.25, 1, 0.5, 1] 
-                }}
-                className={styles.mainPhoto}
-                style={{ 
-                  position: activeId === photo.id ? 'relative' : 'absolute',
-                  zIndex: activeId === photo.id ? 2 : 1 
-                }}
-                decoding="sync"
-              />
-            ))}
+        {/* Правое фото (скрыто на мобильных через CSS или условие) */}
+        {!isMobile && (
+          <div className={styles.BigImage}>
+            <div className={styles.stickyContainer}>
+              {staffPhotos.map((photo) => (
+                <motion.img
+                  key={photo.id}
+                  src={photo.src}
+                  initial={false}
+                  animate={{ 
+                    opacity: activeId === photo.id ? 1 : 0,
+                    scale: activeId === photo.id ? 1 : 1.05,
+                  }}
+                  transition={{ duration: 0.4, ease: "easeOut" }}
+                  className={styles.mainPhoto}
+                  style={{ 
+                    position: activeId === photo.id ? 'relative' : 'absolute',
+                    zIndex: activeId === photo.id ? 2 : 1 
+                  }}
+                />
+              ))}
+            </div>
           </div>
-        </div>
+        )}
       </div>
+
+      {/* Лайтбокс для всех устройств */}
+      <Lightbox
+        open={isOpen}
+        close={() => setIsOpen(false)}
+        index={photoIndex}
+        slides={staffPhotos.map(p => ({ src: p.src }))}
+      />
     </section>
   );
 }
