@@ -165,11 +165,7 @@
       }
 
       .ctaButton {
-        background: linear-gradient(
-          135deg,
-          var(--color-decorate) 0%,
-          #2a4a8a 100%
-        );
+        background: linear-gradient(135deg, var(--color-decorate) 0%, #2a4a8a 100%);
         color: white;
         border: none;
         padding: 16px 32px;
@@ -179,10 +175,12 @@
         cursor: pointer;
         transition: all 0.3s ease;
         box-shadow: 0 4px 15px rgba(48, 85, 157, 0.3);
+        display: flex; // Заменил block на flex, так как в медиа-запросе ниже используется justify-content: center
 
         p {
           color: white;
           text-align: center;
+          margin: 0;
         }
 
         &:hover {
@@ -192,6 +190,19 @@
 
         &:active {
           transform: translateY(0);
+        }
+
+        // Адаптив
+        @media (max-width: 480px) {
+          width: 100%;
+          justify-content: center;
+          padding: 14px 24px;
+          font-size: 15px;
+        }
+
+        @media (max-width: 380px) {
+          padding: 12px 20px;
+          font-size: 14px;
         }
       }
     }

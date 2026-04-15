@@ -7,8 +7,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { UniversalModalForm } from "@/components/common/UniversalForm/UniversalModalForm";
 
-// Данные выносим за пределы компонента
 const vacanciesData = [
   {
     id: "dentist-orthopedist",
@@ -37,8 +37,10 @@ const vacanciesData = [
 ];
 
 export default function VacanciesSlider({ title }: { title?: string }) {
-  // Исправление гидратации и форсированный сброс кэша при монтировании
   const [domReady, setDomReady] = useState(false);
+  
+  // Храним название выбранной вакансии (если null - форма закрыта)
+  const [selectedVacancy, setSelectedVacancy] = useState<string | null>(null);
 
   useEffect(() => {
     setDomReady(true);
@@ -81,33 +83,57 @@ export default function VacanciesSlider({ title }: { title?: string }) {
         >
           {vacanciesData.map((vacancy) => (
             <SwiperSlide key={vacancy.id}>
-              <Link href={vacancy.waLink} target="_blank">
-                <div className={styles.slider_card}>
-                  <div className={styles.card_link}>
-                    <div className={styles.vacancy_header}>
-                      {/* Принудительно приводим к строке, чтобы split не на чем было падать */}
-                      <h3>{String(vacancy.title || "")}</h3>
-                      <span className={styles.salary_badge}>{vacancy.salary}</span>
-                    </div>
-                    <p>{vacancy.requirements}</p>
+              {/* Поменяли button на div и передаем title вакансии в стейт */}
+              <div 
+                className={styles.slider_card} 
+                onClick={() => setSelectedVacancy(vacancy.title)}
+                style={{ cursor: 'pointer' }} // Чтобы было понятно, что карточка кликабельна
+              >
+                <div className={styles.card_link}>
+                  <div className={styles.vacancy_header}>
+                    <h3>{String(vacancy.title || "")}</h3>
+                    <span className={styles.salary_badge}>{vacancy.salary}</span>
                   </div>
-                  <div className={styles.card_footer}>
-                    <div className={styles.vacancy_footer}>
-                      <span>Опыт: {vacancy.experience}</span>
-                      <span>Откликнуться</span>
-                    </div>
-                    
-                    <span className={styles.wa_button}>
-                      <img src="/socials/max.svg" alt="WA" />
-                    </span>
-                  </div>
+                  <p>{vacancy.requirements}</p>
                 </div>
-              </Link>
-              
+                
+                <div className={styles.card_footer}>
+                  <div className={styles.vacancy_footer}>
+                    <span>Опыт: {vacancy.experience}</span>
+                    <span>Откликнуться</span>
+                  </div>
+                  
+                  <Link 
+                    href={vacancy.waLink} 
+                    onClick={() => {
+                      if (typeof window !== "undefined") {
+                        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                        (window as any).ym(105543299, 'reachGoal', 'MaxMessenger');
+                      }
+                    }}
+                    target="_blank" 
+                    className={styles.wa_button}
+                    // Останавливаем всплытие клика, чтобы при клике на иконку WA модалка не открывалась
+                    onClick={(e) => e.stopPropagation()} 
+                  >
+                    <img src="/socials/max.svg" alt="WA" />
+                  </Link>
+                </div>
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
+
+      {/* Модальное окно ОДНО на весь компонент. Лежит вне слайдера */}
+      <UniversalModalForm 
+        isOpen={!!selectedVacancy} // Открыто, если selectedVacancy не null
+        onClose={() => setSelectedVacancy(null)}
+        title={`Отклик на вакансию: ${selectedVacancy}`}
+        titleInText={`Заявка на вакансию: ${selectedVacancy}`}
+        loadingTitle="Подождите, отправляем заявку..."
+        goalName="VacancyForm"
+      />
     </section>
   );
 }

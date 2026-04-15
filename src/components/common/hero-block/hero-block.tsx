@@ -1,6 +1,8 @@
 "use client";
 import Link from 'next/link';
 import styles from './styles.module.scss';
+import React, { useState } from 'react';
+import { UniversalModalForm } from '../UniversalForm/UniversalModalForm';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
@@ -13,6 +15,7 @@ import 'swiper/css/pagination';
 // import '@vidstack/react/player/styles/default/layouts/video.css';
 
 export default function HeroBlock() {
+  const [isFormOpen, setIsFormOpen] = useState(false);
   return (
     <section className={`${styles.hero__section}`}>
       <div className={styles.hero_left}>
@@ -23,13 +26,11 @@ export default function HeroBlock() {
           <p>
             Клиника влюбленных в свое дело <br /> Профилактика и лечение зубов
           </p>
-          <Link
-            // href='https://t.me/stomatologiya_32?text=Здравствуйте хочу записаться на прием'
-            href={'https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM'}
+          <button 
             className={styles.corner_button}
-          >
+            onClick={() => setIsFormOpen(true)}>
             <span>Записаться онлайн</span>
-          </Link>
+          </button>
         </div>
         <div className={`${styles.hero_left__bottom}`}>
           <Swiper
@@ -60,6 +61,12 @@ export default function HeroBlock() {
                 <Link
                   // href='https://t.me/stomatologiya_32?text=Здравствуйте, хочу узнать по поводу отбеливании Amazing White'
                   href={'https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM'}
+                  onClick={() => {
+                    if (typeof window !== "undefined") {
+                      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                      (window as any).ym(105543299, 'reachGoal', 'MaxMessenger');
+                    }
+                  }}
                   className={styles.corner_button}
                 >
                   Узнать подробности
@@ -72,6 +79,12 @@ export default function HeroBlock() {
                 <Link
                   // href='https://t.me/stomatologiya_32?text=Здравствуйте, хочу узнать по поводу скидки для новых клиентов'
                   href={'https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM'}
+                  onClick={() => {
+                    if (typeof window !== "undefined") {
+                      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                      (window as any).ym(105543299, 'reachGoal', 'MaxMessenger');
+                    }
+                  }}
                   className={styles.corner_button}
                 >
                   Узнать подробности
@@ -100,6 +113,15 @@ export default function HeroBlock() {
           </div>
         </div>
       </div>
+      <UniversalModalForm 
+            isOpen={isFormOpen} 
+            onClose={() => setIsFormOpen(false)}
+            title="Записаться на приём онлайн"
+            titleInText="Главный экран 'Записаться онлайн'"
+            loadingTitle="Подождите, отправляем заявку..."
+            bgImage="/hero/hero-first.png" // Если убрать эту строку, фон будет просто белым
+            goalName="MainForm" // Отправит отдельную цель в Метрику
+          />
     </section>
   );
 }

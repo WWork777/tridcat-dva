@@ -1,4 +1,5 @@
 import BreadCrumbs from "@/components/common/breadcrumbs/breadcrumbs";
+import TrackedPhoneLink from "@/components/common/LinkGoals/TrackedPhoneLink";
 import styles from "./styles.module.scss";
 
 export async function generateMetadata() {
@@ -33,10 +34,18 @@ export default function YurInfo() {
                 <strong>Адрес:</strong> <span>650064, г. Кемерово, пр. Советский, 58</span>
               </div>
               <div className={styles.infoRow}>
-                <strong>Горячая линия:</strong> <a href="tel:+73842584356">+7 (3842) 58-43-56</a>
+                <strong>Горячая линия:</strong> 
+                <TrackedPhoneLink 
+                  phoneNumber="+73842584356" 
+                  displayNumber="+7 (3842) 58-43-56" 
+                />
               </div>
               <div className={styles.infoRow}>
-                <strong>Приемная:</strong> <a href="tel:+73842364284">+7 (3842) 36-42-84</a>
+                <strong>Приемная:</strong> 
+                <TrackedPhoneLink 
+                  phoneNumber="+73842364284" 
+                  displayNumber="+7 (3842) 36-42-84" 
+                />
               </div>
               <div className={styles.infoRow}>
                 <strong>E-mail:</strong> <a href="mailto:depart@kuzdrav.ru">depart@kuzdrav.ru</a>
@@ -49,7 +58,11 @@ export default function YurInfo() {
                 <strong>Адрес:</strong> <span>650003, г. Кемерово, б-р Строителей, стр. 54 А.</span>
               </div>
               <div className={styles.infoRow}>
-                <strong>Телефон:</strong> <a href="tel:+73842780893">8-3842-78-08-93</a>
+                <strong>Телефон:</strong> 
+                <TrackedPhoneLink 
+                  phoneNumber="+73842780893" 
+                  displayNumber="8-3842-78-08-93" 
+                />
               </div>
               <div className={styles.infoRow}>
                 <strong>E-mail:</strong> <a href="mailto:rznko@reg42.roszdravnadzor.gov.ru">rznko@reg42.roszdravnadzor.gov.ru</a>
@@ -62,7 +75,11 @@ export default function YurInfo() {
                 <strong>Адрес:</strong> <span>650002, г. Кемерово, пр. Шахтеров, 20</span>
               </div>
               <div className={styles.infoRow}>
-                <strong>Тел./факс:</strong> <a href="tel:+73842641158">(3842) 64-11-58</a>
+                <strong>Тел./факс:</strong>
+                <TrackedPhoneLink 
+                  phoneNumber="+7 (3842) 64-11-58" 
+                  displayNumber="+73842641158" 
+                />
               </div>
               <div className={styles.infoRow}>
                 <strong>E-mail:</strong> <a href="mailto:kemerovo@42.rospotrebnadzor.ru">kemerovo@42.rospotrebnadzor.ru</a>

@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./Header.module.scss";
+import TrackedPhoneLink from "@/components/common/LinkGoals/TrackedPhoneLink";
 
 export default function Header() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -75,9 +76,11 @@ export default function Header() {
           {/* Контакты и кнопка */}
           <div className={styles.actions}>
             <div className={styles.contacts}>
-              <a href="tel:+7(3842) 33 00 05" className={styles.phone}>
-                +7(3842) 33 00 05
-              </a>
+              <TrackedPhoneLink 
+                  phoneNumber="+7(3842) 33 00 05" 
+                  displayNumber="+7(3842) 33 00 05" 
+                  className={styles.phone}
+                />
               <div
                 style={{
                   backgroundColor: "black",
@@ -85,12 +88,21 @@ export default function Header() {
                   width: "1.3px",
                 }}
               ></div>
-              <a href="tel:+7(3842) 58 30 26" className={styles.phone}>
-                +7(3842) 58 30 26
-              </a>
+              <TrackedPhoneLink 
+                  phoneNumber="+7(3842) 58 30 26" 
+                  displayNumber="+7(3842) 58 30 26" 
+                  className={styles.phone}
+                />
 
               <div className={styles.socials}>
-                <Link href="https://m.vk.com/tridsat_dva" target="_blank">
+                <Link href="https://m.vk.com/tridsat_dva" target="_blank"
+                onClick={() => {
+                  if (typeof window !== "undefined") {
+                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    (window as any).ym(105543299, 'reachGoal', 'VKMessenger');
+                  }
+                }}
+                >
                   <Image
                     src="/socials/vk.svg"
                     alt="VK"
@@ -106,7 +118,14 @@ export default function Header() {
                     height={24}
                   />
                 </Link>
-                <Link href="https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM" target="_blank">
+                <Link 
+                onClick={() => {
+                  if (typeof window !== "undefined") {
+                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    (window as any).ym(105543299, 'reachGoal', 'MaxMessenger');
+                  }
+                }}
+                href="https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM" target="_blank">
                   <Image
                     src="/socials/max.svg"
                     alt="tg"
@@ -193,15 +212,24 @@ export default function Header() {
             </Link>
           </nav>
           <div className={styles.mobileContacts}>
-            <Link href="tel:+7(3842) 33 00 05">
-              <span>+7(3842) 33 00 05</span>
-            </Link>
-            <Link href="tel:+7(3842) 58 30 26">
-              <span>+7(3842) 58 30 26</span>
-            </Link>
-            <Link href="tel:+7(3842) 45-75-95">
-              <span>+7(3842) 45-75-95</span>
-            </Link>
+            <span>
+              <TrackedPhoneLink 
+                  phoneNumber="+7(3842) 33 00 05" 
+                  displayNumber="+7(3842) 33 00 05" 
+                />
+            </span>
+            <span>
+              <TrackedPhoneLink 
+                  phoneNumber="+7(3842) 58 30 26" 
+                  displayNumber="+7(3842) 58 30 26" 
+                />
+            </span>
+            <span>
+              <TrackedPhoneLink 
+                  phoneNumber="+7(3842) 45-75-95" 
+                  displayNumber="+7(3842) 45-75-95" 
+                />
+            </span>
             <div className={styles.socials}>
               <Link href="https://m.vk.com/tridsat_dva" target="_blank">
                 <Image
@@ -219,7 +247,15 @@ export default function Header() {
                   height={24}
                 />
               </Link>
-              <Link href="https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM" target="_blank">
+              <Link 
+              
+              onClick={() => {
+                if (typeof window !== "undefined") {
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                  (window as any).ym(105543299, 'reachGoal', 'MaxMessenger');
+                }
+              }}
+              href="https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM" target="_blank">
                 <Image
                   src="/footer/max.svg"
                   alt="tg"

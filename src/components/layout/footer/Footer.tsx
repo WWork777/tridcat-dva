@@ -1,5 +1,7 @@
+"use client"
 import Link from "next/link";
 import styles from "./Footer.module.scss";
+import TrackedPhoneLink from "@/components/common/LinkGoals/TrackedPhoneLink";
 
 export default function Footer() {
   return (
@@ -66,17 +68,19 @@ export default function Footer() {
       <div className={styles.footer_rigth}>
         <div className={styles.footer_rigth__item}>
           <img src="/footer/phone.svg" alt="" />
-          <Link href="tel:+7(3842) 58 30 26">
-            <p>+7(3842) 58 30 26</p>
-          </Link>
+          <p><TrackedPhoneLink 
+              phoneNumber="+7(3842) 58 30 26" 
+              displayNumber="+7(3842) 58 30 26" 
+            /></p>
+          <p><TrackedPhoneLink 
+            phoneNumber="+7(3842) 33 00 05" 
+            displayNumber="+7(3842) 33 00 05" 
+          /></p>
+          <p><TrackedPhoneLink 
+            phoneNumber="+7(3842) 45-75-95" 
+            displayNumber="+7(3842) 45-75-95" 
+          /></p>
           <div className={styles.footer_line}>|</div>
-          <Link href="tel:+7(3842) 33 00 05">
-            <p>+7(3842) 33 00 05</p>
-          </Link>
-          <div className={styles.footer_line}>|</div>
-          <Link href="tel:+7(3842) 45-75-95">
-            <p>+7(3842) 45-75-95</p>
-          </Link>
         </div>
         <div className={styles.footer_rigth__item}>
           <img src="/footer/mail.svg" alt="" />
@@ -93,12 +97,24 @@ export default function Footer() {
           </Link>
           <Link
             href="https://m.vk.com/tridsat_dva"
+            onClick={() => {
+              if (typeof window !== "undefined") {
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                (window as any).ym(105543299, 'reachGoal', 'VKMessenger');
+              }
+            }}
             className={styles.footer_socials_link}
           >
             <img src="/footer/vk.svg" alt="" />
           </Link>
           <Link
             href="https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM"
+            onClick={() => {
+              if (typeof window !== "undefined") {
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                (window as any).ym(105543299, 'reachGoal', 'MaxMessenger');
+              }
+            }}
             className={styles.footer_socials_link}
           >
             <img src="/footer/max.svg" alt="" />

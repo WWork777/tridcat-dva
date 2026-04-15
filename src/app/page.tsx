@@ -8,6 +8,7 @@ import RewievsSlider from "@/components/main-page/rewievs-slider/rewievs-slider"
 import Contacts from "@/components/common/contacts/contacts";
 import Promos from "@/components/main-page/promos/promos";
 import Vacancies from "@/components/main-page/Vacancies/Vacancies";
+import { PromoPopUp } from "@/components/common/PromoPopUp/PromoPopUp";
 
 // import BlockModal from "@/components/common/BlockModal/BlockModal"
 
@@ -72,6 +73,7 @@ export default function Home() {
         <Vacancies/>
         <Contacts />
       </section>
+      <PromoPopUp/>
       {/* <BlockModal allowClose={true}/> */}
     </>
   );

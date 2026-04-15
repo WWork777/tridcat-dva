@@ -133,6 +133,8 @@
   }
 
   .corner_button {
+    // all:unset;
+    
     display: flex;
     justify-content: center;
     position: absolute;
@@ -150,6 +152,7 @@
     z-index: 1;
     transition: all 0.5s ease;
     animation: fadeIn 0.6s ease 0.6s both;
+    border: 1px solid transparent;
 
     @media (max-width: 1350px) {
       // width: 40%;

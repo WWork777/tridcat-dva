@@ -1,5 +1,6 @@
 interface Service {
   id: string;
+  titleForForm?: string;
   ownPage?: boolean; // существование такое страницы отдельно
   title?: string;
   name?: string;
@@ -16,6 +17,7 @@ interface Service {
 const servicesData: Record<string, Service> = {
   "detskaya-stomatologiya": {
     id: "detskaya-stomatologiya",
+    titleForForm: "Записаться на прием к детскому стоматологу",
     ownPage: true,
     title: "Детская стоматология",
     description:
@@ -71,6 +73,7 @@ const servicesData: Record<string, Service> = {
   },
   "implantatsiya-zubov": {
     id: "implantatsiya-zubov",
+    titleForForm: "Записаться на консультацию по имплантации",
     ownPage: true,
     title: "Имплантация зубов",
     description: "Пожизненное решение для восстановления утраченных зубов",
@@ -112,6 +115,7 @@ const servicesData: Record<string, Service> = {
   },
   "ispravlenie-prikusa": {
     id: "ispravlenie-prikusa",
+    titleForForm: "Записаться на приём к ортодонту",
     ownPage: true,
     title: "Исправление прикуса",
     name: "Ортодонтия",
@@ -178,6 +182,7 @@ const servicesData: Record<string, Service> = {
   },
   "otbelivanie-zubov": {
     id: "otbelivanie-zubov",
+    titleForForm: "Записаться на профессиональное отбеливание",
     ownPage: true,
     title: "Отбеливание зубов",
     description:
@@ -226,6 +231,7 @@ const servicesData: Record<string, Service> = {
   },
   "professionalnaya-gigiena": {
     id: "professionalnaya-gigiena",
+    titleForForm: "Записаться на чистку и профгигиену",
     ownPage: true,
     title: "Профессиональная гигиена",
     description:
@@ -274,6 +280,7 @@ const servicesData: Record<string, Service> = {
   },
   rentgenodiagnostika: {
     id: "rentgenodiagnostika",
+    titleForForm: "Записаться на диагностику (рентген)",
     ownPage: true,
     title: "Рентгенодиагностика",
     description:
@@ -297,6 +304,7 @@ const servicesData: Record<string, Service> = {
   },
   "vektor-terapiya": {
     id: "vektor-terapiya",
+    titleForForm: "Записаться на Вектор-терапию",
     ownPage: true,
     title: "Вектор-терапия",
     description:
@@ -334,6 +342,7 @@ const servicesData: Record<string, Service> = {
   },
   "lechenie-zubov": {
     id: "lechenie-zubov",
+    titleForForm: "Записаться на лечение зубов",
     ownPage: true,
     title: "Лечение зубов",
     description:
@@ -401,6 +410,7 @@ const servicesData: Record<string, Service> = {
   },
   "esteticheskoe-vosstanovlenie-zubov": {
     id: "esteticheskoe-vosstanovlenie-zubov",
+    titleForForm: "Записаться на эстетическую реставрацию",
     ownPage: true,
     title: "Эстетическое восстановление зубов",
     description:
@@ -468,6 +478,7 @@ const servicesData: Record<string, Service> = {
   },
   "protezirovanie-zubov": {
     id: "protezirovanie-zubov",
+    titleForForm: "Записаться на протезирование зубов",
     ownPage: true,
     title: "Протезирование зубов",
     description: "Восстановление функциональности и эстетики утраченных зубов",
@@ -565,6 +576,7 @@ const servicesData: Record<string, Service> = {
   },
   "protezirovanie-zubov-na-implantah": {
     id: "protezirovanie-zubov-na-implantah",
+    titleForForm: "Записаться на протезирование на имплантах",
     ownPage: true,
     title: "Протезирование на имплантах",
     description: "Надежное и эстетичное восстановление зубов на имплантатах",
@@ -613,6 +625,7 @@ const servicesData: Record<string, Service> = {
   },
   "udalenie-zubov": {
     id: "udalenie-zubov",
+    titleForForm: "Записаться на удаление зуба",
     ownPage: true,
     title: "Удаление зубов",
     description:
@@ -662,6 +675,7 @@ const servicesData: Record<string, Service> = {
   },
   "ambulatornye-hirurgicheskie-operacii": {
     id: "ambulatornye-hirurgicheskie-operacii",
+    titleForForm: "Записаться на хирургическую операцию",
     ownPage: true,
     title: "Хирургические операции",
     description: "Полный спектр амбулаторных хирургических вмешательств",
@@ -704,6 +718,7 @@ const servicesData: Record<string, Service> = {
   },
   "zubnye-ukrasheniya": {
     id: "zubnye-ukrasheniya",
+    titleForForm: "Записаться на установку скайсов",
     ownPage: true,
     title: "Зубные украшения",
     description: "Эстетическое украшение зубов стразами и скайсами",

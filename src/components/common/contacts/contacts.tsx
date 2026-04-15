@@ -1,6 +1,8 @@
+"use client"
 import styles from "./styles.module.scss";
 import "./style.scss";
 import Link from "next/link";
+import TrackedPhoneLink from "../LinkGoals/TrackedPhoneLink";
 
 export default function Contacts() {
   return (
@@ -27,30 +29,27 @@ export default function Contacts() {
                   <div className={styles.phones}>
                     <div className={styles.phone_row}>
                       <p>
-                        <Link
-                          href="tel:+7(3842) 33 00 05"
+                        <TrackedPhoneLink 
+                          phoneNumber="+7(3842) 33 00 05" 
+                          displayNumber="+7(3842) 33 00 05" 
                           className={styles.phone_link}
-                        >
-                          +7 (3842) 33-00-05
-                        </Link>
+                        />
                       </p>
                       <p>
-                        <Link
-                          href="tel:+7(3842) 58 30 26"
+                        <TrackedPhoneLink 
+                          phoneNumber="+7(3842) 58 30 26" 
+                          displayNumber="+7 (3842) 58-30-26" 
                           className={styles.phone_link}
-                        >
-                          +7 (3842) 58-30-26
-                        </Link>
+                        />
                       </p>
                     </div>
                     <div className={styles.phone_row_center}>
                       <p>
-                        <Link
-                          href="tel:+7(3842) 45-75-95"
+                        <TrackedPhoneLink 
+                          phoneNumber="+7 (3842) 45-75-95" 
+                          displayNumber="+7 (3842) 45-75-95" 
                           className={styles.phone_link}
-                        >
-                          +7 (3842) 45-75-95
-                        </Link>
+                        />
                       </p>
                     </div>
                   </div>
@@ -70,6 +69,12 @@ export default function Contacts() {
                     </Link>
                     <Link
                       href="https://m.vk.com/tridsat_dva"
+                      onClick={() => {
+                        if (typeof window !== "undefined") {
+                          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                          (window as any).ym(105543299, 'reachGoal', 'VKMessenger');
+                        }
+                      }}
                       className={styles.social_link}
                       aria-label="ВКонтакте"
                     >
@@ -77,6 +82,12 @@ export default function Contacts() {
                     </Link>
                     <Link
                       href="https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM"
+                      onClick={() => {
+                        if (typeof window !== "undefined") {
+                          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                          (window as any).ym(105543299, 'reachGoal', 'MaxMessenger');
+                        }
+                      }}
                       className={styles.social_link}
                       aria-label="Max"
                     >

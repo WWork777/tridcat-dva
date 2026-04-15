@@ -6,20 +6,16 @@ import servicesData from "@/data/services.data";
 import SpecialistsService from "@/components/specialists/specialistsSlider/specialists-slider";
 import PricingAccordion from "@/components/services/pricing-accordion/PricingAccordion";
 import { specialistsData } from "@/data/specialists.data";
+import TrackedLink from "@/components/common/LinkGoals/TrackedLink";
 
-// interface ServicePageProps {
-//   params: {
-//     id: string;
-//   };
-// }
+// 1. Импортируем нашу новую клиентскую кнопку
+import ServiceAppointmentButton from "./ServiceAppointmentButton";
 
-// Исправляем компонент - params должен быть Promise
 export default async function ServicePage({
   params,
 }: {
   params: Promise<{ id: string }>;
 }) {
-  // Распаковываем params с помощью await
   const { id } = await params;
   const service = servicesData[id];
 
@@ -27,7 +23,6 @@ export default async function ServicePage({
     notFound();
   }
 
-  // Защита от отсутствующего поля services
   const serviceSpecialists = Object.values(specialistsData).filter(
     (specialist) =>
       specialist.services &&
@@ -35,14 +30,10 @@ export default async function ServicePage({
       specialist.services.includes(id),
   );
 
-  const whatsappMessage = `Здравствуйте, хочу записаться на ${service.title}`;
-  const encodedMessage = encodeURIComponent(whatsappMessage);
-
   const hasFeatures = service.features && service.features.length > 0;
 
   return (
     <div className="container">
-      {/* Хлебные крошки */}
       <BreadCrumbs
         items={[
           { label: "Главная", href: "/" },
@@ -51,7 +42,6 @@ export default async function ServicePage({
         ]}
       />
 
-      {/* Заголовок страницы */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
           <h1>{service.title}</h1>
@@ -62,16 +52,19 @@ export default async function ServicePage({
           )}
           <p className={styles.heroDescription}>{service.fullDescription}</p>
           <div className={styles.buttons_container}>
-            <Link
-              // href={`https://t.me/stomatologiya_32?text=${encodedMessage}`}
-              href={'https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM'}
-              className={styles.wa_button}
-            >
-              <p>Max</p>
-            </Link>
-            <Link href="tel:+7(3842) 33 00 05" className={styles.ctaButton}>
-              <p>Записаться на прием</p>
-            </Link>
+            <TrackedLink
+            link="https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM"
+            className={styles.wa_button}
+            goalName="MaxMessenger"
+            text="Max"
+            />
+            
+            {/* 2. Вставляем нашу кнопку, передавая ей название услуги */}
+            <ServiceAppointmentButton 
+              serviceTitle={service.title} 
+              titleForForm={service.titleForForm} 
+            />
+            
           </div>
         </div>
         {service.imageLink && (
@@ -85,7 +78,7 @@ export default async function ServicePage({
         <PricingAccordion
           service={{
             ...service,
-            features: service.features || [], // Добавить fallback
+            features: service.features || [], 
           }}
         />
       )}
@@ -100,7 +93,6 @@ export async function generateStaticParams() {
   }));
 }
 
-// Исправляем generateMetadata
 export async function generateMetadata({
   params,
 }: {

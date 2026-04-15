@@ -30,7 +30,14 @@ export const ServiceCard = ({
         <Link className={styles.cta_button} href={url}>
           Записаться
         </Link>
-        <Link href={url} className={styles.more_button}>
+        <Link 
+        onClick={() => {
+              if (typeof window !== "undefined") {
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                (window as any).ym(105543299, 'reachGoal', 'MaxMessenger');
+              }
+            }}
+        href={url} className={styles.more_button}>
           Подробнее
         </Link>
       </div>

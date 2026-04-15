@@ -112,7 +112,15 @@ export default function ArticleComponent({ slug }: ArticleComponentProps) {
             <h3>Записаться на консультацию</h3>
             <p>Не откладывайте здоровье своих зубов на потом! Наши специалисты готовы помочь вам уже сегодня.</p>
             {/* <button className={styles.ctaButton} ><a href={`https://t.me/stomatologiya_32?text=${encodedMessage}`}>Записаться онлайн</a></button> */}
-            <button className={styles.ctaButton} ><a href={`https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM`}>Записаться онлайн</a></button>
+            <button className={styles.ctaButton} >
+              <a href={`https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM`}
+              onClick={() => {
+              if (typeof window !== "undefined") {
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                (window as any).ym(105543299, 'reachGoal', 'MaxMessenger');
+              }
+            }}
+              >Записаться онлайн</a></button>
           </div>
         </div>
 

@@ -29,7 +29,14 @@ export default function FloatingContacts() {
   return (
     <div className={styles.root} ref={rootRef}>
       <div className={`${styles.menu} ${open ? styles.open : ""}`}>
-        <a href={links.vk} target="_blank" className={styles.item}>
+        <a href={links.vk} target="_blank" className={styles.item}
+        onClick={() => {
+            if (typeof window !== "undefined") {
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              (window as any).ym(105543299, 'reachGoal', 'VKMessenger');
+            }
+          }}
+          >
           <VkIcon />
           <span>ВК</span>
         </a>
@@ -39,7 +46,14 @@ export default function FloatingContacts() {
           <span>WhatsApp</span>
         </a>
 
-        <a href={links.max} target="_blank" className={styles.item}>
+        <a href={links.max} target="_blank" className={styles.item}
+            onClick={() => {
+              if (typeof window !== "undefined") {
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                (window as any).ym(105543299, 'reachGoal', 'MaxMessenger');
+              }
+            }}
+        >
           <MaxIcon />
           <span>Max</span>
         </a>
@@ -49,9 +63,18 @@ export default function FloatingContacts() {
           <span>Telegram</span>
         </a> */}
 
-        <a href={links.tel} className={styles.item}>
+        <a 
+          href={links.tel} 
+          className={styles.item}
+          onClick={() => {
+            if (typeof window !== "undefined") {
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              (window as any).ym(105543299, 'reachGoal', 'PhoneClick');
+            }
+          }}
+        >
           <PhoneIcon />
-          <span>Позвонить</span>
+          <span>Позвонить</span>  
         </a>
       </div>
 

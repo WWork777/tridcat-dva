@@ -8,6 +8,8 @@ import CasesAccordion from "@/components/specialists/cases/cases";
 import CertificatesSwiper from "@/components/specialists/certificatesSlider/certificatesSlider";
 import ServicesAccordion from "@/components/specialists/servicesAccordion/servicesAccordion";
 import Specialists from "@/components/main-page/specialists-slider/specialists-slider";
+import AppointmentButton from "./AppointmentButton";
+import TrackedLink from "@/components/common/LinkGoals/TrackedLink";
 
 interface SpecialistPageProps {
   params: Promise<{
@@ -46,6 +48,7 @@ export default async function SpecialistPage({
   const hasDetailedDescription = specialist.detailedDescription;
   const hasCases = specialist.cases && specialist.cases.length > 0;
 
+
   return (
     <div className="container">
       {/* Хлебные крошки */}
@@ -61,6 +64,7 @@ export default async function SpecialistPage({
       />
 
       {/* Основная информация о специалисте */}
+      
       <section className={styles.hero}>
         <div className={styles.heroContent}>
           <div className={styles.specialistInfo}>
@@ -145,29 +149,26 @@ export default async function SpecialistPage({
 
             <div className={styles.buttons_container}>
               {specialist.waLink ? (
-                <Link
-                  href={specialist.waLink}
-                  className={styles.wa_button}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <p>Написать в Max</p>
-                </Link>
+
+                <TrackedLink
+                    link={specialist.waLink}
+                    className={styles.wa_button}
+                    goalName="MaxMessenger"
+                    text="Написать в Max"
+                  />
               ) : (
-                <Link
-                  // href={`https://t.me/stomatologiya_32?text=${encodedMessage}`}
-                  href={'https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM'}
-                  className={styles.wa_button}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <p>Написать в Max</p>
-                </Link>
+
+                <TrackedLink
+                    link={'https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM'}
+                    className={styles.wa_button}
+                    goalName="MaxMessenger"
+                    text="Написать в Max"
+                  />
+                
               )}
 
-              <Link href="tel:+7(3842) 33 00 05" className={styles.ctaButton}>
-                <p>Записаться на прием</p>
-              </Link>
+              {/* 2. Вставляем Клиентский Компонент сюда */}
+              <AppointmentButton specialistName={specialist.name} />
             </div>
           </div>
         </div>
@@ -176,6 +177,7 @@ export default async function SpecialistPage({
           <img src={specialist.imageLink} alt={specialist.name} />
         </div>
       </section>
+
 
       {/* Образование и специализации */}
       {(hasEducation || hasSpecializations) && (
