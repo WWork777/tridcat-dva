@@ -64,16 +64,16 @@ export default function Home() {
       <section className="container">
         <About />
         <Services />
-        
+
         <Specialists />
         {/* <Sales /> */}
         {/* <BlogSlider />  */}
         <Promos />
         <RewievsSlider />
-        <Vacancies/>
+        {/* <Vacancies/> */}
         <Contacts />
       </section>
-      <PromoPopUp/>
+      <PromoPopUp />
       {/* <BlockModal allowClose={true}/> */}
     </>
   );
