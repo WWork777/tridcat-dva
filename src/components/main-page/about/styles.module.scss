@@ -14,23 +14,23 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 400px;
-  gap: 20px;
+  gap: 30px; /* Увеличили отступ между видео и правым блоком */
 
   @media (max-width: 1024px) {
-    height: auto;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
   }
 }
 
 .about_top__image {
-  height: 100%;
+  /* Настройки для вертикального видео */
   width: 50%;
-  background: url("/about/about.jpg") no-repeat center;
-  background-size: cover;
+  max-width: 380px;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
   border-radius: 18px;
   transition: all 0.3s ease;
+  cursor: pointer; /* ДОБАВЛЕНО: курсор в виде руки при наведении */
 
   &:hover {
     transform: scale(1.02);
@@ -39,23 +39,15 @@
 
   @media (max-width: 1024px) {
     width: 100%;
-    height: 300px;
-  }
-
-  @media (max-width: 768px) {
-    height: 250px;
-    border-radius: 12px;
-  }
-
-  @media (max-width: 480px) {
-    height: 200px;
+    max-width: 320px;
+    margin: 0 auto; /* По центру на мобильных */
   }
 }
 
 .about_top_rigth {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  flex: 1; /* Занимает всё оставшееся пространство */
   gap: 20px;
 
   @media (max-width: 1024px) {
@@ -67,11 +59,12 @@
 .about_top__rigth__top {
   background-color: var(--color-container);
   border-radius: 18px;
-  height: 60%;
-  padding: 30px;
+  flex: 1; /* Растягивается, если есть место */
+  padding: 40px; /* Сделали внутренние отступы чуть больше */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center; /* Текст по центру вертикали */
+  gap: 20px;
   transition: all 0.3s ease;
 
   &:hover {
@@ -86,15 +79,12 @@
     @media (max-width: 1700px) {
       font-size: 26px;
     }
-
     @media (max-width: 1200px) {
       font-size: 24px;
     }
-
     @media (max-width: 1024px) {
       font-size: 26px;
     }
-
     @media (max-width: 768px) {
       font-size: 22px;
     }
@@ -108,15 +98,12 @@
     @media (max-width: 1700px) {
       font-size: 16px;
     }
-
     @media (max-width: 1200px) {
       font-size: 15px;
     }
-
     @media (max-width: 1024px) {
       font-size: 16px;
     }
-
     @media (max-width: 768px) {
       font-size: 14px;
       line-height: 1.4;
@@ -133,58 +120,40 @@
   }
 
   @media (max-width: 1200px) {
-    padding: 25px;
+    padding: 30px;
   }
-
-  @media (max-width: 1024px) {
-    height: auto;
-    min-height: 200px;
-    padding: 25px;
-  }
-
   @media (max-width: 768px) {
     padding: 20px;
     border-radius: 12px;
-    min-height: 180px;
   }
-
   @media (max-width: 480px) {
     padding: 15px;
-    min-height: 160px;
   }
 }
 
+/* СЕТКА КАРТОЧЕК */
 .about_top__rigth__bottom {
-  height: 40%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 колонки одинаковой ширины */
   gap: 20px;
 
   @media (max-width: 1700px) {
     gap: 15px;
   }
-
-  @media (max-width: 1024px) {
-    height: auto;
-    flex-wrap: wrap;
-  }
-
-  @media (max-width: 768px) {
-    gap: 15px;
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr; /* На очень маленьких экранах выстраиваем в 1 колонку */
   }
 }
 
 .about_top__rigth__bottom__item {
   background-color: var(--color-container);
   border-radius: 18px;
-  width: 25%;
-  min-width: 70px;
+  width: 100%; /* Занимает всю ширину ячейки сетки */
   display: flex;
-  padding: 15px;
+  padding: 20px; /* Увеличили паддинги, чтобы карточки были "пухлее" */
   flex-direction: column;
   justify-content: space-between;
-  gap: 10px;
+  gap: 15px;
   transition: all 0.3s ease;
   cursor: pointer;
 
@@ -203,11 +172,6 @@
     @media (max-width: 1700px) {
       font-size: 24px;
     }
-
-    @media (max-width: 1024px) {
-      font-size: 24px;
-    }
-
     @media (max-width: 768px) {
       font-size: 20px;
     }
@@ -221,21 +185,17 @@
     transition: color 0.3s ease;
 
     @media (max-width: 1700px) {
-      font-size: 12px;
-    }
-
-    @media (max-width: 1024px) {
       font-size: 14px;
     }
-
     @media (max-width: 768px) {
-      font-size: 12px;
+      font-size: 13px;
     }
   }
 
   &:hover span {
     color: #2a4a8a;
     transform: scale(1.1);
+    transform-origin: left;
   }
 
   &:hover p {
@@ -243,29 +203,14 @@
   }
 
   @media (max-width: 1700px) {
-    padding: 12px;
+    padding: 15px;
   }
-
-  @media (max-width: 1024px) {
-    width: calc(50% - 10px);
-    margin-bottom: 10px;
-  }
-
-  //   @media (max-width: 768px) {
-  //     width: 100%;
-  //     flex-direction: row;
-  //     align-items: center;
-  //     justify-content: flex-start;
-  //     padding: 12px 15px;
-  //     border-radius: 12px;
-  //     gap: 15px;
-  //   }
-
   @media (max-width: 480px) {
-    padding: 10px 12px;
+    padding: 15px 20px;
   }
 }
 
+/* ФОРМА (оставлена без изменений из вашего кода) */
 .about_form {
   background-color: var(--color-decorate);
   height: 300px;
@@ -314,11 +259,9 @@
     @media (max-width: 1024px) {
       font-size: 28px;
     }
-
     @media (max-width: 768px) {
       font-size: 24px;
     }
-
     @media (max-width: 480px) {
       font-size: 20px;
     }
@@ -333,7 +276,6 @@
     @media (max-width: 1024px) {
       font-size: 16px;
     }
-
     @media (max-width: 768px) {
       font-size: 14px;
     }
@@ -364,7 +306,6 @@
     outline: none;
     background-color: #e9e9e9;
     border-radius: 18px;
-    font-size: 16px;
     font-family: var(--font-family-sans);
     resize: none;
     height: 40px;
@@ -372,13 +313,13 @@
     font-size: 20px;
     transition: all 0.3s ease;
 
-    &:focus {
-      background-color: #f0f0f0;
-      box-shadow: 0 0 0 2px rgba(48, 85, 157, 0.2);
-    }
-
+    &:focus,
     &:hover {
       background-color: #f0f0f0;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba(48, 85, 157, 0.2);
     }
 
     @media (max-width: 768px) {
@@ -401,7 +342,6 @@
     cursor: pointer;
     position: relative;
     transition: all 0.3s ease;
-    justify-content: space-between;
 
     &:hover {
       border-color: var(--color-decorate);
@@ -455,7 +395,6 @@
       font-size: 14px;
       margin-left: 8px;
     }
-
     @media (max-width: 480px) {
       font-size: 12px;
     }
@@ -503,7 +442,6 @@
     width: 100%;
     gap: 15px;
   }
-
   @media (max-width: 768px) {
     padding: 15px;
     border-radius: 12px;
@@ -512,17 +450,80 @@
 }
 
 // Отключаем сложные анимации на мобильных устройствах для производительности
-// @media (max-width: 768px) {
-//   .about_top__image:hover,
-//   .about_top__rigth__top:hover,
-//   .about_top__rigth__bottom__item:hover,
-//   .about_form:hover,
-//   .about_form__form:hover,
-//   button:hover {
-//     transform: none;
-//   }
+@media (max-width: 768px) {
+  .about_top__image:hover,
+  .about_top__rigth__top:hover,
+  .about_top__rigth__bottom__item:hover,
+  .about_form:hover,
+  .about_form__form:hover,
+  button:hover {
+    transform: none;
+  }
 
-//   .about_top__rigth__bottom__item:hover span {
-//     transform: none;
-//   }
-// }
+  .about_top__rigth__bottom__item:hover span {
+    transform: none;
+  }
+}
+/* --- СТИЛИ ДЛЯ МОДАЛЬНОГО ОКНА С ВИДЕО --- */
+
+.video_modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85); /* Полупрозрачный темный фон */
+  backdrop-filter: blur(5px); /* Размытие фона сзади модалки */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Чтобы окно было поверх всего сайта */
+  padding: 20px;
+}
+
+.video_modal__content {
+  position: relative;
+  width: auto;
+  height: 90vh; /* Видео занимает максимум 90% высоты экрана */
+  max-width: 100%;
+  aspect-ratio: 9 / 16; /* Сохраняем вертикальные пропорции */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  video {
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+    object-fit: contain; /* Видео целиком помещается в экран без обрезки */
+    background-color: #000;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.video_modal__close {
+  position: absolute;
+  top: -10px;
+  right: -50px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 50px;
+  line-height: 1;
+  font-weight: 300;
+  cursor: pointer;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+
+  &:hover {
+    color: var(--color-decorate); /* ИЛИ любой цвет на ваш выбор */
+    transform: scale(1.1);
+  }
+
+  @media (max-width: 768px) {
+    right: 0px;
+    top: -50px; /* На мобильных кнопка будет висеть строго над видео */
+    font-size: 40px;
+  }
+}

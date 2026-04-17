@@ -1,6 +1,11 @@
+"use client";
+import { useState } from "react";
 import styles from "./styles.module.scss";
 
 export default function About() {
+  // Добавляем состояние для управления модальным окном
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+
   return (
     <section id="about" className="component">
       <div>
@@ -8,7 +13,17 @@ export default function About() {
       </div>
       <div className={styles.about}>
         <div className={styles.about_top}>
-          <div className={styles.about_top__image}></div>
+          {/* Видео-превью (кликабельное) */}
+          <video
+            className={styles.about_top__image}
+            src="/about/IMG_6346.MOV"
+            autoPlay
+            loop
+            muted
+            playsInline
+            onClick={() => setIsVideoOpen(true)} // Открываем модалку при клике
+          ></video>
+
           <div className={styles.about_top_rigth}>
             <div className={styles.about_top__rigth__top}>
               <h3>
@@ -21,6 +36,7 @@ export default function About() {
                 улыбаться без стеснения.
               </p>
             </div>
+
             <div className={styles.about_top__rigth__bottom}>
               <div className={styles.about_top__rigth__bottom__item}>
                 <span>01</span>
@@ -41,33 +57,34 @@ export default function About() {
             </div>
           </div>
         </div>
-        {/* <div className={styles.about_bottom}>
-          <div className={styles.about_form}>
-            <div className={styles.about_form__text}>
-              <h3>
-                Позаботьтесь <br></br> о здоровье своих зубов <br></br> уже
-                сегодня!
-              </h3>
-              <p>
-                Оставьте заявку и наш <br></br> администратор вам перезвонит
-              </p>
-            </div>
-            <form className={styles.about_form__form}>
-              <input type="text" placeholder="Ваше имя" />
-              <input type="text" placeholder="Ваш телефон" />
-
-              <div className={styles.checkbox_container}>
-                <input type="checkbox" id="checkbox" />
-                <label htmlFor="checkbox">
-                  Я согласен на обработку персональных данных
-                </label>
-              </div>
-
-              <button type="submit">Отправить</button>
-            </form>
-          </div>
-        </div> */}
       </div>
+
+      {/* Модальное окно с плеером */}
+      {isVideoOpen && (
+        <div
+          className={styles.video_modal}
+          onClick={() => setIsVideoOpen(false)}
+        >
+          {/* Контент модалки. e.stopPropagation() не дает закрыть окно при клике на само видео */}
+          <div
+            className={styles.video_modal__content}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className={styles.video_modal__close}
+              onClick={() => setIsVideoOpen(false)}
+            >
+              &times;
+            </button>
+            <video
+              src="/about/IMG_6346.MOV"
+              controls // Добавляем панель управления (звук, пауза)
+              autoPlay // Запускаем автоматически со звуком
+              playsInline
+            ></video>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
