@@ -76,11 +76,11 @@ export default function Header() {
           {/* Контакты и кнопка */}
           <div className={styles.actions}>
             <div className={styles.contacts}>
-              <TrackedPhoneLink 
-                  phoneNumber="+7(3842) 33 00 05" 
-                  displayNumber="+7(3842) 33 00 05" 
-                  className={styles.phone}
-                />
+              <TrackedPhoneLink
+                phoneNumber="+7(3842) 33 00 05"
+                displayNumber="+7(3842) 33 00 05"
+                className={styles.phone}
+              />
               <div
                 style={{
                   backgroundColor: "black",
@@ -88,20 +88,22 @@ export default function Header() {
                   width: "1.3px",
                 }}
               ></div>
-              <TrackedPhoneLink 
-                  phoneNumber="+7(3842) 58 30 26" 
-                  displayNumber="+7(3842) 58 30 26" 
-                  className={styles.phone}
-                />
+              <TrackedPhoneLink
+                phoneNumber="+7(3842) 58 30 26"
+                displayNumber="+7(3842) 58 30 26"
+                className={styles.phone}
+              />
 
               <div className={styles.socials}>
-                <Link href="https://m.vk.com/tridsat_dva" target="_blank"
-                onClick={() => {
-                  if (typeof window !== "undefined") {
-                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                    (window as any).ym(105543299, 'reachGoal', 'VKMessenger');
-                  }
-                }}
+                <Link
+                  href="https://m.vk.com/tridsat_dva"
+                  target="_blank"
+                  onClick={() => {
+                    if (typeof window !== "undefined") {
+                      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                      (window as any).ym(105543299, "reachGoal", "VKMessenger");
+                    }
+                  }}
                 >
                   <Image
                     src="/socials/vk.svg"
@@ -110,22 +112,28 @@ export default function Header() {
                     height={24}
                   />
                 </Link>
-                <Link href="https://wa.me/79029830005" target="_blank">
+                {/* <Link href="https://wa.me/79029830005" target="_blank">
                   <Image
                     src="/socials/wa.svg"
                     alt="WhatsApp"
                     width={24}
                     height={24}
                   />
-                </Link>
-                <Link 
-                onClick={() => {
-                  if (typeof window !== "undefined") {
-                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                    (window as any).ym(105543299, 'reachGoal', 'MaxMessenger');
-                  }
-                }}
-                href="https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM" target="_blank">
+                </Link> */}
+                <Link
+                  onClick={() => {
+                    if (typeof window !== "undefined") {
+                      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                      (window as any).ym(
+                        105543299,
+                        "reachGoal",
+                        "MaxMessenger",
+                      );
+                    }
+                  }}
+                  href="https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM"
+                  target="_blank"
+                >
                   <Image
                     src="/socials/max.svg"
                     alt="tg"
@@ -213,22 +221,22 @@ export default function Header() {
           </nav>
           <div className={styles.mobileContacts}>
             <span>
-              <TrackedPhoneLink 
-                  phoneNumber="+7(3842) 33 00 05" 
-                  displayNumber="+7(3842) 33 00 05" 
-                />
+              <TrackedPhoneLink
+                phoneNumber="+7(3842) 33 00 05"
+                displayNumber="+7(3842) 33 00 05"
+              />
             </span>
             <span>
-              <TrackedPhoneLink 
-                  phoneNumber="+7(3842) 58 30 26" 
-                  displayNumber="+7(3842) 58 30 26" 
-                />
+              <TrackedPhoneLink
+                phoneNumber="+7(3842) 58 30 26"
+                displayNumber="+7(3842) 58 30 26"
+              />
             </span>
             <span>
-              <TrackedPhoneLink 
-                  phoneNumber="+7(3842) 45-75-95" 
-                  displayNumber="+7(3842) 45-75-95" 
-                />
+              <TrackedPhoneLink
+                phoneNumber="+7(3842) 45-75-95"
+                displayNumber="+7(3842) 45-75-95"
+              />
             </span>
             <div className={styles.socials}>
               <Link href="https://m.vk.com/tridsat_dva" target="_blank">
@@ -239,29 +247,25 @@ export default function Header() {
                   height={24}
                 />
               </Link>
-              <Link href="https://wa.me/79029830005" target="_blank">
+              {/* <Link href="https://wa.me/79029830005" target="_blank">
                 <Image
                   src="/footer/wa.svg"
                   alt="whatsapp"
                   width={24}
                   height={24}
                 />
-              </Link>
-              <Link 
-              
-              onClick={() => {
-                if (typeof window !== "undefined") {
-                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                  (window as any).ym(105543299, 'reachGoal', 'MaxMessenger');
-                }
-              }}
-              href="https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM" target="_blank">
-                <Image
-                  src="/footer/max.svg"
-                  alt="tg"
-                  width={24}
-                  height={24}
-                />
+              </Link> */}
+              <Link
+                onClick={() => {
+                  if (typeof window !== "undefined") {
+                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    (window as any).ym(105543299, "reachGoal", "MaxMessenger");
+                  }
+                }}
+                href="https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM"
+                target="_blank"
+              >
+                <Image src="/footer/max.svg" alt="tg" width={24} height={24} />
               </Link>
               {/* <Link href="https://t.me/stomatologiya_32" target="_blank">
                 <Image

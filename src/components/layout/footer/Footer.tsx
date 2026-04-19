@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Link from "next/link";
 import styles from "./Footer.module.scss";
 import TrackedPhoneLink from "@/components/common/LinkGoals/TrackedPhoneLink";
@@ -59,7 +59,7 @@ export default function Footer() {
           <Link href="/prices" className={styles.footer_center_link}>
             <p>Цены</p>
           </Link>
-          
+
           <Link href="/#contacts" className={styles.footer_center_link}>
             <p>Контакты</p>
           </Link>
@@ -68,18 +68,24 @@ export default function Footer() {
       <div className={styles.footer_rigth}>
         <div className={styles.footer_rigth__item}>
           <img src="/footer/phone.svg" alt="" />
-          <p><TrackedPhoneLink 
-              phoneNumber="+7(3842) 58 30 26" 
-              displayNumber="+7(3842) 58 30 26" 
-            /></p>
-          <p><TrackedPhoneLink 
-            phoneNumber="+7(3842) 33 00 05" 
-            displayNumber="+7(3842) 33 00 05" 
-          /></p>
-          <p><TrackedPhoneLink 
-            phoneNumber="+7(3842) 45-75-95" 
-            displayNumber="+7(3842) 45-75-95" 
-          /></p>
+          <p>
+            <TrackedPhoneLink
+              phoneNumber="+7(3842) 58 30 26"
+              displayNumber="+7(3842) 58 30 26"
+            />
+          </p>
+          <p>
+            <TrackedPhoneLink
+              phoneNumber="+7(3842) 33 00 05"
+              displayNumber="+7(3842) 33 00 05"
+            />
+          </p>
+          <p>
+            <TrackedPhoneLink
+              phoneNumber="+7(3842) 45-75-95"
+              displayNumber="+7(3842) 45-75-95"
+            />
+          </p>
           <div className={styles.footer_line}>|</div>
         </div>
         <div className={styles.footer_rigth__item}>
@@ -89,18 +95,18 @@ export default function Footer() {
           </Link>
         </div>
         <div className={styles.footer_socials}>
-          <Link
+          {/* <Link
             href="https://wa.me/79029830005"
             className={styles.footer_socials_link}
           >
             <img src="/footer/wa.svg" alt="" />
-          </Link>
+          </Link> */}
           <Link
             href="https://m.vk.com/tridsat_dva"
             onClick={() => {
               if (typeof window !== "undefined") {
                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                (window as any).ym(105543299, 'reachGoal', 'VKMessenger');
+                (window as any).ym(105543299, "reachGoal", "VKMessenger");
               }
             }}
             className={styles.footer_socials_link}
@@ -112,7 +118,7 @@ export default function Footer() {
             onClick={() => {
               if (typeof window !== "undefined") {
                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                (window as any).ym(105543299, 'reachGoal', 'MaxMessenger');
+                (window as any).ym(105543299, "reachGoal", "MaxMessenger");
               }
             }}
             className={styles.footer_socials_link}
@@ -129,24 +135,43 @@ export default function Footer() {
       </div>
       <div className={styles.footer_warning}>
         <p className={styles.footer_warning__info}>
-          ООО <span>|</span> «ТРИДЦАТЬ ДВА» <br/> 
-          ИНН <span>|</span>4207048278 <br/>
-          КПП <span>|</span>420501001 <br/>
-          ОГРН <span>|</span>1024200702965 <br/>
-          Юр. адрес <span>|</span> 650000, Кемеровская область, г Кемерово, Советский пр-кт, зд. 32, помещ. 18<br/>
-          Директор - Ивченко Валерий Николаевич<br/>
-          
+          ООО <span>|</span> «ТРИДЦАТЬ ДВА» <br />
+          ИНН <span>|</span>4207048278 <br />
+          КПП <span>|</span>420501001 <br />
+          ОГРН <span>|</span>1024200702965 <br />
+          Юр. адрес <span>|</span> 650000, Кемеровская область, г Кемерово,
+          Советский пр-кт, зд. 32, помещ. 18
+          <br />
+          Директор - Ивченко Валерий Николаевич
+          <br />
         </p>
         <p className={styles.footer_warning__info}>
-          Лицензия на осуществление медицинской деятельности: <a href="/docs/Л041-01161-42_00573884.pdf" target="_blanc">Л041-01161-42/00573884 от 12.12.2017</a> <br />
-          <a href="/docs/ПППСУ.pdf" target="_blanc" >Правила предоставления услуг</a> <br /> 
-          <a href="/docs/ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ.pdf" target="_blanc" >Пользовательское соглашение</a> <br /> 
-          <a href="/docs/ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ.pdf" target="_blanc" >Политика конфиденциальности</a> <br /> 
-          <a href="/docs/ПОЛИТИКА ОБРАБОТКИ ПД.pdf" target="_blanc" >Политика обработки персональных данных</a> <br /> 
-          <a href="/yur-info" target="_blanc">Юридическая информация</a>
+          Лицензия на осуществление медицинской деятельности:{" "}
+          <a href="/docs/Л041-01161-42_00573884.pdf" target="_blanc">
+            Л041-01161-42/00573884 от 12.12.2017
+          </a>{" "}
+          <br />
+          <a href="/docs/ПППСУ.pdf" target="_blanc">
+            Правила предоставления услуг
+          </a>{" "}
+          <br />
+          <a href="/docs/ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ.pdf" target="_blanc">
+            Пользовательское соглашение
+          </a>{" "}
+          <br />
+          <a href="/docs/ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ.pdf" target="_blanc">
+            Политика конфиденциальности
+          </a>{" "}
+          <br />
+          <a href="/docs/ПОЛИТИКА ОБРАБОТКИ ПД.pdf" target="_blanc">
+            Политика обработки персональных данных
+          </a>{" "}
+          <br />
+          <a href="/yur-info" target="_blanc">
+            Юридическая информация
+          </a>
         </p>
         Имеются противопоказания, необходима консультация специалиста <br />
-        
       </div>
     </section>
   );

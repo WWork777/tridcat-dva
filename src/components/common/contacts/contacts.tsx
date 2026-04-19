@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import styles from "./styles.module.scss";
 import "./style.scss";
 import Link from "next/link";
@@ -29,25 +29,25 @@ export default function Contacts() {
                   <div className={styles.phones}>
                     <div className={styles.phone_row}>
                       <p>
-                        <TrackedPhoneLink 
-                          phoneNumber="+7(3842) 33 00 05" 
-                          displayNumber="+7(3842) 33 00 05" 
+                        <TrackedPhoneLink
+                          phoneNumber="+7(3842) 33 00 05"
+                          displayNumber="+7(3842) 33 00 05"
                           className={styles.phone_link}
                         />
                       </p>
                       <p>
-                        <TrackedPhoneLink 
-                          phoneNumber="+7(3842) 58 30 26" 
-                          displayNumber="+7 (3842) 58-30-26" 
+                        <TrackedPhoneLink
+                          phoneNumber="+7(3842) 58 30 26"
+                          displayNumber="+7 (3842) 58-30-26"
                           className={styles.phone_link}
                         />
                       </p>
                     </div>
                     <div className={styles.phone_row_center}>
                       <p>
-                        <TrackedPhoneLink 
-                          phoneNumber="+7 (3842) 45-75-95" 
-                          displayNumber="+7 (3842) 45-75-95" 
+                        <TrackedPhoneLink
+                          phoneNumber="+7 (3842) 45-75-95"
+                          displayNumber="+7 (3842) 45-75-95"
                           className={styles.phone_link}
                         />
                       </p>
@@ -60,19 +60,23 @@ export default function Contacts() {
                 <h3>Соцсети</h3>
                 <div className={styles.contacts_content}>
                   <div className={styles.socials}>
-                    <Link
+                    {/* <Link
                       href="https://wa.me/79029830005"
                       className={styles.social_link}
                       aria-label="WhatsApp"
                     >
                       <img src="/socials/wa.svg" alt="WhatsApp" />
-                    </Link>
+                    </Link> */}
                     <Link
                       href="https://m.vk.com/tridsat_dva"
                       onClick={() => {
                         if (typeof window !== "undefined") {
                           // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                          (window as any).ym(105543299, 'reachGoal', 'VKMessenger');
+                          (window as any).ym(
+                            105543299,
+                            "reachGoal",
+                            "VKMessenger",
+                          );
                         }
                       }}
                       className={styles.social_link}
@@ -85,7 +89,11 @@ export default function Contacts() {
                       onClick={() => {
                         if (typeof window !== "undefined") {
                           // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                          (window as any).ym(105543299, 'reachGoal', 'MaxMessenger');
+                          (window as any).ym(
+                            105543299,
+                            "reachGoal",
+                            "MaxMessenger",
+                          );
                         }
                       }}
                       className={styles.social_link}
