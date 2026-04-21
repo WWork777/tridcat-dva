@@ -30,14 +30,16 @@ export const ServiceCard = ({
         <Link className={styles.cta_button} href={url}>
           Записаться
         </Link>
-        <Link 
-        onClick={() => {
-              if (typeof window !== "undefined") {
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                (window as any).ym(105543299, 'reachGoal', 'MaxMessenger');
-              }
-            }}
-        href={url} className={styles.more_button}>
+        <Link
+          onClick={() => {
+            if (typeof window !== "undefined") {
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              (window as any).ym(105543299, "reachGoal", "MaxMessenger");
+            }
+          }}
+          href={url}
+          className={styles.more_button}
+        >
           Подробнее
         </Link>
       </div>
@@ -62,16 +64,16 @@ export default function Promos({ pricesPage }: { pricesPage?: boolean }) {
         "Отбеливание Amazing White с использованием лампы Zoom4 15.000 рублей вместо 22.000 рублей до конца весны",
       imageLink: "/hero/promo2v2.webp",
       // url: "https://t.me/stomatologiya_32?text=Здравствуйте, хочу узнать по поводу отбеливания Amazing White",
-      url: 'https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM'
+      url: "https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM",
     },
     {
       id: 3,
-      title: "Скидка для новый клиентов",
+      title: "Скидка для новых клиентов",
       description:
         "Скидка 10% на все услуги для тех, кто впервые посетит нашу клинику",
       imageLink: "/promos/promo3.webp",
       // url: "https://t.me/stomatologiya_32?text=Здравствуйте, хочу узнать по поводу скидки для новых клиентов",
-      url: 'https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM'
+      url: "https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM",
     },
   ];
 
