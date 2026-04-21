@@ -9,7 +9,7 @@ export default function About() {
   return (
     <section id="about" className="component">
       <div>
-        <h2>О клинике</h2>
+        <h2>О нас</h2>
       </div>
       <div className={styles.about}>
         <div className={styles.about_top}>

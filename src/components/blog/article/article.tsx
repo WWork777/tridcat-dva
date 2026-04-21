@@ -1,3 +1,4 @@
+"use client";
 import styles from "./article.module.scss";
 import { blogData, Article } from "@/data/blog.data";
 import Image from "next/image";
@@ -17,8 +18,8 @@ export default function ArticleComponent({ slug }: ArticleComponentProps) {
   }
 
   // Получаем связанные статьи
-  const relatedArticles = article.relatedArticles 
-    ? blogData.filter(item => article.relatedArticles!.includes(item.id))
+  const relatedArticles = article.relatedArticles
+    ? blogData.filter((item) => article.relatedArticles!.includes(item.id))
     : [];
 
   const tgmessage = `Здравствуйте, хочу записаться на прием`;
@@ -33,7 +34,7 @@ export default function ArticleComponent({ slug }: ArticleComponentProps) {
           { label: article.title },
         ]}
       />
-      
+
       <article className={styles.article}>
         {/* Заголовок статьи */}
         <header className={styles.header}>
@@ -42,10 +43,12 @@ export default function ArticleComponent({ slug }: ArticleComponentProps) {
               <span className={styles.category}>{article.category}</span>
             )}
             {article.readTime && (
-              <span className={styles.readTime}>{article.readTime} мин чтения</span>
+              <span className={styles.readTime}>
+                {article.readTime} мин чтения
+              </span>
             )}
           </div>
-          
+
           <h1 className={styles.title}>{article.title}</h1>
           <p className={styles.excerpt}>{article.excerpt}</p>
         </header>
@@ -74,7 +77,7 @@ export default function ArticleComponent({ slug }: ArticleComponentProps) {
             <section key={index} className={styles.section}>
               <h2 className={styles.sectionTitle}>{section.title}</h2>
               <p className={styles.sectionContent}>{section.content}</p>
-              
+
               {section.list && (
                 <ul className={styles.sectionList}>
                   {section.list.map((item, itemIndex) => (
@@ -102,7 +105,9 @@ export default function ArticleComponent({ slug }: ArticleComponentProps) {
               />
               <div className={styles.authorDetails}>
                 <h3 className={styles.authorName}>{article.author.name}</h3>
-                <p className={styles.authorPosition}>{article.author.position}</p>
+                <p className={styles.authorPosition}>
+                  {article.author.position}
+                </p>
               </div>
             </div>
           </div>
@@ -110,17 +115,24 @@ export default function ArticleComponent({ slug }: ArticleComponentProps) {
           {/* CTA блок */}
           <div className={styles.cta}>
             <h3>Записаться на консультацию</h3>
-            <p>Не откладывайте здоровье своих зубов на потом! Наши специалисты готовы помочь вам уже сегодня.</p>
+            <p>
+              Не откладывайте здоровье своих зубов на потом! Наши специалисты
+              готовы помочь вам уже сегодня.
+            </p>
             {/* <button className={styles.ctaButton} ><a href={`https://t.me/stomatologiya_32?text=${encodedMessage}`}>Записаться онлайн</a></button> */}
-            <button className={styles.ctaButton} >
-              <a href={`https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM`}
-              onClick={() => {
-              if (typeof window !== "undefined") {
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                (window as any).ym(105543299, 'reachGoal', 'MaxMessenger');
-              }
-            }}
-              >Записаться онлайн</a></button>
+            <button className={styles.ctaButton}>
+              <a
+                href={`https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM`}
+                onClick={() => {
+                  if (typeof window !== "undefined") {
+                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    (window as any).ym(105543299, "reachGoal", "MaxMessenger");
+                  }
+                }}
+              >
+                Записаться онлайн
+              </a>
+            </button>
           </div>
         </div>
 
@@ -130,7 +142,9 @@ export default function ArticleComponent({ slug }: ArticleComponentProps) {
           <div className={styles.tags}>
             <span className={styles.tagsLabel}>Теги:</span>
             {article.tags.map((tag, index) => (
-              <span key={index} className={styles.tag}>#{tag}</span>
+              <span key={index} className={styles.tag}>
+                #{tag}
+              </span>
             ))}
           </div>
 
@@ -140,13 +154,17 @@ export default function ArticleComponent({ slug }: ArticleComponentProps) {
               <h3 className={styles.relatedTitle}>Читайте также</h3>
               <div className={styles.relatedGrid}>
                 {relatedArticles.map((relatedArticle) => (
-                  <Link 
-                    key={relatedArticle.id} 
+                  <Link
+                    key={relatedArticle.id}
                     href={`/blog/${relatedArticle.slug}`}
                     className={styles.relatedCard}
                   >
-                    <h4 className={styles.relatedCardTitle}>{relatedArticle.title}</h4>
-                    <p className={styles.relatedCardExcerpt}>{relatedArticle.excerpt}</p>
+                    <h4 className={styles.relatedCardTitle}>
+                      {relatedArticle.title}
+                    </h4>
+                    <p className={styles.relatedCardExcerpt}>
+                      {relatedArticle.excerpt}
+                    </p>
                     <span className={styles.relatedCardLink}>Читать →</span>
                   </Link>
                 ))}
