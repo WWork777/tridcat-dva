@@ -71,6 +71,7 @@ export default function Header() {
             <Link href="/prices">Цены</Link>
             <Link href="/blog">Блог</Link>
             <Link href="/#contacts">Контакты</Link>
+            <Link href="/vacancies">Вакансии</Link>
           </nav>
 
           {/* Контакты и кнопка */}
