@@ -219,6 +219,9 @@ export default function Header() {
             <Link href="/#contacts" onClick={closeMenu}>
               Контакты
             </Link>
+            <Link href="/vacancies" onClick={closeMenu}>
+              Вакансии
+            </Link>
           </nav>
           <div className={styles.mobileContacts}>
             <span>
