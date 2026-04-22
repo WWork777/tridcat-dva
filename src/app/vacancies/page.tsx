@@ -2,6 +2,7 @@ import { VacancyCard } from '@/components/vacancyCard/vacancyCard';
 import { vacancies } from '@/data/vacancies.data';
 import styles from './styles.module.scss';
 import Contacts from '@/components/common/contacts/contacts';
+import Link from 'next/link';
 export async function generateMetadata() {
   return {
     title: "Вакансии стоматологии | Тридцать Два",
@@ -79,6 +80,9 @@ export default function VacanciesPage() {
             {vacancy.fullContent.note && (
               <p className={styles.note}>{vacancy.fullContent.note}</p>
             )}
+            <Link className={styles.link} href={'https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM'}>
+                Связаться с нами
+            </Link>
           </div>
         ))}
       </div>

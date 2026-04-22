@@ -66,12 +66,12 @@ export default function Header() {
             <Link href="/gallery">Галерея</Link>
             <Link href="/services">Услуги</Link>
             <Link href="/specialists">Специалисты</Link>
+            <Link href="/vacancies">Вакансии</Link>
             <Link href="/#reviews">Отзывы</Link>
             <Link href="/#promos">Акции</Link>
             <Link href="/prices">Цены</Link>
             <Link href="/blog">Блог</Link>
             <Link href="/#contacts">Контакты</Link>
-            <Link href="/vacancies">Вакансии</Link>
           </nav>
 
           {/* Контакты и кнопка */}
@@ -201,6 +201,9 @@ export default function Header() {
             <Link href="/specialists" onClick={closeMenu}>
               Специалисты
             </Link>
+            <Link href="/vacancies" onClick={closeMenu}>
+              Вакансии
+            </Link>
             <Link href="/blog" onClick={closeMenu}>
               Отзывы
             </Link>
@@ -218,9 +221,6 @@ export default function Header() {
             </Link>
             <Link href="/#contacts" onClick={closeMenu}>
               Контакты
-            </Link>
-            <Link href="/vacancies" onClick={closeMenu}>
-              Вакансии
             </Link>
           </nav>
           <div className={styles.mobileContacts}>
