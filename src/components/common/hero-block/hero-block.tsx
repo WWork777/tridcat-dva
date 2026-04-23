@@ -31,6 +31,7 @@ export default function HeroBlock() {
             onClick={() => setIsFormOpen(true)}>
             <span>Записаться онлайн</span>
           </button>
+          
         </div>
         <div className={`${styles.hero_left__bottom}`}>
           <Swiper
