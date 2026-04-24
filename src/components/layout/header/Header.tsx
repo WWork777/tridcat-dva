@@ -78,8 +78,8 @@ export default function Header() {
           <div className={styles.actions}>
             <div className={styles.contacts}>
               <TrackedPhoneLink
-                phoneNumber="+7(3842) 33 00 05"
-                displayNumber="+7(3842) 33 00 05"
+                phoneNumber="+7 (902) 983 0005"
+                displayNumber="+7 (902) 983 0005"
                 className={styles.phone}
               />
               <div
@@ -89,11 +89,6 @@ export default function Header() {
                   width: "1.3px",
                 }}
               ></div>
-              <TrackedPhoneLink
-                phoneNumber="+7(3842) 58 30 26"
-                displayNumber="+7(3842) 58 30 26"
-                className={styles.phone}
-              />
 
               <div className={styles.socials}>
                 <Link
@@ -226,20 +221,8 @@ export default function Header() {
           <div className={styles.mobileContacts}>
             <span>
               <TrackedPhoneLink
-                phoneNumber="+7(3842) 33 00 05"
-                displayNumber="+7(3842) 33 00 05"
-              />
-            </span>
-            <span>
-              <TrackedPhoneLink
-                phoneNumber="+7(3842) 58 30 26"
-                displayNumber="+7(3842) 58 30 26"
-              />
-            </span>
-            <span>
-              <TrackedPhoneLink
-                phoneNumber="+7(3842) 45-75-95"
-                displayNumber="+7(3842) 45-75-95"
+                phoneNumber="+7 (902) 983 0005"
+                displayNumber="+7 (902) 983 0005"
               />
             </span>
             <div className={styles.socials}>

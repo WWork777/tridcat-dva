@@ -7,15 +7,16 @@ import styles from "./styles.module.scss";
 
 interface AppointmentButtonProps {
   specialistName: string;
+  formLink: string;
 }
 
-export default function AppointmentButton({ specialistName }: AppointmentButtonProps) {
+export default function AppointmentButton({ specialistName, formLink }: AppointmentButtonProps) {
   const [isFormOpen, setIsFormOpen] = useState(false);
 
   return (
     <>
       {/* Кнопка, которая открывает модалку (заменяем ваш старый Link на tel:) */}
-      <button onClick={() => setIsFormOpen(true)} className={styles.ctaButton}>
+      <button onClick={() => formLink ? window.location.href = formLink : setIsFormOpen(true)} className={styles.ctaButton}>
         <p>Записаться на прием</p>
       </button>
 

@@ -11,7 +11,6 @@ export default function FloatingContacts() {
     vk: "https://m.vk.com/tridsat_dva",
     // tg: "https://t.me/stomatologiya_32",
     max: 'https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM',
-    wa: "https://api.whatsapp.com/send/?phone=79029830005&text&type=phone_number&app_absent=0",
     tel: "tel:+7(3842) 33 00 05",
   };
 
@@ -41,10 +40,6 @@ export default function FloatingContacts() {
           <span>ВК</span>
         </a>
 
-        <a href={links.wa} target="_blank" className={styles.item}>
-          <WaIcon />
-          <span>WhatsApp</span>
-        </a>
 
         <a href={links.max} target="_blank" className={styles.item}
             onClick={() => {
@@ -137,13 +132,6 @@ function MaxIcon() {
   );
 }
 
-function WaIcon() {
-  return (
-    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
-      <path d="M12.04 2C6.52 2 2.04 6.48 2.04 12c0 1.77.46 3.5 1.34 5.02L2 22l5.15-1.35A9.95 9.95 0 0012.04 22c5.52 0 10-4.48 10-10s-4.48-10-10-10zm5.83 14.26c-.25.7-1.45 1.35-2 1.41-.5.06-1.14.09-3.67-.78-3.24-1.12-5.32-4.57-5.48-4.78-.16-.2-1.32-1.76-1.32-3.35 0-1.6.84-2.39 1.14-2.72.3-.32.65-.4.87-.4h.63c.2 0 .46-.08.72.55.26.64.89 2.19.97 2.35.08.16.13.34.02.54-.11.2-.16.32-.32.5-.16.18-.34.4-.48.54-.16.16-.33.33-.14.65.19.32.84 1.38 1.8 2.23 1.24 1.1 2.28 1.44 2.6 1.6.32.16.5.14.69-.08.2-.22.8-.94 1.01-1.26.21-.32.43-.26.72-.16.29.1 1.84.87 2.16 1.03.32.16.53.24.61.37.08.13.08.74-.17 1.44z" />
-    </svg>
-  );
-}
 
 function PhoneIcon() {
   return (

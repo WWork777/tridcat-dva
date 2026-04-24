@@ -42,9 +42,9 @@ export const ServiceCard = ({
         )}
       </div>
       <div className={styles.button_group}>
-        <button className={styles.cta_button} onClick={() => setIsFormOpen(true)}>
+        <Link className={styles.cta_button} href={"https://booking.medflex.ru/?user=3af5c574ee33a9c585fc8a3ac3d8a9f3&isRoundWidget=true "}>
           Записаться
-        </button>
+        </Link>
         <Link href={serviceUrl} className={styles.more_button}>
           Подробнее
         </Link>

@@ -131,6 +131,9 @@
   }
 
   .cta_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--color-decorate);
     color: var(--color-container);
     border: none;

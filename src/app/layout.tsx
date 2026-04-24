@@ -47,7 +47,7 @@ export default function RootLayout({
         {children}
         <YandexMetrika />
         <Footer />
-        
+        <script type="text/javascript" async src="https://app.uiscom.ru/static/cs.min.js?k=yr6qBcZgiZI7LCLHNfq5_v2Ugk11sHp6"></script>
       </body>
     </html>
   );

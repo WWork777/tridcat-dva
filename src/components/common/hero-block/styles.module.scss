@@ -373,6 +373,20 @@
     
   }
 }
+.four_slide {
+  &::before {
+    background: url("/hero/promo4.jpg");
+  background-size: 100% 100%;  /* принудительно растягивает по ширине и высоте контейнера */
+  background-repeat: no-repeat;
+  background-position: center; /* обычно уже не важно, но пусть будет */
+        @media (max-width:480px) {
+              background: url("/hero/promo4m.jpg");
+                background-size: 100% 100%;  /* принудительно растягивает по ширине и высоте контейнера */
+  background-repeat: no-repeat;
+  background-position: center; /* обычно уже не важно, но пусть будет */
+    }
+  }
+}
 
 .third_slide{
   &::before {
@@ -380,7 +394,6 @@
     background-position: center;
     opacity: 0.45;
     background-size: cover; /* Для фона лучше использовать background-size вместо object-fit */
-    
   }
 }
 

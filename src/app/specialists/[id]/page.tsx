@@ -168,7 +168,7 @@ export default async function SpecialistPage({
               )}
 
               {/* 2. Вставляем Клиентский Компонент сюда */}
-              <AppointmentButton specialistName={specialist.name} />
+              <AppointmentButton specialistName={specialist.name} formLink={specialist.formLink} />
             </div>
           </div>
         </div>
