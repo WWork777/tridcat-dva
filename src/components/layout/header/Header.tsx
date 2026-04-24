@@ -200,9 +200,6 @@ export default function Header() {
               Вакансии
             </Link>
             <Link href="/blog" onClick={closeMenu}>
-              Отзывы
-            </Link>
-            <Link href="/blog" onClick={closeMenu}>
               Блог
             </Link>
             <Link href="/#reviews" onClick={closeMenu}>
