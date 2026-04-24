@@ -26,7 +26,7 @@ export const ServiceCard = ({
         <h3>{title}</h3>
         <p>{description}</p>
       </div>
-      <div className={styles.button_group}>
+      { serviceId == 4 ? "" : <div className={styles.button_group}>
         <Link className={styles.cta_button} href={url}>
           Записаться
         </Link>
@@ -42,12 +42,14 @@ export const ServiceCard = ({
         >
           Подробнее
         </Link>
-      </div>
+      </div>}
     </div>
   );
 };
 
 export default function Promos({ pricesPage }: { pricesPage?: boolean }) {
+  const sale3 = window.innerWidth <= 480 ? "/hero/promo4mv2.jpg" : "/hero/promo4.jpg";
+  console.log(sale3);
   const servicesData = [
     // {
     //   id: 1,
@@ -72,6 +74,12 @@ export default function Promos({ pricesPage }: { pricesPage?: boolean }) {
       description:
         "Скидка 10% на все услуги для тех, кто впервые посетит нашу клинику",
       imageLink: "/promos/promo3.webp",
+      // url: "https://t.me/stomatologiya_32?text=Здравствуйте, хочу узнать по поводу скидки для новых клиентов",
+      url: "https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM",
+    },
+    {
+      id: 4,
+      imageLink: sale3,
       // url: "https://t.me/stomatologiya_32?text=Здравствуйте, хочу узнать по поводу скидки для новых клиентов",
       url: "https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM",
     },
