@@ -3,8 +3,8 @@ import Link from "next/link";
 import styles from "./styles.module.scss";
 
 interface ServiceCardProps {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   imageLink?: string;
   serviceId: number;
   url: string;
