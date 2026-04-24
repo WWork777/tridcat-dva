@@ -1,4 +1,5 @@
 "use client";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import styles from "./styles.module.scss";
 
@@ -48,7 +49,11 @@ export const ServiceCard = ({
 };
 
 export default function Promos({ pricesPage }: { pricesPage?: boolean }) {
-  const sale3 = window.innerWidth <= 480 ? "/hero/promo4mv2.jpg" : "/hero/promo4.jpg";
+  const [sale3, setSale3] = useState("/hero/promo4.jpg"); // серверное значение
+
+useEffect(() => {
+  setSale3(window.innerWidth <= 480 ? "/hero/promo4mv2.jpg" : "/hero/promo4.jpg");
+}, []);
   console.log(sale3);
   const servicesData = [
     // {
@@ -88,7 +93,7 @@ export default function Promos({ pricesPage }: { pricesPage?: boolean }) {
   return (
     <section
       id="promos"
-      className={`component ${pricesPage ? styles.pricesPage : ""}`}
+      className={`component ${pricesPage ? styles.pricesPage : "/hero/promo4.jpg"}`}
     >
       <div>
         <h2>Акции</h2>
