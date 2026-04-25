@@ -51,7 +51,7 @@ export default function ReviewsSlider() {
     {
       id: "all",
       name: "Все отзывы",
-      rating: 4.6,
+      rating: 4.9,
       reviewsCount: 209,
       ratingsCount: 456,
       icon: "",
@@ -115,7 +115,7 @@ export default function ReviewsSlider() {
     {
       id: "yandex",
       name: "Яндекс",
-      rating: 4.7,
+      rating: 5.0,
       reviewsCount: 89,
       ratingsCount: 245,
       icon: "/rewievs/yandex-icon.svg",
