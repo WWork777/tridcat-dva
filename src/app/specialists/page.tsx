@@ -65,17 +65,16 @@ export default function SpecialistsPage() {
       <div className={styles.specialistsGrid}>
         {allSpecialists.map((specialist) => (
           <div key={specialist.id} className={styles.specialistItem}>
-              <SliderCard
-                img={specialist.imageLink}
-                name={specialist.name}
-                description={specialist.description}
-                stage={specialist.stage}
-                showStage={!!specialist.stage}
-                link={`/specialists/${specialist.id}`}
-                showWhatsApp={true} // Включаем WhatsApp
-                waLink={specialist.waLink} // Передаем WhatsApp ссылку
-              />
-            
+            <SliderCard
+              img={specialist.imageLink}
+              name={specialist.name}
+              description={specialist.description}
+              stage={specialist.stage}
+              showStage={!!specialist.stage}
+              link={`/specialists/${specialist.id}`}
+              showWhatsApp={true} // Включаем WhatsApp
+              waLink={specialist.waLink} // Передаем WhatsApp ссылку
+            />
           </div>
         ))}
       </div>

@@ -47,7 +47,8 @@ export const SliderCard = ({
     // На сервере и при первом рендере на клиенте всегда возвращаем чистый name
     if (!isMounted) return name;
 
-    const isNotMobile = typeof window !== 'undefined' && window.innerWidth >= 1200;
+    const isNotMobile =
+      typeof window !== "undefined" && window.innerWidth >= 1200;
 
     if (isNotMobile) {
       const words = name.split(" ");
@@ -80,7 +81,17 @@ export const SliderCard = ({
         {showStage && stage && <span>Стаж: {stage}</span>}
 
         {showWhatsApp && waLink && (
-          <Link href={waLink} target="_blank" rel="noopener noreferrer">
+          <Link
+            href={waLink}
+            target="_blank"
+            onClick={() => {
+              if (typeof window !== "undefined") {
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                (window as any).ym(105543299, "reachGoal", "MaxMessenger");
+              }
+            }}
+            rel="noopener noreferrer"
+          >
             <img src="/socials/max.svg" alt="WhatsApp" />
           </Link>
         )}
@@ -89,44 +100,41 @@ export const SliderCard = ({
   );
 };
 
-export default function Specialists( {title, excludeId}: SpecialistsProps ) {
+export default function Specialists({ title, excludeId }: SpecialistsProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [procedureName, setProcedureName] = useState("");
   const toggleModal = (procedureName = "") => {
     setIsModalOpen(!isModalOpen);
     setProcedureName(procedureName);
   };
-    // Получаем всех специалистов
-  
-  
+  // Получаем всех специалистов
 
   const allSpecialists = Object.values(specialistsData);
 
-  const filteredSpecialists = excludeId 
-    ? allSpecialists.filter(specialist => specialist.id !== excludeId)
+  const filteredSpecialists = excludeId
+    ? allSpecialists.filter((specialist) => specialist.id !== excludeId)
     : allSpecialists;
-
 
   return (
     <>
       <section id="specialists" className="component">
         <div className={styles.head}>
           <div className={styles.leftSide}>
-            <h2 className={`${title ? styles.anotherSpec : null}`}>{title ? title : "Специалисты"}</h2>
+            <h2 className={`${title ? styles.anotherSpec : null}`}>
+              {title ? title : "Специалисты"}
+            </h2>
             <div className={`${styles.custom_navigation}`}>
               <div className={`${styles.custom_prev}`}></div>
               <div className={`${styles.custom_next}`}></div>
             </div>
           </div>
-          
+
           <Link href="/specialists" className={styles.all_button}>
             <span>Все специалисты</span>
           </Link>
         </div>
 
         <div className={styles.home_team_slider}>
-          
-          
           <Swiper
             modules={[Navigation, Pagination]}
             className={styles.mySwiper}
@@ -179,7 +187,6 @@ export default function Specialists( {title, excludeId}: SpecialistsProps ) {
               </SwiperSlide>
             ))}
           </Swiper>
-          
         </div>
       </section>
     </>

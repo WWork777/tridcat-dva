@@ -48,7 +48,6 @@ export default async function SpecialistPage({
   const hasDetailedDescription = specialist.detailedDescription;
   const hasCases = specialist.cases && specialist.cases.length > 0;
 
-
   return (
     <div className="container">
       {/* Хлебные крошки */}
@@ -64,7 +63,7 @@ export default async function SpecialistPage({
       />
 
       {/* Основная информация о специалисте */}
-      
+
       <section className={styles.hero}>
         <div className={styles.heroContent}>
           <div className={styles.specialistInfo}>
@@ -149,26 +148,25 @@ export default async function SpecialistPage({
 
             <div className={styles.buttons_container}>
               {specialist.waLink ? (
-
                 <TrackedLink
-                    link={specialist.waLink}
-                    className={styles.wa_button}
-                    goalName="MaxMessenger"
-                    text="Написать в Max"
-                  />
+                  link={specialist.waLink}
+                  className={styles.wa_button}
+                  goalName="MaxMessenger"
+                  text="Написать в Max"
+                />
               ) : (
-
                 <TrackedLink
-                    link={'https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM'}
-                    className={styles.wa_button}
-                    goalName="MaxMessenger"
-                    text="Написать в Max"
-                  />
-                
+                  link={
+                    "https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM"
+                  }
+                  className={styles.wa_button}
+                  goalName="MaxMessenger"
+                  text="Написать в Max"
+                />
               )}
 
               {/* 2. Вставляем Клиентский Компонент сюда */}
-              <AppointmentButton specialistName={specialist.name} formLink={specialist.formLink} />
+              <AppointmentButton />
             </div>
           </div>
         </div>
@@ -177,7 +175,6 @@ export default async function SpecialistPage({
           <img src={specialist.imageLink} alt={specialist.name} />
         </div>
       </section>
-
 
       {/* Образование и специализации */}
       {(hasEducation || hasSpecializations) && (
