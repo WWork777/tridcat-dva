@@ -53,18 +53,14 @@ export default async function ServicePage({
           <p className={styles.heroDescription}>{service.fullDescription}</p>
           <div className={styles.buttons_container}>
             <TrackedLink
-            link="https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM"
-            className={styles.wa_button}
-            goalName="MaxMessenger"
-            text="Max"
+              link="https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM"
+              className={styles.wa_button}
+              goalName="MaxMessenger"
+              text="Max"
             />
-            
+
             {/* 2. Вставляем нашу кнопку, передавая ей название услуги */}
-            <ServiceAppointmentButton 
-              serviceTitle={service.title} 
-              titleForForm={service.titleForForm} 
-            />
-            
+            <ServiceAppointmentButton />
           </div>
         </div>
         {service.imageLink && (
@@ -78,7 +74,7 @@ export default async function ServicePage({
         <PricingAccordion
           service={{
             ...service,
-            features: service.features || [], 
+            features: service.features || [],
           }}
         />
       )}

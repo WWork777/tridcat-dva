@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import styles from "./styles.module.scss";
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { UniversalModalForm } from "@/components/common/UniversalForm/UniversalModalForm";
 
 interface ServiceCardProps {
@@ -33,36 +33,44 @@ export const ServiceCard = ({
 
   return (
     <>
-    <div className={styles.service_card}>
-      <div>
-        <h3>{title}</h3>
-        <p>{description}</p>
-        {imageLink && (
-          <img src={imageLink} alt={title} className={styles.serviceImage} />
-        )}
-      </div>
-      <div className={styles.button_group}>
-        <Link className={styles.cta_button} href={"https://booking.medflex.ru/?user=3af5c574ee33a9c585fc8a3ac3d8a9f3&isRoundWidget=true "}>
-          Записаться
-        </Link>
-        <Link href={serviceUrl} className={styles.more_button}>
-          Подробнее
-        </Link>
+      <div className={styles.service_card}>
+        <div>
+          <h3>{title}</h3>
+          <p>{description}</p>
+          {imageLink && (
+            <img src={imageLink} alt={title} className={styles.serviceImage} />
+          )}
+        </div>
+        <div className={styles.button_group}>
+          <Link
+            className={styles.cta_button}
+            href={
+              "https://booking.medflex.ru/?user=3af5c574ee33a9c585fc8a3ac3d8a9f3&isRoundWidget=true "
+            }
+            onClick={() => {
+              if (typeof window !== "undefined") {
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                (window as any).ym(105543299, "reachGoal", "service");
+              }
+            }}
+          >
+            Записаться
+          </Link>
+          <Link href={serviceUrl} className={styles.more_button}>
+            Подробнее
+          </Link>
+        </div>
       </div>
 
-      
-    </div>
-    
-    <UniversalModalForm
-          isOpen={isFormOpen}
-          onClose={() => setIsFormOpen(false)}
-          title={titleForForm || `Записаться на ${title}`}
-          titleInText={`Услуга: ${title}`}
-          loadingTitle="Подождите, отправляем заявку..."
-          goalName="ServiceForm" // Отправит отдельную цель в Метрику
-        />
+      <UniversalModalForm
+        isOpen={isFormOpen}
+        onClose={() => setIsFormOpen(false)}
+        title={titleForForm || `Записаться на ${title}`}
+        titleInText={`Услуга: ${title}`}
+        loadingTitle="Подождите, отправляем заявку..."
+        goalName="ServiceForm" // Отправит отдельную цель в Метрику
+      />
     </>
-    
   );
 };
 
@@ -131,7 +139,8 @@ export default function Services() {
             title={service.title}
             description={service.description}
             imageLink={service.imageLink}
-            titleForForm={service.titleForForm} />
+            titleForForm={service.titleForForm}
+          />
         ))}
       </div>
       <div className={styles.all_services_button}>

@@ -1,38 +1,29 @@
-"use client";
+"use client"; // Обязательная директива для клиентских компонентов
 
-import React, { useState } from 'react';
-import { UniversalModalForm } from "@/components/common/UniversalForm/UniversalModalForm";
-import styles from "./styles.module.scss"; 
+import styles from "./styles.module.scss";
+import Link from "next/link";
 
-interface ServiceAppointmentButtonProps {
-  serviceTitle: string;
-  titleForForm?: string; // Добавляем новый пропс
-}
-
-export default function ServiceAppointmentButton({ 
-  serviceTitle, 
-  titleForForm 
-}: ServiceAppointmentButtonProps) {
-  const [isFormOpen, setIsFormOpen] = useState(false);
+export default function ServiceAppointmentButton() {
+  const handleClick = () => {
+    // Безопасный вызов Яндекс.Метрики только на стороне клиента
+    if (typeof window !== "undefined") {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const ym = (window as any).ym;
+      if (ym) {
+        ym(105543299, "reachGoal", "service");
+        // Если вам нужно передать название услуги в метрику:
+        // ym(105543299, "reachGoal", "service", { service_name: serviceTitle });
+      }
+    }
+  };
 
   return (
-    <>
-      <button onClick={() => setIsFormOpen(true)} className={styles.ctaButton}>
-        <p>Записаться на прием</p>
-      </button>
-
-      <UniversalModalForm 
-        isOpen={isFormOpen} 
-        onClose={() => setIsFormOpen(false)}
-        // Используем titleForForm, а если его нет — стандартную фразу
-        title={titleForForm || `Записаться на: ${serviceTitle}`}
-        
-        // В текст заявки для WhatsApp все равно передаем точное название услуги
-        titleInText={`Услуга: ${serviceTitle}`} 
-        
-        loadingTitle="Подождите, отправляем заявку..."
-        goalName="ServiceForm" 
-      />
-    </>
+    <Link
+      href="https://booking.medflex.ru/?user=3af5c574ee33a9c585fc8a3ac3d8a9f3&isRoundWidget=true"
+      onClick={handleClick}
+      className={styles.ctaButton}
+    >
+      <p>Записаться на прием</p>
+    </Link>
   );
 }
