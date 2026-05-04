@@ -79,7 +79,7 @@ export default function Promos({ pricesPage }: { pricesPage?: boolean }) {
       id: 3,
       title: "Скидка для новых клиентов",
       description:
-        "Скидка 10% на все услуги для тех, кто впервые посетит нашу клинику",
+        "Дарим 10% на все приемы в месяц вашего первого визита. Акция действует до последнего дня месяца, в котором вы посетили нас впервые",
       imageLink: "/promos/promo3.webp",
       url: "https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM",
     },

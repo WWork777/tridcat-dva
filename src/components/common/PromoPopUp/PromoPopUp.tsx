@@ -85,9 +85,8 @@ export const PromoPopUp = () => {
         
         <div className={styles.content}>
           <p className={styles.text}>
-            Скидка <span>10%</span> на все услуги для тех, кто <span>впервые</span> посетит нашу клинику с 1.04 по 1.06
+          <span>Фиксируем скидку 10% </span> c 1.04 по 1.06 на все визиты с момента <span>первого приёма</span> и <span>до конца</span> календарного месяца
           </p>
-          
           <form className={styles.form} onSubmit={handleSubmit}>
             <input 
               type="text" 

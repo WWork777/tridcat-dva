@@ -76,7 +76,7 @@ export default function HeroBlock() {
           </SwiperSlide>
           <SwiperSlide>
               <div className={`${styles.hero_left__bottom__left} ${styles.third_slide}`}>
-                <p>Скидка <span>10%</span> на все услуги для тех, кто <span>впервые</span> посетит нашу клинику с 1.04 по 1.06</p>
+                <p>Дарим <span>10%</span> на все приемы в месяц вашего первого визита. Акция действует до <span>последнего дня месяца</span>, в котором вы посетили нас впервые</p>
                 <Link
                   // href='https://t.me/stomatologiya_32?text=Здравствуйте, хочу узнать по поводу скидки для новых клиентов'
                   href={'https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM'}
