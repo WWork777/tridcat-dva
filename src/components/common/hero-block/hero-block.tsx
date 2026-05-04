@@ -1,13 +1,13 @@
 "use client";
-import Link from "next/link";
-import styles from "./styles.module.scss";
-import React, { useState } from "react";
-import { UniversalModalForm } from "../UniversalForm/UniversalModalForm";
+import Link from 'next/link';
+import styles from './styles.module.scss';
+import React, { useState } from 'react';
+import { UniversalModalForm } from '../UniversalForm/UniversalModalForm';
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 // import { MediaPlayer, MediaProvider } from '@vidstack/react';
 // import { defaultLayoutIcons, DefaultVideoLayout } from '@vidstack/react/player/layouts/default';
@@ -21,18 +21,17 @@ export default function HeroBlock() {
       <div className={styles.hero_left}>
         <div className={styles.hero_left__top}>
           <h1>
-            Стоматология <br />
-            для всей семьи
+            Стоматология <br/>для всей семьи
           </h1>
           <p>
             Клиника влюбленных в свое дело <br /> Профилактика и лечение зубов
           </p>
-          <button
+          <button 
             className={styles.corner_button}
-            onClick={() => setIsFormOpen(true)}
-          >
+            onClick={() => setIsFormOpen(true)}>
             <span>Записаться онлайн</span>
           </button>
+          
         </div>
         <div className={`${styles.hero_left__bottom}`}>
           <Swiper
@@ -58,23 +57,14 @@ export default function HeroBlock() {
               </div>
             </SwiperSlide> */}
             <SwiperSlide>
-              <div
-                className={`${styles.hero_left__bottom__left} ${styles.second_slide}`}
-              >
-                <p>
-                  Отбеливание <span>Amazing White</span> с использованием лампы{" "}
-                  <span>Zoom4</span> <br />
-                  <span>15.000 </span>рублей вместо 22.000 рублей до конца весны
-                </p>
+              <div className={`${styles.hero_left__bottom__left} ${styles.second_slide}`}>
+                <p>Отбеливание <span>Amazing White</span> с использованием лампы <span>Zoom4</span> <br /><span>15.000 </span>рублей вместо 22.000 рублей до конца весны</p>
                 <Link
                   // href='https://t.me/stomatologiya_32?text=Здравствуйте, хочу узнать по поводу отбеливании Amazing White'
-                  href={
-                    "https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM"
-                  }
+                  href={'https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM'}
                   onClick={() => {
                     if (typeof window !== "undefined") {
                       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-<<<<<<< HEAD
                       (window as any).ym(105543299, 'reachGoal', 'MaxMessenger');
                     }
                   }}
@@ -94,13 +84,6 @@ export default function HeroBlock() {
                     if (typeof window !== "undefined") {
                       // eslint-disable-next-line @typescript-eslint/no-explicit-any
                       (window as any).ym(105543299, 'reachGoal', 'MaxMessenger');
-=======
-                      (window as any).ym(
-                        105543299,
-                        "reachGoal",
-                        "MaxMessenger",
-                      );
->>>>>>> 31ce76e4670db58aeda9173a211513eec2313fea
                     }
                   }}
                   className={styles.corner_button}
@@ -110,39 +93,8 @@ export default function HeroBlock() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div
-                className={`${styles.hero_left__bottom__left} ${styles.third_slide}`}
-              >
-                <p>
-                  Скидка <span>10%</span> на все услуги для тех, кто{" "}
-                  <span>впервые</span> посетит нашу клинику с 1.04 по 1.06
-                </p>
-                <Link
-                  // href='https://t.me/stomatologiya_32?text=Здравствуйте, хочу узнать по поводу скидки для новых клиентов'
-                  href={
-                    "https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM"
-                  }
-                  onClick={() => {
-                    if (typeof window !== "undefined") {
-                      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                      (window as any).ym(
-                        105543299,
-                        "reachGoal",
-                        "MaxMessenger",
-                      );
-                    }
-                  }}
-                  className={styles.corner_button}
-                >
-                  Узнать подробности
-                </Link>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div
-                className={`${styles.hero_left__bottom__left} ${styles.four_slide}`}
-              />
-            </SwiperSlide>
+              <div className={`${styles.hero_left__bottom__left} ${styles.four_slide}`} />
+          </SwiperSlide>
           </Swiper>
         </div>
       </div>
@@ -152,8 +104,8 @@ export default function HeroBlock() {
             Стоматологи, которым вы<br></br> можете доверять
           </p>
           <img
-            src="/hero/women.png"
-            alt="Квалифицированные стоматологи клиники"
+            src='/hero/women.png'
+            alt='Квалифицированные стоматологи клиники'
           />
           <div className={styles.hero_buttons__right}>
             <button>
@@ -165,15 +117,15 @@ export default function HeroBlock() {
           </div>
         </div>
       </div>
-      <UniversalModalForm
-        isOpen={isFormOpen}
-        onClose={() => setIsFormOpen(false)}
-        title="Записаться на приём онлайн"
-        titleInText="Главный экран 'Записаться онлайн'"
-        loadingTitle="Подождите, отправляем заявку..."
-        bgImage="/hero/hero-first.png" // Если убрать эту строку, фон будет просто белым
-        goalName="MainForm" // Отправит отдельную цель в Метрику
-      />
+      <UniversalModalForm 
+            isOpen={isFormOpen} 
+            onClose={() => setIsFormOpen(false)}
+            title="Записаться на приём онлайн"
+            titleInText="Главный экран 'Записаться онлайн'"
+            loadingTitle="Подождите, отправляем заявку..."
+            bgImage="/hero/hero-first.png" // Если убрать эту строку, фон будет просто белым
+            goalName="MainForm" // Отправит отдельную цель в Метрику
+          />
     </section>
   );
 }
