@@ -97,6 +97,45 @@ export const specialistsData: Record<string, Specialists> = {
           alt: "Состояние зубов 2.1 и 2.2 после реставрации"
         },
         details: "Прямые после реставрации зуба 4.6"
+      },
+      {
+        id: "direct-restoration-3-6",
+        title: "Художественная реставрация зуба 3.6",
+        beforeImage: {
+          src: "/cases/marina-sergeevna/3-6-1.jpg",
+          alt: "Прямые до реставрации зуба 3.6"
+        },
+        afterImage: {
+          src: "/cases/marina-sergeevna/3-6-2.jpg",
+          alt: "Состояние зуба 3.6 после реставрации"
+        },
+        details: "После художественной реставрации зуба 3.6 (~60 минут, стоимость работы: 9400p)"
+      },
+      {
+        id: "direct-restoration-1-4",
+        title: "Художественная реставрация зубов 1.4, 1.5",
+        beforeImage: {
+          src: "/cases/marina-sergeevna/1-4-1.jpg",
+          alt: "Прямые до реставрации зуба 1.4, 1.5"
+        },
+        afterImage: {
+          src: "/cases/marina-sergeevna/1-4-2.jpg",
+          alt: "Состояние зуба 1.4, 1.5 после реставрации"
+        },
+        details: "После художественной реставрации зубов 1.4, 1.5 (~60 минут, стоимость работы: 17600p)"
+      },
+      {
+        id: "direct-restoration-4-4",
+        title: "Реставрацией боковой группы зубов, реставрация зуба 4.4",
+        beforeImage: {
+          src: "/cases/marina-sergeevna/4-4-1.jpg",
+          alt: "Прямые до реставрации зуба 4.4"
+        },
+        afterImage: {
+          src: "/cases/marina-sergeevna/4-4-2.jpg",
+          alt: "Состояние зуба 4.4 после реставрации"
+        },
+        details: "После реставрации боковой группы зубов, реставрации зуба 4.4 (~60 минут, стоимость работы: 8980p)"
       }
     ],
     
