@@ -231,7 +231,13 @@
     background-color: var(--color-decorate);
   }
 }
-
+  .third_slide {
+    p {
+      @media (max-width: 480px) {
+        font-size: 16px !important;
+      }
+    }
+  }
 .hero_left__bottom__left {
   // width: 45%; при наличии второго блока
   display: flex;
