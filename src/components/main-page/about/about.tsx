@@ -44,7 +44,7 @@ export default function About() {
               </div>
               <div className={styles.about_top__rigth__bottom__item}>
                 <span>02</span>
-                <p>Лечение без боли</p>
+                <p>Беспроцентная рассрочка от клиники</p>
               </div>
               <div className={styles.about_top__rigth__bottom__item}>
                 <span>03</span>
