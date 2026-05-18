@@ -18,7 +18,6 @@
   font-size: 24px;
   font-weight: 600;
   color: var(--color-text-primary);
-  margin-bottom: 20px;
   line-height: 1.4;
   transition: all 0.4s ease;
 }
@@ -32,6 +31,7 @@
 .prices_table {
   width: 100%;
   border-collapse: collapse;
+  margin-top: 20px;
 }
 
 .header_row {
@@ -167,5 +167,17 @@
   
   .service_name {
     font-size: 14px;
+  }
+}
+.section_title_con {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.add_table {
+  cursor: pointer;
+  transition: .3s;
+  @media (max-width: 480px) {
+    height: 14px;
   }
 }

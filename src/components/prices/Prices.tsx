@@ -1,6 +1,8 @@
 "use client";
+import { useState } from 'react';
 import styles from './Prices.module.scss';
 import servicesData from '@/data/services.data';
+
 
 // Массивы ID категорий
 const therapyIds = [
@@ -140,7 +142,6 @@ export default function Prices() {
   };
 
   const otherServices = allServices.filter(service => !allCategoryIds.has(service.cleanId));
-
   return (
     <section className={styles.prices_container}>
       <PriceSection title="Терапия" services={filterServices(therapyIds)} />
@@ -161,10 +162,23 @@ export default function Prices() {
 function PriceSection({ title, services }: { title: string, services: typeof allServices }) {
   if (services.length === 0) return null;
 
+  const [accordion, setAccordion] = useState(null);
   return (
-    <div className={styles.section}>
-      <h2 className={styles.section_title}>{title}</h2>
-      <div className={styles.table_wrapper}>
+    <div className={styles.section} >
+      <div className={styles.section_title_con}>
+        <h2 className={styles.section_title}>{title}</h2>
+          <svg  className={styles.add_table} onClick={()=>{accordion == 1 ? setAccordion(null) : setAccordion(1)}} style={{cursor: "pointer"}} style={accordion == 1 ? {rotate: "45deg"} : {rotate: "0deg"}} 
+            id="Layer_1" 
+            viewBox="0 0 512 512" 
+            xmlns="http://www.w3.org/2000/svg" 
+            data-name="Layer 1"
+            width="24"
+            height="24"
+          >
+            <path d="m512 256a33.212 33.212 0 0 1 -33.2 33.2h-178.756a10.847 10.847 0 0 0 -10.844 10.844v178.759a33.2 33.2 0 0 1 -66.4 0v-178.757a10.847 10.847 0 0 0 -10.843-10.846h-178.757a33.2 33.2 0 0 1 0-66.4h178.76a10.847 10.847 0 0 0 10.847-10.847v-178.761a33.2 33.2 0 0 1 66.4 0v178.76a10.847 10.847 0 0 0 10.847 10.847h178.757a33.215 33.215 0 0 1 33.189 33.201z"/>
+          </svg>
+      </div>
+      {accordion == 1 && <div className={styles.table_wrapper}>
         <table className={styles.prices_table}>
           <thead>
             <tr className={styles.header_row}>
@@ -186,7 +200,7 @@ function PriceSection({ title, services }: { title: string, services: typeof all
             ))}
           </tbody>
         </table>
-      </div>
+      </div>}
     </div>
   );
 }
