@@ -1155,14 +1155,14 @@ const servicesData: Record<string, Service> = {
     price: "500 ₽",
     duration: "10-15 минут"
   },
-  "gigiena-kofferdam": {
-    id: "gigiena-kofferdam",
-    ownPage: false,
-    title: "Наложение резиновой завесы коффердам",
-    description: "Наложение резиновой завесы коффердам",
-    price: "700 ₽",
-    duration: "15-20 минут"
-  },
+  // "gigiena-kofferdam": {
+  //   id: "gigiena-kofferdam",
+  //   ownPage: false,
+  //   title: "Наложение резиновой завесы коффердам",
+  //   description: "Наложение резиновой завесы коффердам",
+  //   price: "700 ₽",
+  //   duration: "15-20 минут"
+  // },
   "kompleksnaya-gigiena": {
     id: "kompleksnaya-gigiena",
     ownPage: false,
@@ -2366,22 +2366,22 @@ const servicesData: Record<string, Service> = {
     price: "50000 ₽",
     duration: "60-90 минут"
   },
-  "otkrytie-implantata-alphabio": {
-    id: "otkrytie-implantata-alphabio",
-    ownPage: false,
-    title: "Открытие имплантата AlphaBio",
-    description: "Открытие имплантата, установка формирователя десны (AlphaBio)",
-    price: "0 ₽",
-    duration: "30-45 минут"
-  },
-  "otkrytie-implantata-straumann": {
-    id: "otkrytie-implantata-straumann",
-    ownPage: false,
-    title: "Открытие имплантата Straumann",
-    description: "Открытие имплантата, установка формирователя десны (Straumann) *Пожизненная гарантия от производителя",
-    price: "0 ₽",
-    duration: "30-45 минут"
-  },
+  // "otkrytie-implantata-alphabio": {
+  //   id: "otkrytie-implantata-alphabio",
+  //   ownPage: false,
+  //   title: "Открытие имплантата AlphaBio",
+  //   description: "Открытие имплантата, установка формирователя десны (AlphaBio)",
+  //   price: "0 ₽",
+  //   duration: "30-45 минут"
+  // },
+  // "otkrytie-implantata-straumann": {
+  //   id: "otkrytie-implantata-straumann",
+  //   ownPage: false,
+  //   title: "Открытие имплантата Straumann",
+  //   description: "Открытие имплантата, установка формирователя десны (Straumann) *Пожизненная гарантия от производителя",
+  //   price: "0 ₽",
+  //   duration: "30-45 минут"
+  // },
   "udalenie-implantata-prostoe": {
     id: "udalenie-implantata-prostoe",
     ownPage: false,
@@ -2904,22 +2904,22 @@ const servicesData: Record<string, Service> = {
     price: "1300 ₽",
     duration: "30-45 минут"
   },
-  "ortodontiya-dispansernyy-priem": {
-    id: "ortodontiya-dispansernyy-priem",
-    ownPage: false,
-    title: "Диспансерный прием ортодонта",
-    description: "Диспансерный прием (осмотр, консультация, выдача справка) врача-ортодонта",
-    price: "1100 ₽",
-    duration: "20-30 минут"
-  },
-  "ortodontiya-osmotr": {
-    id: "ortodontiya-osmotr",
-    ownPage: false,
-    title: "Осмотр ортодонта",
-    description: "Прием врача-ортодонта (осмотр)",
-    price: "0 ₽",
-    duration: "15-25 минут"
-  },
+  // "ortodontiya-dispansernyy-priem": {
+  //   id: "ortodontiya-dispansernyy-priem",
+  //   ownPage: false,
+  //   title: "Диспансерный прием ортодонта",
+  //   description: "Диспансерный прием (осмотр, консультация, выдача справка) врача-ортодонта",
+  //   price: "1100 ₽",
+  //   duration: "20-30 минут"
+  // },
+  // "ortodontiya-osmotr": {
+  //   id: "ortodontiya-osmotr",
+  //   ownPage: false,
+  //   title: "Осмотр ортодонта",
+  //   description: "Прием врача-ортодонта (осмотр)",
+  //   price: "0 ₽",
+  //   duration: "15-25 минут"
+  // },
   "ortodontiya-povtornyy-priem": {
     id: "ortodontiya-povtornyy-priem",
     ownPage: false,
@@ -2936,30 +2936,30 @@ const servicesData: Record<string, Service> = {
     price: "500 ₽",
     duration: "10-15 минут"
   },
-  "ortodontiya-naznachenie-rezhima-vosk": {
-    id: "ortodontiya-naznachenie-rezhima-vosk",
-    ownPage: false,
-    title: "Назначение лечебно-оздоровительного режима (воск)",
-    description: "Назначение лечебно-оздоровительного режима при заболеваниях полости рта и зубов (воск)",
-    price: "350 ₽",
-    duration: "10-15 минут"
-  },
-  "ortodontiya-naznachenie-rezhima-gigiena-malyy": {
-    id: "ortodontiya-naznachenie-rezhima-gigiena-malyy",
-    ownPage: false,
-    title: "Назначение лечебно-оздоровительного режима (малый набор)",
-    description: "Назначение лечебно-оздоровительного режима при заболеваниях полости рта и зубов (гигиенический набор малый)",
-    price: "1700 ₽",
-    duration: "15-25 минут"
-  },
-  "ortodontiya-naznachenie-rezhima-gigiena-bolshoy": {
-    id: "ortodontiya-naznachenie-rezhima-gigiena-bolshoy",
-    ownPage: false,
-    title: "Назначение лечебно-оздоровительного режима (большой набор)",
-    description: "Назначение лечебно-оздоровительного режима при заболеваниях полости рта и зубов (гигиенический набор большой)",
-    price: "2000 ₽",
-    duration: "20-30 минут"
-  },
+  // "ortodontiya-naznachenie-rezhima-vosk": {
+  //   id: "ortodontiya-naznachenie-rezhima-vosk",
+  //   ownPage: false,
+  //   title: "Назначение лечебно-оздоровительного режима (воск)",
+  //   description: "Назначение лечебно-оздоровительного режима при заболеваниях полости рта и зубов (воск)",
+  //   price: "350 ₽",
+  //   duration: "10-15 минут"
+  // },
+  // "ortodontiya-naznachenie-rezhima-gigiena-malyy": {
+  //   id: "ortodontiya-naznachenie-rezhima-gigiena-malyy",
+  //   ownPage: false,
+  //   title: "Назначение лечебно-оздоровительного режима (малый набор)",
+  //   description: "Назначение лечебно-оздоровительного режима при заболеваниях полости рта и зубов (гигиенический набор малый)",
+  //   price: "1700 ₽",
+  //   duration: "15-25 минут"
+  // },
+  // "ortodontiya-naznachenie-rezhima-gigiena-bolshoy": {
+  //   id: "ortodontiya-naznachenie-rezhima-gigiena-bolshoy",
+  //   ownPage: false,
+  //   title: "Назначение лечебно-оздоровительного режима (большой набор)",
+  //   description: "Назначение лечебно-оздоровительного режима при заболеваниях полости рта и зубов (гигиенический набор большой)",
+  //   price: "2000 ₽",
+  //   duration: "20-30 минут"
+  // },
   "ortodontiya-issledovanie-modeley": {
     id: "ortodontiya-issledovanie-modeley",
     ownPage: false,
@@ -3344,38 +3344,38 @@ const servicesData: Record<string, Service> = {
     price: "5200 ₽",
     duration: "40-60 минут"
   },
-  "provizornaya-koronka-vremennaya": {
-    id: "provizornaya-koronka-vremennaya",
-    ownPage: false,
-    title: "Провизорная коронка (временная)",
-    description: "Провизорная коронка (временная)",
-    price: "2500 ₽",
-    duration: "40-60 минут"
-  },
-  "protez-4-implanta-balka-multiunit-zircon": {
-    id: "protez-4-implanta-balka-multiunit-zircon",
-    ownPage: false,
-    title: "Протез на 4 имплантатах (циркон)",
-    description: "Протез на 4 имплантатах (балка, мультиюниты-циркон)",
-    price: "310000 ₽",
-    duration: "120-180 минут"
-  },
-  "protez-4-implanta-balka-multiunit-pmma": {
-    id: "protez-4-implanta-balka-multiunit-pmma",
-    ownPage: false,
-    title: "Протез на 4 имплантатах (РММА)",
-    description: "Протез на 4 имплантатах с мультиюнитами (балка, РММА)",
-    price: "178500 ₽",
-    duration: "120-180 минут"
-  },
-  "protez-6-implanta-balka-multiunit-pmma": {
-    id: "protez-6-implanta-balka-multiunit-pmma",
-    ownPage: false,
-    title: "Протез на 6 имплантатах (РММА)",
-    description: "Протез на 6 имплантатах с мультиюнитами (балка, РММА)",
-    price: "239500 ₽",
-    duration: "150-210 минут"
-  },
+  // "provizornaya-koronka-vremennaya": {
+  //   id: "provizornaya-koronka-vremennaya",
+  //   ownPage: false,
+  //   title: "Провизорная коронка (временная)",
+  //   description: "Провизорная коронка (временная)",
+  //   price: "2500 ₽",
+  //   duration: "40-60 минут"
+  // },
+  // "protez-4-implanta-balka-multiunit-zircon": {
+  //   id: "protez-4-implanta-balka-multiunit-zircon",
+  //   ownPage: false,
+  //   title: "Протез на 4 имплантатах (циркон)",
+  //   description: "Протез на 4 имплантатах (балка, мультиюниты-циркон)",
+  //   price: "310000 ₽",
+  //   duration: "120-180 минут"
+  // },
+  // "protez-4-implanta-balka-multiunit-pmma": {
+  //   id: "protez-4-implanta-balka-multiunit-pmma",
+  //   ownPage: false,
+  //   title: "Протез на 4 имплантатах (РММА)",
+  //   description: "Протез на 4 имплантатах с мультиюнитами (балка, РММА)",
+  //   price: "178500 ₽",
+  //   duration: "120-180 минут"
+  // },
+  // "protez-6-implanta-balka-multiunit-pmma": {
+  //   id: "protez-6-implanta-balka-multiunit-pmma",
+  //   ownPage: false,
+  //   title: "Протез на 6 имплантатах (РММА)",
+  //   description: "Протез на 6 имплантатах с мультиюнитами (балка, РММА)",
+  //   price: "239500 ₽",
+  //   duration: "150-210 минут"
+  // },
   "lechenie-pod-mikroskopom-1chas": {
     id: "lechenie-pod-mikroskopom-1chas",
     ownPage: false,

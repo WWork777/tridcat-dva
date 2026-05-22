@@ -152,9 +152,9 @@ export default function Prices() {
       <PriceSection title="Имплантация" services={filterServices(ImplantIds)} />
       <PriceSection title="Ортодонтия" services={filterServices(OrtodontIds)} />
       
-      {otherServices.length > 0 && (
+      {/* {otherServices.length > 0 && (
         <PriceSection title="Другие услуги" services={otherServices} />
-      )}
+      )} */}
     </section>
   );
 }

@@ -20,7 +20,7 @@ export default function ServiceList() {
     },
     {
       id: "ispravlenie-prikusa",
-      title: "Исправление прикуса",
+      title: "Ортодонтия",
       titleForForm: "Записаться к ортодонту",
       description: "Наша стоматология оказывает полный спектр услуг, направленный на исправление прикуса зубов.",
       imageLink: "services/prikus.png",
@@ -34,14 +34,14 @@ export default function ServiceList() {
     },
     {
       id: "professionalnaya-gigiena",
-      title: "Профессиональная гигиена",
+      title: "Гигиена полости рта",
       titleForForm: "Записаться на профгигиену",
       description: "это комплекс процедур, направленных на удаление с зубов самого разного рода отложений.",
       imageLink: "services/gigiena.png",
     },
     {
       id: "rentgenodiagnostika",
-      title: "Рентгенодиагностика",
+      title: "Диагностика заболеваний зубов",
       titleForForm: "Записаться на снимок",
       description: "С помощью рентгенодиагностики стоматологи определяют глубину поражения зуба кариесов, наличие кист и гранулем, оценивают состояние костных тканей.",
       imageLink: "services/6.png",
@@ -62,7 +62,7 @@ export default function ServiceList() {
     },
     {
       id: "esteticheskoe-vosstanovlenie-zubov",
-      title: "Эстетическое восстановление зубов",
+      title: "Эстетическая стоматология",
       titleForForm: "Записаться на реставрацию",
       description: "Стоматология «32» оказывает полный спектр услуг по эстетическому восстановлению зубов.",
       imageLink: "services/restv.png"
@@ -90,7 +90,7 @@ export default function ServiceList() {
     },
     {
       id: "ambulatornye-hirurgicheskie-operacii",
-      title: "Амбулаторные хирургические операции",
+      title: "Хирургическая стоматология",
       titleForForm: "Записаться на хирургические операции",
       description: "Стоматология «32» проводит полный перечень амбулаторных хирургических операций. Это операции, не требующие госпитализации пациента.",
       imageLink: "services/hirurg.png"

@@ -400,6 +400,7 @@ export const specialistsData: Record<string, Specialists> = {
     
     
     services: [
+      "lechenie-zubov",
       "pervichnyy-priem",
       "dispansernyy-priem",
       "povtornyy-priem",
@@ -792,6 +793,7 @@ export const specialistsData: Record<string, Specialists> = {
     ],
 
     services: [
+      "lechenie-zubov",
       "pervichnyy-priem",
       "dispansernyy-priem",
       "povtornyy-priem",
@@ -916,7 +918,7 @@ export const specialistsData: Record<string, Specialists> = {
 
     services: [
       
-
+      "protezirovanie-zubov",
       "udalenie-zubov",
       "ambulatornye-hirurgicheskie-operacii",
       "hirurgiya-pervichnyy-osmotr",
@@ -1028,6 +1030,8 @@ export const specialistsData: Record<string, Specialists> = {
 
 
     services: [
+      "detskaya-stomatologiya",
+      "lechenie-zubov",
       "pervichnyy-priem",
       "dispansernyy-priem",
       "povtornyy-priem",
@@ -1527,6 +1531,7 @@ export const specialistsData: Record<string, Specialists> = {
     ],
 
     services: [
+    "lechenie-zubov",
       "pervichnyy-priem",
     "dispansernyy-priem",
     "povtornyy-priem",
@@ -1749,7 +1754,7 @@ export const specialistsData: Record<string, Specialists> = {
     ],
 
     services: [
-      
+      "lechenie-zubov",
       "pervichnyy-priem",
     "dispansernyy-priem",
     "povtornyy-priem",
@@ -1954,6 +1959,7 @@ export const specialistsData: Record<string, Specialists> = {
     ],
 
     services: [
+    "lechenie-zubov",
       "pervichnyy-priem",
     "dispansernyy-priem",
     "povtornyy-priem",
@@ -2073,6 +2079,7 @@ export const specialistsData: Record<string, Specialists> = {
     ],
 
     services: [
+    "lechenie-zubov",
       "pervichnyy-priem",
     "dispansernyy-priem",
     "povtornyy-priem",
@@ -2334,6 +2341,8 @@ export const specialistsData: Record<string, Specialists> = {
     ],
 
     services: [
+    "detskaya-stomatologiya",
+    "lechenie-zubov",
       "pervichnyy-priem",
     "dispansernyy-priem",
     "povtornyy-priem",
@@ -2497,6 +2506,7 @@ export const specialistsData: Record<string, Specialists> = {
     ],
 
     services: [
+      "lechenie-zubov",
       "pervichnyy-priem",
     "dispansernyy-priem",
     "povtornyy-priem",

@@ -55,7 +55,7 @@ export default function ReviewsSlider() {
       reviewsCount: 209,
       ratingsCount: 456,
       icon: "",
-      link: "https://yandex.ru/maps/org/tridtsat_dva/103320707341/",
+      link: "https://yandex.ru/maps/org/tridtsat_dva/103320707341/reviews/",
       reviews: [
         {
           name: "Ирина Константиновна",
@@ -119,7 +119,7 @@ export default function ReviewsSlider() {
       reviewsCount: 89,
       ratingsCount: 245,
       icon: "/rewievs/yandex-icon.svg",
-      link: "https://yandex.ru/maps/org/tridtsat_dva/103320707341/",
+      link: "https://yandex.ru/maps/org/tridtsat_dva/103320707341/reviews/",
       reviews: [
         {
           name: "Дмитрий Козлов",
@@ -148,7 +148,7 @@ export default function ReviewsSlider() {
       reviewsCount: 45,
       ratingsCount: 55,
       icon: "/rewievs/2gis-icon.svg",
-      link: "https://2gis.ru/kemerovo/firm/704215723090545",
+      link: "https://2gis.ru/kemerovo/firm/704215723090545/tab/reviews",
       reviews: [
         {
           name: "Виктор Павлов",
@@ -307,6 +307,13 @@ export default function ReviewsSlider() {
             ))}
           </Swiper>
         </div>
+          <div className={styles.rewievs_button} style={{paddingTop: "20px", margin: "auto", justifyContent: "center"}}>
+                <a href={currentAggregator.link} target="_blank" rel="noopener noreferrer">
+                  <button>
+                    <p>Смотреть ещё</p>
+                  </button>
+                </a>
+              </div>
       </section>
     </>
   );
