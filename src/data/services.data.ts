@@ -117,7 +117,7 @@ const servicesData: Record<string, Service> = {
     id: "ispravlenie-prikusa",
     titleForForm: "Записаться на приём к ортодонту",
     ownPage: true,
-    title: "Исправление прикуса",
+    title: "Ортодонтия",
     name: "Ортодонтия",
     description:
       "Современные методы создания идеальной улыбки и правильной окклюзии",
@@ -233,7 +233,7 @@ const servicesData: Record<string, Service> = {
     id: "professionalnaya-gigiena",
     titleForForm: "Записаться на чистку и профгигиену",
     ownPage: true,
-    title: "Профессиональная гигиена",
+    title: "Гигиена полости рта",
     description:
       "Комплексное очищение зубов от всех видов отложений с укреплением эмали",
     name: "Гигиена",
@@ -282,7 +282,7 @@ const servicesData: Record<string, Service> = {
     id: "rentgenodiagnostika",
     titleForForm: "Записаться на диагностику (рентген)",
     ownPage: true,
-    title: "Рентгенодиагностика",
+    title: "Диагностика заболеваний зубов",
     description:
       "Точная цифровая диагностика для правильной постановки диагноза",
     name: "Диагностика",
@@ -306,7 +306,7 @@ const servicesData: Record<string, Service> = {
     id: "vektor-terapiya",
     titleForForm: "Записаться на Вектор-терапию",
     ownPage: true,
-    title: "Вектор-терапия",
+    title: "Пародонтология",
     description:
       "Эффективное лечение заболеваний пародонта без хирургического вмешательства",
     name: "Пародонтология",
@@ -412,7 +412,7 @@ const servicesData: Record<string, Service> = {
     id: "esteticheskoe-vosstanovlenie-zubov",
     titleForForm: "Записаться на эстетическую реставрацию",
     ownPage: true,
-    title: "Эстетическое восстановление зубов",
+    title: "Эстетическая стоматология",
     description:
       "Создание идеальной улыбки с учетом индивидуальных особенностей",
     name: "Эстетическая стоматология",
@@ -677,7 +677,7 @@ const servicesData: Record<string, Service> = {
     id: "ambulatornye-hirurgicheskie-operacii",
     titleForForm: "Записаться на хирургическую операцию",
     ownPage: true,
-    title: "Хирургические операции",
+    title: "Хирургическая стоматология",
     description: "Полный спектр амбулаторных хирургических вмешательств",
     name: "Хирургия",
     fullDescription:

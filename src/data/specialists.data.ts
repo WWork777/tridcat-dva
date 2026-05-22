@@ -400,6 +400,7 @@ export const specialistsData: Record<string, Specialists> = {
     
     
     services: [
+      "vektor-terapiya",
       "lechenie-zubov",
       "pervichnyy-priem",
       "dispansernyy-priem",
@@ -793,6 +794,7 @@ export const specialistsData: Record<string, Specialists> = {
     ],
 
     services: [
+      "vektor-terapiya",
       "lechenie-zubov",
       "pervichnyy-priem",
       "dispansernyy-priem",
@@ -917,7 +919,7 @@ export const specialistsData: Record<string, Specialists> = {
   ],
 
     services: [
-      
+      "vektor-terapiya",
       "protezirovanie-zubov",
       "udalenie-zubov",
       "ambulatornye-hirurgicheskie-operacii",
@@ -1030,6 +1032,7 @@ export const specialistsData: Record<string, Specialists> = {
 
 
     services: [
+      "vektor-terapiya",
       "detskaya-stomatologiya",
       "lechenie-zubov",
       "pervichnyy-priem",
@@ -1246,8 +1249,6 @@ export const specialistsData: Record<string, Specialists> = {
       "povyazka",
         
       // "lechenie-zubov",
-    "esteticheskoe-vosstanovlenie-zubov",
-    "professionalnaya-gigiena",
       "otbelivanie-zubov",
       "gigiena-optragate",
       "gigiena-kofferdam",
@@ -1283,7 +1284,6 @@ export const specialistsData: Record<string, Specialists> = {
       "gigiena-anesteziya-sochetannaya",
       "gigiena-povyazka",
 
-      "ambulatornye-hirurgicheskie-operacii",
       "hirurgiya-pervichnyy-osmotr",
       "hirurgiya-pervichnyy-kpl",
       "hirurgiya-povtornyy-priem",
@@ -1531,6 +1531,7 @@ export const specialistsData: Record<string, Specialists> = {
     ],
 
     services: [
+    "vektor-terapiya",
     "lechenie-zubov",
       "pervichnyy-priem",
     "dispansernyy-priem",
@@ -1809,8 +1810,7 @@ export const specialistsData: Record<string, Specialists> = {
     "povyazka",
 
     // "lechenie-zubov",
-    "esteticheskoe-vosstanovlenie-zubov",
-    "professionalnaya-gigiena",
+    "ambulatornye-hirurgicheskie-operacii",
     "otbelivanie-zubov",
     "gigiena-optragate",
     "gigiena-kofferdam",
@@ -1959,6 +1959,7 @@ export const specialistsData: Record<string, Specialists> = {
     ],
 
     services: [
+    "vektor-terapiya",
     "lechenie-zubov",
       "pervichnyy-priem",
     "dispansernyy-priem",
@@ -2079,6 +2080,7 @@ export const specialistsData: Record<string, Specialists> = {
     ],
 
     services: [
+    "vektor-terapiya",
     "lechenie-zubov",
       "pervichnyy-priem",
     "dispansernyy-priem",
@@ -2341,6 +2343,7 @@ export const specialistsData: Record<string, Specialists> = {
     ],
 
     services: [
+    "vektor-terapiya",
     "detskaya-stomatologiya",
     "lechenie-zubov",
       "pervichnyy-priem",
@@ -2506,6 +2509,7 @@ export const specialistsData: Record<string, Specialists> = {
     ],
 
     services: [
+      "vektor-terapiya",
       "lechenie-zubov",
       "pervichnyy-priem",
     "dispansernyy-priem",

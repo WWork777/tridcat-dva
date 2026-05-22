@@ -10,7 +10,7 @@ const therapyIds = [
   "vremennaya-plomba", "vremennaya-plomba-sits", "vremennaya-plomba-devit", "plomba-1-5-6",
   "plomba-2-3", "plomba-4", "polirovka-garantiya", "pulpotomiya", "ekstirpatsiya-pulpy",
   "vosstanovlenie-stenki", "snyatie-plomby", "lechebnaya-prokladka", "plomba-sits",
-  "otsrochennoe-lechenie", "korrektsiya-plomby", "bokovoy-zub-menshe", "peredniy-zub-menshe",
+  "otsrochennoe-lechenie", "korrektsiya-plomby",
   "plombirovanie-kanala", "plombirovanie-lateral", "zakrytie-perforatsii", "diagnosticheskoe-preparirovanie",
   "obrabotka-kanala", "obrabotka-horoshiy", "obrabotka-plohoy", "vremennoe-plombirovanie",
   "medikamentoznaya-obrabotka", "udalenie-shtifta", "rasplombirovka-pasta", "rasplombirovka-fosfat",
@@ -24,7 +24,7 @@ const therapyIds = [
 
 const hygieneIds = [
   "gigiena-optragate",
-  "gigiena-kofferdam", "kompleksnaya-gigiena", "kompleksnaya-gigiena-molochnyy",
+  "kompleksnaya-gigiena", "kompleksnaya-gigiena-molochnyy",
   "kompleksnaya-gigiena-smennyy", "kompleksnaya-gigiena-ortodont", "kompleksnaya-gigiena-ortodont-deti",
   "ftorirovanie-apf", "otbelivanie-amazing-white", "otbelivanie-philips-zoom", "individualnaya-kapa",
   "obuchenie-gigiene"
@@ -57,7 +57,7 @@ const ortopediaIDS = [
 ];
 
 const SurgeryIds = [
-  "ambulatornye-hirurgicheskie-operacii",
+  // "ambulatornye-hirurgicheskie-operacii",
   "hirurgiya-pervichnyy-kpl", "hirurgiya-optragate", "udalenie-molochnogo-zuba",
   "udalenie-odnokornevogo", "udalenie-mnogokornevogo", "udalenie-atravmaticheskoe", "udalenie-slozhnoe",
   "udalenie-stenki-zuba", "udalenie-ekzostoza", "udalenie-retinirovannogo", "cistektomiya",
@@ -87,8 +87,8 @@ const KidsIds = [
 ];
 
 const ImplantIds = [
-  "implantatsiya-zubov", "implantatsiya-alphabio", "implantatsiya-straumann", "otkrytie-implantata-alphabio",
-  "otkrytie-implantata-straumann", "udalenie-implantata-prostoe", "udalenie-implantata-slozhnoe",
+  "implantatsiya-alphabio", "implantatsiya-straumann",
+  "udalenie-implantata-prostoe", "udalenie-implantata-slozhnoe",
   "medikamentoznaya-obrabotka-desny", "lo-skutnaya-operatsiya", "kostnaya-plastika-rasshcheplenie",
   "plastika-alveolyarnogo-otrostka", "korrektsiya-alveolyarnogo-otrostka", "osteoplastika-kollapan",
   "sinus-lifting-otkrytyy-bazovyy", "sinus-lifting-otkrytyy-15-20-1gr", "sinus-lifting-otkrytyy-15-20-2gr",
@@ -100,9 +100,8 @@ const ImplantIds = [
 ];
 
 const OrtodontIds = [
-  "ispravlenie-prikusa", "ortodontiya-pervichnyy-kpl", "ortodontiya-dispansernyy-priem", "ortodontiya-osmotr",
-  "ortodontiya-povtornyy-priem", "ortodontiya-optragate", "ortodontiya-naznachenie-rezhima-vosk",
-  "ortodontiya-naznachenie-rezhima-gigiena-malyy", "ortodontiya-naznachenie-rezhima-gigiena-bolshoy",
+  "ortodontiya-pervichnyy-kpl",
+  "ortodontiya-povtornyy-priem", "ortodontiya-optragate",
   "ortodontiya-issledovanie-modeley", "ortodontiya-ottisk-alginat", "ortodontiya-izgotovlenie-modeli",
   "ortodontiya-funktsionalnye-zhevatelnye-proby", "ortodontiya-aktivatsiya-nesemnogo-apparata-odna-chelyust",
   "ortodontiya-aktivatsiya-nesemnogo-apparata-dve-chelyusti", "ortodontiya-smena-ligatury",
@@ -121,8 +120,7 @@ const OrtodontIds = [
   "ortodontiya-dopolnitelnyy-breketa-elite-mini-twin", "ortodontiya-snyatie-breketov-s-reteynerom",
   "ortodontiya-fiksatsiya-breketa-kompozit", "ortodontiya-povtornaya-fiksatsiya-breketa",
   "ortodontiya-fiksatsiya-nakusochnogo-breketa", "ortodontiya-ustanovka-shchechnoy-trubki",
-  "ortodontiya-polirovanie-konstruktsii", "provizornaya-koronka-vremennaya", "protez-4-implanta-balka-multiunit-zircon",
-  "protez-4-implanta-balka-multiunit-pmma", "protez-6-implanta-balka-multiunit-pmma"
+  "ortodontiya-polirovanie-konstruktsii",
 ];
 
 const allCategoryIds = new Set([

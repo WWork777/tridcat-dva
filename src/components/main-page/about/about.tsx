@@ -40,7 +40,7 @@ export default function About() {
             <div className={styles.about_top__rigth__bottom}>
               <div className={styles.about_top__rigth__bottom__item}>
                 <span>01</span>
-                <p>28 лет дарим улыбку людям</p>
+                <p>Одни из самых выгодных цен на импланты в городе</p>
               </div>
               <div className={styles.about_top__rigth__bottom__item}>
                 <span>02</span>
@@ -53,6 +53,22 @@ export default function About() {
               <div className={styles.about_top__rigth__bottom__item}>
                 <span>04</span>
                 <p>Комфортная атмосфера</p>
+              </div>
+              <div className={styles.about_top__rigth__bottom__item}>
+                <span>05</span>
+                <p>Работаем с 18 страховыми компаниями</p>
+              </div>
+              <div className={styles.about_top__rigth__bottom__item}>
+                <span>06</span>
+                <p>Лечение под микроскопом</p>
+              </div>
+              <div className={styles.about_top__rigth__bottom__item}>
+                <span>07</span>
+                <p>Пожизненная гарантия от производителя на импланты Straumann</p>
+              </div>
+              <div className={styles.about_top__rigth__bottom__item}>
+                <span>08</span>
+                <p>В команде только профессионалы, влюбленные в свое дело</p>
               </div>
             </div>
           </div>
