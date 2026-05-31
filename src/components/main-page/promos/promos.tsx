@@ -26,7 +26,7 @@ export const ServiceCard = ({
   return (
     <div
       className={`${styles.service_card} ${imageLink ? styles.has_bg : ""}`}
-      style={imageLink ? { backgroundImage: `url(${imageLink})` } : undefined}
+      style={imageLink ? { backgroundImage: `url(${imageLink})`, ...(serviceId === 4 && { backgroundSize: "100% 100%" })}  : undefined}
     >
       <div className={styles.card_content}>
         {title && <h3>{title}</h3>}
@@ -67,14 +67,14 @@ export default function Promos({ pricesPage }: { pricesPage?: boolean }) {
   }, []);
 
   const servicesData = [
-    {
-      id: 2,
-      title: "Скидки на отбеливание",
-      description:
-        "Отбеливание Amazing White с использованием лампы Zoom4 15.000 рублей вместо 22.000 рублей до конца весны",
-      imageLink: "/hero/promo2v2.webp",
-      url: "https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM",
-    },
+    // {
+    //   id: 2,
+    //   title: "Скидки на отбеливание",
+    //   description:
+    //     "Отбеливание Amazing White с использованием лампы Zoom4 15.000 рублей вместо 22.000 рублей до конца весны",
+    //   imageLink: "/hero/promo2v2.webp",
+    //   url: "https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM",
+    // },
     {
       id: 3,
       title: "Скидка для новых клиентов",

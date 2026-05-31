@@ -85,7 +85,7 @@ export const PromoPopUp = () => {
 
         <div className={styles.content}>
           <p className={styles.text}>
-            <span>Фиксируем скидку 10% </span> c 1.05 по 1.06 на все визиты с
+            <span>Фиксируем скидку 10% </span> c 1.05 по 1.07 на все визиты с
             момента <span>первого приёма</span> и <span>до конца</span>{" "}
             календарного месяца
           </p>

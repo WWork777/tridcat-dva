@@ -1,8 +1,8 @@
 .pricesPage{
   margin: 0 !important;
 }
-.swiper-wrapper:nth-child(3){
-  background-size: 100% 100% !important;
+.swiper:nth-child(2){
+  background-size: contain;
 }
 .service_card {
   background-color: var(--color-container);

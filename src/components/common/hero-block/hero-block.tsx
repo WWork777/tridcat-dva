@@ -56,7 +56,7 @@ export default function HeroBlock() {
                 </Link>
               </div>
             </SwiperSlide> */}
-            <SwiperSlide>
+            {/* <SwiperSlide>
               <div className={`${styles.hero_left__bottom__left} ${styles.second_slide}`}>
                 <p>Отбеливание <span>Amazing White</span> с использованием лампы <span>Zoom4</span> <br /><span>15.000 </span>рублей вместо 22.000 рублей до конца весны</p>
                 <Link
@@ -73,7 +73,7 @@ export default function HeroBlock() {
                   Узнать подробности
                 </Link>
               </div>
-          </SwiperSlide>
+          </SwiperSlide> */}
           <SwiperSlide>
               <div className={`${styles.hero_left__bottom__left} ${styles.third_slide}`}>
                 <p>Дарим <span>10%</span> на все приемы в месяц вашего первого визита. Акция действует до <span>последнего дня месяца</span>, в котором вы посетили нас впервые</p>
