@@ -1,4 +1,5 @@
-import { useMemo } from "react";
+"use client";
+import { useMemo, useEffect } from "react";
 import styles from "./blogComponent.module.scss";
 import BreadCrumbs from "@/components/common/breadcrumbs/breadcrumbs";
 import Image from "next/image";
@@ -25,6 +26,35 @@ export default function BlogComponent() {
       return new Date(b.date).getTime() - new Date(a.date).getTime();
     });
   }, []);
+
+  useEffect(() => {
+    // Выполняем только в режиме разработки (опционально)
+    if (process.env.NODE_ENV === "development") {
+      const titleMap = new Map<string, string[]>();
+      
+      // Используем исходные данные blogData, а не отсортированные
+      blogData.forEach((article) => {
+        const title = article.title;
+        if (!titleMap.has(title)) {
+          titleMap.set(title, []);
+        }
+        titleMap.get(title)!.push(article.id);
+      });
+      
+      const duplicates = Array.from(titleMap.entries())
+        .filter(([_, ids]) => ids.length > 1);
+      
+      if (duplicates.length > 0) {
+        console.group("🔴 Найдены дубли статей по заголовку (blogData):");
+        duplicates.forEach(([title, ids]) => {
+          console.log(`Заголовок: "${title}" → ID: ${ids.join(", ")}`);
+        });
+        console.groupEnd();
+      } else {
+        console.log("✅ Дубли по заголовку в blogData отсутствуют");
+      }
+    }
+  }, []); // Пустой массив – проверяем один раз при монтировании
 
   return (
     <section className="container">
