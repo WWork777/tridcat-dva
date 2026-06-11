@@ -82,7 +82,7 @@ export default function Services() {
       titleForForm: "Записаться на прием к детскому стоматологу",
       description:
         "это комплекс процедур, направленных на удаление с зубов самого разного рода отложений.",
-      imageLink: "services/1.png",
+      imageLink: "services/servicesActual/detskay.png",
     },
     {
       id: "implantatsiya-zubov",
@@ -90,7 +90,7 @@ export default function Services() {
       titleForForm: "Записаться на консультацию по имплантации",
       description:
         "хирургическая процедура, которая позволяет вживлять в костную ткань челюсти искусственный корень — титановый имплант.",
-      imageLink: "services/2.png",
+      imageLink: "services/servicesActual/implantacia.png",
     },
     {
       id: "ispravlenie-prikusa",
@@ -98,7 +98,7 @@ export default function Services() {
       titleForForm: "Записаться на приём к ортодонту",
       description:
         "Наша стоматология оказывает полный спектр услуг, направленный на исправление прикуса зубов.",
-      imageLink: "services/www.jpg",
+      imageLink: "services/servicesActual/ortodontia.png",
     },
     {
       id: "lechenie-zubov",
@@ -106,7 +106,7 @@ export default function Services() {
       titleForForm: "Записаться на лечение зубов",
       description:
         "Современное лечение кариеса и его осложнений с гарантией качества",
-      imageLink: "services/lechenie.png",
+      imageLink: "services/servicesActual/lechenie.png",
     },
     {
       id: "professionalnaya-gigiena",
@@ -114,7 +114,7 @@ export default function Services() {
       titleForForm: "Записаться на чистку и профгигиену",
       description:
         "это комплекс процедур, направленных на удаление с зубов самого разного рода отложений.",
-      imageLink: "services/gigiena.png",
+      imageLink: "services/servicesActual/gigiena.png",
     },
     {
       id: "rentgenodiagnostika",
@@ -122,7 +122,7 @@ export default function Services() {
       titleForForm: "Записаться на диагностику (рентген)",
       description:
         "Позволяет выявить кариес, кисты, гранулемы и оценить состояние костной ткани.",
-      imageLink: "services/6.png",
+      imageLink: "services/servicesActual/diagnostika.png",
     },
   ];
 
