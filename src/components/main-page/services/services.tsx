@@ -98,7 +98,7 @@ export default function Services() {
       titleForForm: "Записаться на приём к ортодонту",
       description:
         "Наша стоматология оказывает полный спектр услуг, направленный на исправление прикуса зубов.",
-      imageLink: "services/prikus.png",
+      imageLink: "services/www.jpg",
     },
     {
       id: "lechenie-zubov",
