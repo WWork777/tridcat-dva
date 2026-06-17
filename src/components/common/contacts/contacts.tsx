@@ -30,8 +30,13 @@ export default function Contacts() {
                     <div className={styles.phone_row}>
                       <p>
                         <TrackedPhoneLink
-                          phoneNumber="+7 (902) 983 0005"
-                          displayNumber="+7 (902) 983 0005"
+                          phoneNumber="+7(3842) 58-30-26"
+                          displayNumber="+7(3842) 58-30-26"
+                          className={styles.phone_link}
+                        />
+                        <TrackedPhoneLink
+                          phoneNumber="+7(3842) 45-75-95"
+                          displayNumber="+7(3842) 45-75-95"
                           className={styles.phone_link}
                         />
                       </p>

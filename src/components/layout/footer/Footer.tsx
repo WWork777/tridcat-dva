@@ -70,11 +70,18 @@ export default function Footer() {
           <img src="/footer/phone.svg" alt="" />
           <p>
             <TrackedPhoneLink
-              phoneNumber="+7 (902) 983 0005"
-              displayNumber="+7 (902) 983 0005"
+              phoneNumber="+7(3842) 58-30-26"
+              displayNumber="+7(3842) 58-30-26"
             />
           </p>
+
           <div className={styles.footer_line}>|</div>
+          <p>
+            <TrackedPhoneLink
+              phoneNumber="+7(3842) 45-75-95"
+              displayNumber="+7(3842) 45-75-95"
+            />
+          </p>
         </div>
         <div className={styles.footer_rigth__item}>
           <img src="/footer/mail.svg" alt="" />
