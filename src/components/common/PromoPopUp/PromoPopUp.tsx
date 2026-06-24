@@ -9,6 +9,7 @@ export const PromoPopUp = () => {
 
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
+  const [consent, setConsent] = useState(false);
 
   const [isLoading, setIsLoading] = useState(false);
 
@@ -31,6 +32,12 @@ export const PromoPopUp = () => {
     if (digitsOnly.length !== 11) {
       alert("Пожалуйста, введите номер телефона полностью.");
       return; // Прерываем выполнение функции, форма не отправляется
+    }
+
+    // СОГЛАСИЕ НА ОБРАБОТКУ ПЕРСОНАЛЬНЫХ ДАННЫХ (152-ФЗ)
+    if (!consent) {
+      alert("Необходимо дать согласие на обработку персональных данных.");
+      return;
     }
 
     setIsLoading(true);
@@ -61,6 +68,7 @@ export const PromoPopUp = () => {
         alert("Заявка успешно отправлена!");
         setName("");
         setPhone("");
+        setConsent(false);
         setIsOpen(false);
       } else {
         console.error("Ошибка API:", await maxResponse.text());
@@ -110,10 +118,24 @@ export const PromoPopUp = () => {
               required
               placeholder=""
             />
+            <label className={styles.consent}>
+              <input
+                type="checkbox"
+                checked={consent}
+                onChange={(e) => setConsent(e.target.checked)}
+                required
+              />
+              <span>
+                Я даю согласие на обработку{" "}
+                <a href="/docs/ПОЛИТИКА ОБРАБОТКИ ПД.pdf" target="_blank" rel="noopener noreferrer">персональных данных</a>{" "}
+                и принимаю условия{" "}
+                <a href="/docs/ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ.pdf" target="_blank" rel="noopener noreferrer">пользовательского соглашения</a>.
+              </span>
+            </label>
             <button
               type="submit"
               className={styles.submitButton}
-              disabled={isLoading}
+              disabled={isLoading || !consent}
             >
               {isLoading ? "Отправка..." : "Забрать скидку"}
             </button>

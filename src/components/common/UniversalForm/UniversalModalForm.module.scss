@@ -124,10 +124,38 @@
   }
 }
 
+.consent {
+  grid-column: span 2;
+  @media (max-width: 768px) { grid-column: span 1; }
+
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #555;
+  cursor: pointer;
+  user-select: none;
+
+  input[type="checkbox"] {
+    margin-top: 2px;
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+    accent-color: var(--color-decorate);
+    cursor: pointer;
+  }
+
+  a {
+    color: var(--color-decorate);
+    text-decoration: underline;
+  }
+}
+
 .submitButton {
   grid-column: span 2;
   @media (max-width: 768px) { grid-column: span 1; }
-  
+
   font-family: var(--font-family-sans, sans-serif);
   padding: 18px 30px;
   color: white;

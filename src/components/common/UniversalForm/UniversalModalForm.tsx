@@ -26,6 +26,7 @@ export const UniversalModalForm: React.FC<UniversalModalProps> = ({
 }) => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
+  const [consent, setConsent] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   // Очищаем форму при закрытии окна
@@ -33,6 +34,7 @@ export const UniversalModalForm: React.FC<UniversalModalProps> = ({
     if (!isOpen) {
       setName('');
       setPhone('');
+      setConsent(false);
       setIsLoading(false);
     }
   }, [isOpen]);
@@ -44,6 +46,12 @@ export const UniversalModalForm: React.FC<UniversalModalProps> = ({
     const digitsOnly = phone.replace(/\D/g, '');
     if (digitsOnly.length !== 11) {
       alert("Пожалуйста, введите номер телефона полностью.");
+      return;
+    }
+
+    // СОГЛАСИЕ НА ОБРАБОТКУ ПЕРСОНАЛЬНЫХ ДАННЫХ (152-ФЗ)
+    if (!consent) {
+      alert("Необходимо дать согласие на обработку персональных данных.");
       return;
     }
 
@@ -130,7 +138,21 @@ export const UniversalModalForm: React.FC<UniversalModalProps> = ({
                 required
                 placeholder=""
             />
-            <button type="submit" className={styles.submitButton} disabled={isLoading}>
+            <label className={styles.consent}>
+              <input
+                type="checkbox"
+                checked={consent}
+                onChange={(e) => setConsent(e.target.checked)}
+                required
+              />
+              <span>
+                Я даю согласие на обработку{" "}
+                <a href="/docs/ПОЛИТИКА ОБРАБОТКИ ПД.pdf" target="_blank" rel="noopener noreferrer">персональных данных</a>{" "}
+                и принимаю условия{" "}
+                <a href="/docs/ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ.pdf" target="_blank" rel="noopener noreferrer">пользовательского соглашения</a>.
+              </span>
+            </label>
+            <button type="submit" className={styles.submitButton} disabled={isLoading || !consent}>
               {isLoading ? 'Отправка...' : 'Оставить заявку'}
             </button>
           </form>

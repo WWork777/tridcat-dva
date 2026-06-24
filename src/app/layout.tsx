@@ -6,6 +6,7 @@ import Footer from "@/components/layout/footer/Footer";
 import YandexMetrika from "@/components/common/YandexMetrika/YandexMEtrika";
 import FloatingButton from "@/components/FloatingContacts/FloatingContacts";
 import StructuredData from "@/components/seo/StructuredData";
+import CookieConsent from "@/components/common/CookieConsent/CookieConsent";
 
 
 const geistSans = Wix_Madefor_Display({
@@ -47,6 +48,7 @@ export default function RootLayout({
         {children}
         <YandexMetrika />
         <Footer />
+        <CookieConsent />
         <script type="text/javascript" async src="https://app.uiscom.ru/static/cs.min.js?k=yr6qBcZgiZI7LCLHNfq5_v2Ugk11sHp6"></script>
 
         <div id="medflexRoundWidgetData" data-src="https://booking.medflex.ru/?user=3af5c574ee33a9c585fc8a3ac3d8a9f3&isRoundWidget=true"></div> <script defer src="https://booking.medflex.ru/components/round/round_widget_button.js" charSet="utf-8"></script>
