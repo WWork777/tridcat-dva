@@ -1,7 +1,19 @@
 /* .container задаёт overflow-x: hidden, что превращает секцию в скролл-контейнер
-   и ломает position: sticky у большого фото. На этой странице переопределяем. */
+   и ломает position: sticky у большого фото. На этой странице переопределяем.
+   Плюс делаем страницу широкой — убираем большие боковые отступы .container. */
 .page {
   overflow: visible !important;
+  width: 100% !important;
+  max-width: 1760px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+
+  @media (max-width: 768px) {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
 }
 
 .pageHeader {

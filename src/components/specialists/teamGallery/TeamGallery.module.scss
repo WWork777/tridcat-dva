@@ -112,6 +112,16 @@
   color: rgba(255, 255, 255, 0.85);
 }
 
+/* Пустые «пропуски» — создают воздух и асимметрию (скип карточек в строках) */
+.spacer {
+  break-inside: avoid;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
 /* Декоративные фразы между фото */
 .quote {
   break-inside: avoid;
