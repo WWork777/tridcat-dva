@@ -1,16 +1,27 @@
-.specialistsGrid {
-  margin-top: 50px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 30px;
-  margin-bottom: 80px;
+.pageHeader {
+  margin-top: 24px;
+  text-align: center;
 }
 
-// Адаптация для мобильных
-@media (max-width: 768px) {
-  .specialistsGrid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    margin-bottom: 60px;
+.title {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #0a1628;
+  margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+.subtitle {
+  max-width: 640px;
+  margin: 14px auto 0;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: #5b6b7e;
+
+  @media (max-width: 768px) {
+    font-size: 0.95rem;
   }
 }

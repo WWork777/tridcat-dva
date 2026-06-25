@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Исходные необработанные фото (не нужны в репозитории/деплое)
+public/archive/

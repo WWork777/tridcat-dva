@@ -2,7 +2,7 @@
 import BreadCrumbs from "@/components/common/breadcrumbs/breadcrumbs";
 import styles from "./styles.module.scss";
 import { specialistsData } from "@/data/specialists.data";
-import { SliderCard } from "@/components/main-page/specialists-slider/specialists-slider";
+import TeamGallery from "@/components/specialists/teamGallery/TeamGallery";
 
 export async function generateMetadata() {
   return {
@@ -60,24 +60,13 @@ export default function SpecialistsPage() {
 
       <div className={styles.pageHeader}>
         <h1 className={styles.title}>Наши специалисты</h1>
+        <p className={styles.subtitle}>
+          Команда клиники «Тридцать Два» — врачи, ассистенты и администраторы,
+          которым можно доверить здоровье вашей улыбки.
+        </p>
       </div>
 
-      <div className={styles.specialistsGrid}>
-        {allSpecialists.map((specialist) => (
-          <div key={specialist.id} className={styles.specialistItem}>
-            <SliderCard
-              img={specialist.imageLink}
-              name={specialist.name}
-              description={specialist.description}
-              stage={specialist.stage}
-              showStage={!!specialist.stage}
-              link={`/specialists/${specialist.id}`}
-              showWhatsApp={true} // Включаем WhatsApp
-              waLink={specialist.waLink} // Передаем WhatsApp ссылку
-            />
-          </div>
-        ))}
-      </div>
+      <TeamGallery members={allSpecialists} />
     </section>
   );
 }

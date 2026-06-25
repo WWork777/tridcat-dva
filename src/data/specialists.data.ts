@@ -49,7 +49,7 @@ export const specialistsData: Record<string, Specialists> = {
     // waLink: "https://t.me/stomatologiya_32?text=Здравствуйте хочу записаться к специалисту Ивановой Марине Сергеевне",
     waLink: 'https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM',
     stage: "17 лет",
-    imageLink: "/specialists/ivanova.jpg",
+    imageLink: "/specialists/team/ivanova.jpg",
     
     // Новые поля из скриншота
     detailedDescription: `Я врач-стоматолог терапевт. Окончила стоматологический факультет КГМА. Профессиональный подход к каждому пациенту, большой интерес к работе, качественное ее выполнение, а также желание и умение воспитывать в большинстве пациентов стоматологическую грамотность — вот моя цель. Помимо основной терапевтической деятельности (безболезненное лечение кариеса и его осложнений, реставрация зубов), выполняю гигиенические процедуры: снятие зубных отложений, глубокое фторирование зубов, также отбеливание зубов, диагностику заболеваний пародонта и лечение десны на одном из самых современных и эффективных аппаратов «Vector».`,
@@ -1656,7 +1656,7 @@ export const specialistsData: Record<string, Specialists> = {
       },
     ],
 
-    imageLink: "/specialists/lobanova-1.jpg",
+    imageLink: "/specialists/team/lobanova.jpg",
   },
   "anastasiya-aleksandrovna-terskih": {
     id: "anastasiya-aleksandrovna-terskih",
@@ -1931,7 +1931,7 @@ export const specialistsData: Record<string, Specialists> = {
     "chastichnyy-semnyy-protez-master",
     "garnitur-keramicheskih-zubov"
     ],
-    imageLink: "/specialists/terskih-1.jpg",
+    imageLink: "/specialists/team/terskih.jpg",
   },
   "anna-evgenevna-terehina": {
     id: "anna-evgenevna-terehina",
@@ -2480,7 +2480,7 @@ export const specialistsData: Record<string, Specialists> = {
     "detskaya-anesteziya-sochetannaya",
     "detskaya-povyazka"
     ],
-    imageLink: "/specialists/potrebnikova-2.jpg",
+    imageLink: "/specialists/team/potrebnikova.jpg",
   },
   "burilova-mariya-dmitrievna": {
     id: "burilova-mariya-dmitrievna",
@@ -2637,7 +2637,7 @@ export const specialistsData: Record<string, Specialists> = {
     name: "Панова Инна Андреевна",
     description: "Ассистент врача-стоматолога",
     stage: "",
-    imageLink: "/specialists/panova-1.jpg",
+    imageLink: "/specialists/team/panova.jpg",
   },
   "nikita-konstantinovich-shkurat": {
     id: "nikita-konstantinovich-shkurat",
@@ -2651,7 +2651,7 @@ export const specialistsData: Record<string, Specialists> = {
     name: "Каслина Александра Александровна",
     description: "Ассистент врача-стоматолога",
     stage: "",
-    imageLink: "/specialists/kaslina-1.jpg",
+    imageLink: "/specialists/team/kaslina.jpg",
   },
   // "anzhelika-vitalevna-amelchenko": {
   //   id: "anzhelika-vitalevna-amelchenko",
@@ -2665,14 +2665,14 @@ export const specialistsData: Record<string, Specialists> = {
     name: "Смирнова Кристина Максимовна",
     description: "Ассистент врача-стоматолога",
     stage: "",
-    imageLink: "/specialists/smirnova-1.jpg",
+    imageLink: "/specialists/team/smirnova.jpg",
   },
   "klimova-marina-olegovna": {
     id: "klimova-marina-olegovna",
     name: "Климова Марина Олеговна",
     description: "Ассистент врача-стоматолога",
     stage: "",
-    imageLink: "/specialists/klimova-1.jpg",
+    imageLink: "/specialists/team/klimova.jpg",
   },
   "pogodin-petr-vasilevich": {
     id: "pogodin-petr-vasilevich",
@@ -2714,7 +2714,42 @@ export const specialistsData: Record<string, Specialists> = {
     name: "Ивченко Валерий Николаевич",
     description: "Директор",
     stage: "",
-    imageLink: "/specialists/ivchenko.jpg",
+    imageLink: "/specialists/team/ivchenko-valerij.jpg",
+  },
+  "redina": {
+    id: "redina",
+    name: "Редина",
+    description: "Администратор",
+    stage: "",
+    imageLink: "/specialists/team/redina.jpg",
+  },
+  "semenova-angelina-evgenevna": {
+    id: "semenova-angelina-evgenevna",
+    name: "Семенова Ангелина Евгеньевна",
+    description: "Ассистент врача-стоматолога",
+    stage: "",
+    imageLink: "/specialists/team/semenova-angelina.jpg",
+  },
+  "semenova-kristina-evgenevna": {
+    id: "semenova-kristina-evgenevna",
+    name: "Семенова Кристина Евгеньевна",
+    description: "Ассистент врача-стоматолога",
+    stage: "",
+    imageLink: "/specialists/team/semenova-kristina.jpg",
+  },
+  "andrejchik-irina-maratovna": {
+    id: "andrejchik-irina-maratovna",
+    name: "Андрейчик Ирина Маратовна",
+    description: "Администратор-координатор",
+    stage: "",
+    imageLink: "/specialists/team/andrejchik.jpg",
+  },
+  "abraamyan-kristina-karenovna": {
+    id: "abraamyan-kristina-karenovna",
+    name: "Абраамян Кристина Кареновна",
+    description: "Ассистент врача-стоматолога",
+    stage: "",
+    imageLink: "/specialists/team/abraamyan.jpg",
   },
   // "tatyana-evgenevna-zolotuhina": {
   //   id: "tatyana-evgenevna-zolotuhina",
