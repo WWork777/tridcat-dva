@@ -59,7 +59,9 @@ export default function TeamGallery({ members }: { members: TeamMember[] }) {
               onMouseEnter={() => setActive(i)}
               onFocus={() => setActive(i)}
             >
-              <img src={m.imageLink} alt={m.name} loading="lazy" />
+              <div className={styles.thumbImageWrap}>
+                <img src={m.imageLink} alt={m.name} loading="lazy" />
+              </div>
               <div className={styles.thumbCaption}>
                 <span className={styles.thumbName}>{m.name}</span>
                 <span className={styles.thumbRole}>{m.description}</span>
