@@ -1,3 +1,6 @@
+"use client";
+
+import { Fragment, useState } from "react";
 import Link from "next/link";
 import styles from "./TeamGallery.module.scss";
 
@@ -9,41 +12,72 @@ interface TeamMember {
   imageLink: string;
 }
 
-// Паттерн соотношений сторон для «живой», асимметричной галерейной раскладки.
-// Карточки получают разную высоту, благодаря чему колонки складываются мозаикой.
-const ASPECTS = ["3 / 4", "2 / 3", "4 / 5", "2 / 3", "3 / 4", "5 / 7"];
+// Соотношения сторон для «живой», асимметричной раскладки миниатюр.
+const ASPECTS = ["3 / 4", "4 / 5", "1 / 1", "4 / 5", "3 / 4", "5 / 6"];
+
+// Декоративные фразы клиники, вплетённые в галерею (как в референсе).
+const QUOTES: Record<number, string> = {
+  3: "Мы верим, что красивая, здоровая улыбка может изменить жизнь!",
+  8: "Наша работа — это наша страсть!",
+};
 
 export default function TeamGallery({ members }: { members: TeamMember[] }) {
+  const [active, setActive] = useState(0);
+  const featured = members[active] ?? members[0];
+
   return (
-    <div className={styles.gallery}>
-      {members.map((m, i) => (
-        <Link
-          key={m.id}
-          href={`/specialists/${m.id}`}
-          className={styles.card}
-          style={{ ["--ratio" as string]: ASPECTS[i % ASPECTS.length] }}
-        >
-          <div className={styles.imageWrap}>
-            <img
-              src={m.imageLink}
-              alt={m.name}
-              loading="lazy"
-              className={styles.image}
-            />
-            <div className={styles.gradient} />
-
-            {m.stage && (
-              <span className={styles.badge}>Стаж: {m.stage}</span>
+    <div className={styles.layout}>
+      {/* Левая зона — мозаичная галерея миниатюр */}
+      <div className={styles.gallery}>
+        {members.map((m, i) => (
+          <Fragment key={m.id}>
+            {QUOTES[i] && (
+              <div className={styles.quote}>
+                <span className={styles.quoteIcon}>✤</span>
+                <p>{QUOTES[i]}</p>
+              </div>
             )}
+            <Link
+              href={`/specialists/${m.id}`}
+              className={`${styles.thumb} ${i === active ? styles.thumbActive : ""}`}
+              style={{ ["--ratio" as string]: ASPECTS[i % ASPECTS.length] }}
+              onMouseEnter={() => setActive(i)}
+              onFocus={() => setActive(i)}
+            >
+              <img src={m.imageLink} alt={m.name} loading="lazy" />
+              <div className={styles.thumbCaption}>
+                <span className={styles.thumbName}>{m.name}</span>
+                <span className={styles.thumbRole}>{m.description}</span>
+              </div>
+            </Link>
+          </Fragment>
+        ))}
+      </div>
 
-            <div className={styles.caption}>
-              <h3 className={styles.name}>{m.name}</h3>
-              <p className={styles.role}>{m.description}</p>
-              <span className={styles.more}>Подробнее →</span>
-            </div>
+      {/* Правая зона — большое «прилипающее» фото выбранного специалиста */}
+      <div className={styles.featuredCol}>
+        <Link
+          href={`/specialists/${featured.id}`}
+          className={styles.featured}
+          aria-label={featured.name}
+        >
+          <div className={styles.featuredImageWrap}>
+            <img
+              key={featured.id}
+              src={featured.imageLink}
+              alt={featured.name}
+              className={styles.featuredImage}
+            />
+          </div>
+          <div key={`card-${featured.id}`} className={styles.featuredCard}>
+            {featured.stage && (
+              <span className={styles.featuredBadge}>Стаж: {featured.stage}</span>
+            )}
+            <h3 className={styles.featuredName}>{featured.name}</h3>
+            <p className={styles.featuredRole}>{featured.description}</p>
           </div>
         </Link>
-      ))}
+      </div>
     </div>
   );
 }

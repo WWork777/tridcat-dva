@@ -1,3 +1,9 @@
+/* .container задаёт overflow-x: hidden, что превращает секцию в скролл-контейнер
+   и ломает position: sticky у большого фото. На этой странице переопределяем. */
+.page {
+  overflow: visible !important;
+}
+
 .pageHeader {
   margin-top: 24px;
   text-align: center;

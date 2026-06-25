@@ -1,142 +1,207 @@
-/* Галерейная мозаичная раскладка на CSS-колонках */
-.gallery {
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.layout {
   margin-top: 50px;
   margin-bottom: 80px;
-  column-count: 4;
-  column-gap: 24px;
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 48px;
+  align-items: stretch;
 
-  @media (max-width: 1280px) {
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+/* ---------- Левая зона: мозаика миниатюр ---------- */
+.gallery {
+  column-count: 3;
+  column-gap: 20px;
+
+  @media (max-width: 1024px) {
     column-count: 3;
   }
-  @media (max-width: 900px) {
+  @media (max-width: 768px) {
     column-count: 2;
-    column-gap: 18px;
+    column-gap: 14px;
   }
-  @media (max-width: 520px) {
-    column-count: 1;
+  @media (max-width: 420px) {
+    column-count: 2;
   }
 }
 
-.card {
+.thumb {
+  position: relative;
   display: block;
   break-inside: avoid;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #eef1f5;
   text-decoration: none;
   color: inherit;
+  aspect-ratio: var(--ratio, 4 / 5);
+  box-shadow: 0 4px 14px rgba(20, 40, 70, 0.06);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, outline-color 0.35s ease;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 
-  @media (max-width: 900px) {
-    margin-bottom: 18px;
+  @media (max-width: 768px) {
+    margin-bottom: 14px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 26px rgba(20, 40, 70, 0.16);
+
+    img { transform: scale(1.06); }
   }
 }
 
-.imageWrap {
+/* Активная (наведённая) миниатюра подсвечивается */
+.thumbActive {
+  outline-color: var(--color-decorate, #5b8def);
+}
+
+/* Подпись на миниатюре — на десктопе показываем при наведении,
+   на тач-устройствах всегда (там нет большого фото). */
+.thumbCaption {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 14px 12px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: #fff;
+  background: linear-gradient(to top, rgba(10, 22, 40, 0.85), rgba(10, 22, 40, 0));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  @media (hover: none) {
+    opacity: 1;
+  }
+}
+
+.thumb:hover .thumbCaption {
+  opacity: 1;
+}
+
+.thumbName {
+  font-size: 13.5px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.thumbRole {
+  font-size: 11.5px;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Декоративные фразы между фото */
+.quote {
+  break-inside: avoid;
+  margin-bottom: 20px;
+  padding: 18px 8px;
+  text-align: center;
+  color: #5b6b7e;
+
+  p {
+    margin: 8px 0 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.45;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.quoteIcon {
+  color: var(--color-decorate, #5b8def);
+  font-size: 18px;
+}
+
+/* ---------- Правая зона: большое «прилипающее» фото ---------- */
+.featuredCol {
+  @media (max-width: 1024px) {
+    display: none; /* на мобильных большое фото скрываем, миниатюры самодостаточны */
+  }
+}
+
+.featured {
+  position: sticky;
+  top: 90px;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.featuredImageWrap {
   position: relative;
   width: 100%;
-  aspect-ratio: var(--ratio, 2 / 3);
-  border-radius: 20px;
+  aspect-ratio: 4 / 5;
+  border-radius: 28px;
   overflow: hidden;
-  background: #eef1f5;
-  box-shadow: 0 8px 24px rgba(20, 40, 70, 0.08);
-  transition: box-shadow 0.4s ease, transform 0.4s ease;
+  background: #e9edf2;
+  box-shadow: 0 20px 50px rgba(20, 40, 70, 0.14);
 }
 
-.card:hover .imageWrap {
-  box-shadow: 0 18px 40px rgba(20, 40, 70, 0.18);
-  transform: translateY(-4px);
-}
-
-.image {
+.featuredImage {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: top center;
   display: block;
-  transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
-  will-change: transform;
+  animation: fadeIn 0.45s ease;
 }
 
-.card:hover .image {
-  transform: scale(1.07);
+.featuredCard {
+  position: relative;
+  margin: -64px 24px 0;
+  padding: 22px 26px;
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 16px 36px rgba(20, 40, 70, 0.12);
+  animation: fadeIn 0.45s ease;
 }
 
-.gradient {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(10, 22, 40, 0.82) 0%,
-    rgba(10, 22, 40, 0.35) 35%,
-    rgba(10, 22, 40, 0) 60%
-  );
-  opacity: 0.9;
-  transition: opacity 0.4s ease;
-}
-
-.card:hover .gradient {
-  opacity: 1;
-}
-
-.badge {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  z-index: 2;
-  padding: 6px 12px;
+.featuredBadge {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 5px 12px;
   border-radius: 999px;
   font-size: 12px;
   font-weight: 600;
-  color: #0a1628;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(4px);
+  color: var(--color-decorate, #5b8def);
+  background: rgba(91, 141, 239, 0.1);
 }
 
-.caption {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 2;
-  padding: 20px 18px;
-  color: #fff;
-}
-
-.name {
+.featuredName {
   margin: 0;
-  font-size: 19px;
+  font-size: 24px;
   font-weight: 700;
   line-height: 1.25;
+  color: #0a1628;
 }
 
-.role {
-  margin: 6px 0 0;
-  font-size: 13.5px;
-  line-height: 1.4;
-  color: rgba(255, 255, 255, 0.85);
-}
-
-.more {
-  display: inline-block;
-  margin-top: 10px;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--color-decorate, #5b8def);
-  background: rgba(255, 255, 255, 0.95);
-  padding: 6px 14px;
-  border-radius: 999px;
-  opacity: 0;
-  transform: translateY(8px);
-  transition: opacity 0.35s ease, transform 0.35s ease;
-}
-
-.card:hover .more {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* На тач-устройствах ссылку «Подробнее» показываем сразу */
-@media (hover: none) {
-  .more {
-    opacity: 1;
-    transform: none;
-  }
+.featuredRole {
+  margin: 8px 0 0;
+  font-size: 15px;
+  line-height: 1.45;
+  color: #5b6b7e;
 }

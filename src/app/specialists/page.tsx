@@ -50,10 +50,17 @@ export async function generateMetadata() {
 }
 
 export default function SpecialistsPage() {
-  const allSpecialists = Object.values(specialistsData);
+  // Передаём в клиентский компонент только нужные поля (без тяжёлых массивов услуг/сертификатов)
+  const members = Object.values(specialistsData).map((s) => ({
+    id: s.id,
+    name: s.name,
+    description: s.description,
+    stage: s.stage,
+    imageLink: s.imageLink,
+  }));
 
   return (
-    <section className="container">
+    <section className={`container ${styles.page}`}>
       <BreadCrumbs
         items={[{ label: "Главная", href: "/" }, { label: "Специалисты" }]}
       />
@@ -66,7 +73,7 @@ export default function SpecialistsPage() {
         </p>
       </div>
 
-      <TeamGallery members={allSpecialists} />
+      <TeamGallery members={members} />
     </section>
   );
 }
