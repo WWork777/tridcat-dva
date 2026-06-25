@@ -7,9 +7,14 @@
   margin-top: 50px;
   margin-bottom: 80px;
   display: grid;
-  grid-template-columns: 1.25fr 1fr;
+  grid-template-columns: minmax(0, 1fr) 400px;
   gap: 48px;
   align-items: stretch;
+
+  @media (max-width: 1280px) {
+    grid-template-columns: minmax(0, 1fr) 340px;
+    gap: 32px;
+  }
 
   @media (max-width: 1024px) {
     grid-template-columns: 1fr;
