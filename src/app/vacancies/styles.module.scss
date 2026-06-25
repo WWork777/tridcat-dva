@@ -42,6 +42,17 @@
   }
 }
 
+.emptyState {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #555;
+  margin-bottom: 50px;
+
+  @media (max-width: 640px) {
+    font-size: 1.1rem;
+  }
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

@@ -1,8 +1,5 @@
-import { VacancyCard } from '@/components/vacancyCard/vacancyCard';
-import { vacancies } from '@/data/vacancies.data';
 import styles from './styles.module.scss';
 import Contacts from '@/components/common/contacts/contacts';
-import Link from 'next/link';
 export async function generateMetadata() {
   return {
     title: "Вакансии стоматологии | Тридцать Два",
@@ -57,35 +54,9 @@ export default function VacanciesPage() {
     // </main>
        <main className={styles.container}>
       <h1 className={styles.pageTitle}>Наши вакансии</h1>
-      <div className={styles.grid}>
-        {vacancies.map((vacancy) => (
-          <div key={vacancy.id} className={styles.card}>
-            <h2 className={styles.title}>{vacancy.title}</h2>
-            <section className={styles.section}>
-              <h3 className={styles.sectionTitle}>Что мы ждём от Вас:</h3>
-              <ul className={styles.list}>
-                {vacancy.fullContent.requirements.map((item, index) => (
-                  <li key={index} className={styles.listItem}>{item}</li>
-                ))}
-              </ul>
-            </section>
-            <section className={styles.section}>
-              <h3 className={styles.sectionTitle}>Мы предлагаем:</h3>
-              <ul className={styles.list}>
-                {vacancy.fullContent.offers.map((item, index) => (
-                  <li key={index} className={styles.listItem}>{item}</li>
-                ))}
-              </ul>
-            </section>
-            {vacancy.fullContent.note && (
-              <p className={styles.note}>{vacancy.fullContent.note}</p>
-            )}
-            <Link className={styles.link} href={'https://max.ru/u/f9LHodD0cOLWDBJA1W4ItwCfnNzrB4wo5xf0kp49J4zumo-o9tkdWjupGoM'}>
-                Связаться с нами
-            </Link>
-          </div>
-        ))}
-      </div>
+      <p className={styles.emptyState}>
+        В настоящий момент открытых вакансий нет.
+      </p>
       <Contacts />
     </main>
   );
