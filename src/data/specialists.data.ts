@@ -2718,7 +2718,7 @@ export const specialistsData: Record<string, Specialists> = {
   },
   "redina": {
     id: "redina",
-    name: "Редина",
+    name: "Федина Наталья Игоревна",
     description: "Администратор",
     stage: "",
     imageLink: "/specialists/team/redina.jpg",
