@@ -58,7 +58,7 @@ export default function ServiceList() {
     title: "Протезирование зубов",
     titleForForm: "Консультация по протезированию",
     description: "Протезирование зубов – это целый комплекс стоматологических услуг, с помощью которого восстанавливают функции зубов.",
-    imageLink: "services/servicesActual/protezirovanie.png",
+    imageLink: "services/servicesActual/protezirovan.png",
   },
   {
     id: "ambulatornye-hirurgicheskie-operacii",
