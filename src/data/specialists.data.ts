@@ -494,6 +494,13 @@ export const specialistsData: Record<string, Specialists> = {
       "gigiena-povyazka"
     ]
   },
+  "ivchenko-valerij-nikolaevich": {
+    id: "ivchenko-valerij-nikolaevich",
+    name: "Ивченко Валерий Николаевич",
+    description: "Директор",
+    stage: "",
+    imageLink: "/specialists/team/ivchenko-valerij.jpg",
+  },
   // "stanislav-sergeevich-bondarev": {
   //   id: "stanislav-sergeevich-bondarev",
   //   name: "Бондарев Станислав Сергеевич",
@@ -2688,6 +2695,27 @@ export const specialistsData: Record<string, Specialists> = {
     stage: "",
     imageLink: "/specialists/gerasimov-1.jpg",
   },
+  "semenova-angelina-evgenevna": {
+    id: "semenova-angelina-evgenevna",
+    name: "Семенова Ангелина Евгеньевна",
+    description: "Ассистент врача-стоматолога",
+    stage: "",
+    imageLink: "/specialists/team/semenova-angelina.jpg",
+  },
+  "semenova-kristina-evgenevna": {
+    id: "semenova-kristina-evgenevna",
+    name: "Семенова Кристина Евгеньевна",
+    description: "Ассистент врача-стоматолога",
+    stage: "",
+    imageLink: "/specialists/team/semenova-kristina.jpg",
+  },
+  "abraamyan-kristina-karenovna": {
+    id: "abraamyan-kristina-karenovna",
+    name: "Абраамян Кристина Кареновна",
+    description: "Ассистент врача-стоматолога",
+    stage: "",
+    imageLink: "/specialists/team/abraamyan.jpg",
+  },
   "pantyuhina-darya-vladimirovna": {
     id: "pantyuhina-darya-vladimirovna",
     name: "Пантюхина Дарья Владимировна",
@@ -2709,33 +2737,12 @@ export const specialistsData: Record<string, Specialists> = {
     stage: "",
     imageLink: "/specialists/shumkova-1.jpg",
   },
-  "ivchenko-valerij-nikolaevich": {
-    id: "ivchenko-valerij-nikolaevich",
-    name: "Ивченко Валерий Николаевич",
-    description: "Директор",
-    stage: "",
-    imageLink: "/specialists/team/ivchenko-valerij.jpg",
-  },
   "redina": {
-    id: "redina",
+    id: "fedina-natalia-igorevna",
     name: "Федина Наталья Игоревна",
-    description: "Администратор",
+    description: "Администратор, старшая медицинская сестра",
     stage: "",
     imageLink: "/specialists/team/redina.jpg",
-  },
-  "semenova-angelina-evgenevna": {
-    id: "semenova-angelina-evgenevna",
-    name: "Семенова Ангелина Евгеньевна",
-    description: "Ассистент врача-стоматолога",
-    stage: "",
-    imageLink: "/specialists/team/semenova-angelina.jpg",
-  },
-  "semenova-kristina-evgenevna": {
-    id: "semenova-kristina-evgenevna",
-    name: "Семенова Кристина Евгеньевна",
-    description: "Ассистент врача-стоматолога",
-    stage: "",
-    imageLink: "/specialists/team/semenova-kristina.jpg",
   },
   "andrejchik-irina-maratovna": {
     id: "andrejchik-irina-maratovna",
@@ -2743,13 +2750,6 @@ export const specialistsData: Record<string, Specialists> = {
     description: "Администратор-координатор",
     stage: "",
     imageLink: "/specialists/team/andrejchik.jpg",
-  },
-  "abraamyan-kristina-karenovna": {
-    id: "abraamyan-kristina-karenovna",
-    name: "Абраамян Кристина Кареновна",
-    description: "Ассистент врача-стоматолога",
-    stage: "",
-    imageLink: "/specialists/team/abraamyan.jpg",
   },
   // "tatyana-evgenevna-zolotuhina": {
   //   id: "tatyana-evgenevna-zolotuhina",
