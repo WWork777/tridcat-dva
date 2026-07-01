@@ -42,7 +42,7 @@ export const PromoPopUp = () => {
 
     setIsLoading(true);
 
-    const text = `🔥 Новая заявка на скидку 10%!\nИмя: ${name}\nТелефон: ${phone}`;
+    const text = `🦷 Новая заявка на приём!\nИмя: ${name}\nТелефон: ${phone}`;
 
     const idInstance = "3100517801";
     const apiTokenInstance =
@@ -93,9 +93,8 @@ export const PromoPopUp = () => {
 
         <div className={styles.content}>
           <p className={styles.text}>
-            <span>Фиксируем скидку 10% </span> c 1.05 по 1.07 на все визиты с
-            момента <span>первого приёма</span> и <span>до конца</span>{" "}
-            календарного месяца
+            Запишитесь на <span>приём</span> прямо сейчас — оставьте заявку, и
+            мы перезвоним вам в <span>ближайшее время</span>
           </p>
           <form className={styles.form} onSubmit={handleSubmit}>
             <input
@@ -137,7 +136,7 @@ export const PromoPopUp = () => {
               className={styles.submitButton}
               disabled={isLoading || !consent}
             >
-              {isLoading ? "Отправка..." : "Забрать скидку"}
+              {isLoading ? "Отправка..." : "Записаться на приём"}
             </button>
           </form>
         </div>

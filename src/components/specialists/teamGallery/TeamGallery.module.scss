@@ -28,7 +28,29 @@
   }
 }
 
-/* ---------- Левая зона: Свободная мозаика (Masonry) ---------- */
+/* ---------- Левая зона: группы (медперсонал / ассистенты / администраторы) ---------- */
+.galleryGroups {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  width: 100%;
+}
+
+/* Руководство — глав. врач и директор всегда рядом на десктопе (не мозаика) */
+.leaders {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 36px;
+
+  @media (max-width: 1280px) {
+    gap: 24px;
+  }
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Мозаика (Masonry) — своя для каждой группы, чтобы колонки не мешали людей из разных групп */
 .gallery {
   column-count: 3;
   column-gap: 36px;
