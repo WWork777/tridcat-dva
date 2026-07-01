@@ -73,7 +73,7 @@ export default function Home() {
         {/* <Vacancies/> */}
         <Contacts />
       </section>
-      <PromoPopUp />
+      {/* <PromoPopUp /> */}
       {/* <BlockModal allowClose={true}/> */}
     </>
   );

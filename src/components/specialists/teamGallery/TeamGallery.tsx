@@ -24,13 +24,13 @@ const QUOTES: Record<number, string> = {
 // Пустые «пропуски» (высота в px) — намеренно скипаем места в строках,
 // чтобы раскладка была воздушной и асимметричной, как в референсе.
 const SPACERS: Record<number, number> = {
-  // 2: 80,
-  // 6: 130,
-  // 11: 70,
-  // 14: 150,
-  // 19: 90,
-  // 24: 120,
-  // 29: 80,
+  2: 80,
+  6: 130,
+  11: 70,
+  14: 150,
+  19: 90,
+  24: 120,
+  29: 80,
 };
 
 export default function TeamGallery({ members }: { members: TeamMember[] }) {

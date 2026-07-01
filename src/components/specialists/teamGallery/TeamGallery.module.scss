@@ -30,35 +30,29 @@
 
 /* ---------- Левая зона: Свободная мозаика (Masonry) ---------- */
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 36px 36px;
+  column-count: 3;
+  column-gap: 36px;
   width: 100%;
 
   @media (max-width: 1280px) {
-    gap: 24px;
+    column-gap: 24px;
   }
   @media (max-width: 1024px) {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    column-count: 2;
+    column-gap: 20px;
   }
+  /* Телефон — одна колонка крупных фото с подписью под ними (как в референсе) */
   @media (max-width: 600px) {
-    grid-template-columns: 1fr;
-    gap: 24px;
+    column-count: 1;
   }
 }
 
-/* У .thumb убираем margin-bottom и break-inside */
-.thumb:nth-child(3) {
-  align-items: start;
-}
 .thumb {
-  display: flex;
-  align-items: end;
+  display: block;
+  break-inside: avoid;
+  margin-bottom: 36px;
   text-decoration: none;
   color: inherit;
-  // margin-bottom: 36px; — удалить
-  // break-inside: avoid; — удалить
 
   @media (max-width: 1024px) {
     margin-bottom: 28px;
@@ -150,7 +144,7 @@
 
 .quote {
   break-inside: avoid;
-  // margin-bottom: 36px;
+  margin-bottom: 36px;
   padding: 24px 8px;
   text-align: center;
   color: #5b6b7e;
